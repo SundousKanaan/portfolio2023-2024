@@ -1,0 +1,28 @@
+main > div > article:first-of-type {
+    display: flex;
+
+}
+main > div > article:first-of-type > div{
+    width: 90%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+
+main > div > article:first-of-type > section:first-of-type img{
+    width: 40%;
+    aspect-ratio: 1/1;
+
+    border-radius: 50%;
+}
+
+main > div > article:first-of-type > section:first-of-type div{
+    width: 50%;
+    background-color: aquamarine;
+}
+
+main > div > article:first-of-type > section:first-of-type div h1{
+color: red;
+}
