@@ -18,47 +18,58 @@ navButton.addEventListener('click', () => {
 // define the function that runs the countdown
 const runCountdown = () => {
     // let clock = document.querySelectorAll(".clock");
-    let circle = document.querySelectorAll(".clock svg circle:nth-of-type(2)");
-    let clockCounter = 100;
+    let circles = document.querySelectorAll(".clock svg circle:nth-of-type(2)");
+    let clockCounter = 0;
     let countDownInt;
 
-    console.log(circle);
     const countDown = () => {
-        for (let i = 0; i < circle.length; i++) {
-            circle[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
-            if (circle[i] === circle[0]) {
-                if (clockCounter === 35) {
+        
+        console.log("clockCounter:", clockCounter);
+        for (let i = 0; i < circles.length; i++) {
+            circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
+            
+            if (circles[i] === circles[0]) {
+                if (clockCounter === 40) {
                     clearInterval(countDownInt);
                 };
-                // clockCounter--;
-                console.log("33",[i]);
+                clockCounter ++;
             }
-
-            else if (circle[i] === circle[1]) {
-                if (clockCounter === 25) {
+            
+            else if (circles[i] === circles[1]) {
+                if (clockCounter === 15) {
                     clearInterval(countDownInt);
                 };
-                // clockCounter--;
-                console.log("41",[i]);
+                clockCounter ++;
+            } 
+            
+            else if (circles[i] === circles[2]) {
+                if (clockCounter === 20) {
+                    clearInterval(countDownInt);
+                };
+                clockCounter ++;
+            } 
+
+            else if (circles[i] === circles[3]) {
+                if (clockCounter === 45) {
+                    clearInterval(countDownInt);
+                };
+                clockCounter ++;
             } 
             
             else {
-                if (clockCounter === 70) {
+                if (clockCounter === 25) {
                     clearInterval(countDownInt);
                 };
-                console.log("49",[i]);
+                clockCounter ++;
             }
-            clockCounter--;
         }
     };
     // handle clicking on the clock
-    countDownInt = setInterval(countDown, 50);
+    countDownInt = setInterval(countDown, 60);
 }
 
 // call the function when the page is loaded
 window.addEventListener("load", runCountdown);
-
-
 
 
 const API_URL = "https://api.github.com/users/SundousKanaan";
