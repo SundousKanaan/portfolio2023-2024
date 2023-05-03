@@ -222,7 +222,9 @@ main > div > article{
   padding: 2em 0;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
 
   scroll-margin-top:4em;
 }

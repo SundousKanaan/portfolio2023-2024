@@ -71,25 +71,104 @@ main>div>article:first-of-type>section:first-of-type div a {
 }
 
 main>div>article:first-of-type>section:first-of-type div h1::before,
-main>div>article:first-of-type>section:first-of-type div p::before{    content: "";
+main>div>article:first-of-type>section:first-of-type div p::before {
+    content: "";
     display: block;
-    
+
     width: 90vw;
     height: .2em;
-    
+
     position: absolute;
     top: calc(50% - .2em / 2);
     z-index: -1;
-    
+
     background-color: var(--them-color);
     animation: lineEffect 1s 1 both linear;
 }
 
 @keyframes lineEffect {
-    from{
+    from {
         transform: scaleX(0);
     }
-    to{
+
+    to {
         transform: scaleX(1);
     }
+}
+
+
+
+main>div>article:first-of-type>section:nth-of-type(2){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    margin-top: 2em;
+}
+
+.clock {
+    width: fit-content;
+    /* margin: auto; */
+    /* margin-top: 50px; */
+    background-color: #151932;
+    /* width: 10em; */
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+    /* box-shadow: 0 0 0 10px #151932, 0 0 35px 35px #252a54; */
+    position: relative;
+}
+
+/* .clock::before {
+    content: "";
+    width: 285px;
+    height: 285px;
+    border: #292c4f solid 20px;
+    position: absolute;
+    top: -27.5px; */
+    /* left: -27.5px;
+    background-color: transparent;
+    border-radius: 100%;
+} */
+
+.clock svg {
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    /* top: 0;
+    left: 0; */
+
+    display: grid;
+    place-items: center;
+}
+
+.clock svg circle {
+    width: 10em;
+    height: 10em;
+    fill: none;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    stroke-dasharray: 817;
+    stroke-dashoffset: 817;
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: rotate(-90deg);
+
+    position: absolute;
+    /* stroke: #1ab905; */
+}
+
+.clock svg circle:nth-of-type(1) {
+    stroke-dashoffset: 0;
+    opacity: 0.1;
+    stroke: #f3f3f3;
+}
+
+.clock svg circle:nth-of-type(2) {
+    stroke: var(--them-color);
+    stroke-dashoffset: calc(817 - (817 * 0) / 100);
 }
