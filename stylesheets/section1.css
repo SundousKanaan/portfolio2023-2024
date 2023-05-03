@@ -1,28 +1,95 @@
-main > div > article:first-of-type {
+/* main > div > article:first-of-type {
     display: flex;
+    align-items: center;
+} */
 
-}
-main > div > article:first-of-type > div{
+main>div>article:first-of-type>section:first-of-type {
     width: 90%;
     height: fit-content;
 
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
+    align-items: center;
+    gap: 1em;
+    /* gap: 2em; */
 }
 
-main > div > article:first-of-type > section:first-of-type img{
-    width: 40%;
-    aspect-ratio: 1/1;
+main>div>article:first-of-type>section:first-of-type img {
+    display: block;
+    width: 13em;
+    height: 13em;
+
+    align-self: center;
 
     border-radius: 50%;
+    animation: shadow 1s -.5s infinite linear both alternate, shadow2 1s -.5s infinite linear both alternate;
 }
 
-main > div > article:first-of-type > section:first-of-type div{
-    width: 50%;
-    background-color: aquamarine;
+@keyframes shadow {
+    from {
+        box-shadow: -.5em .5em 0 var(--secondere-color);
+    }
+
+    to {
+        box-shadow: .5em -.5em 0 var(--secondere-color);
+    }
 }
 
-main > div > article:first-of-type > section:first-of-type div h1{
-color: red;
+@keyframes shadow2 {
+    from {
+        box-shadow: -.5em -.5em 0 var(--them-color);
+    }
+
+    to {
+        box-shadow: .5em .5em 0 var(--them-color);
+    }
+}
+
+main>div>article:first-of-type>section:first-of-type div {
+    width: 100%;
+    /* padding: 2em .5em 2em 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+main>div>article:first-of-type>section:first-of-type div h1,
+main>div>article:first-of-type>section:first-of-type div p,
+main>div>article:first-of-type>section:first-of-type div a {
+    width: fit-content;
+    max-width: 60%;
+    text-align: center;
+    padding: 0 .5em;
+
+    position: relative;
+    background-color: var(--bg);
+
+    display: grid;
+    place-items: center;
+
+}
+
+main>div>article:first-of-type>section:first-of-type div h1::before,
+main>div>article:first-of-type>section:first-of-type div p::before{    content: "";
+    display: block;
+    
+    width: 90vw;
+    height: .2em;
+    
+    position: absolute;
+    top: calc(50% - .2em / 2);
+    z-index: -1;
+    
+    background-color: var(--them-color);
+    animation: lineEffect 1s 1 both linear;
+}
+
+@keyframes lineEffect {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
 }
