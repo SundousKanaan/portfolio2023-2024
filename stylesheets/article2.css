@@ -1,5 +1,7 @@
 main>div>article:nth-of-type(2){
     height: 100vh;
+
+    padding: 0 1em;
 }
 
 main>div>article:nth-of-type(2) h2{
@@ -11,6 +13,7 @@ main>div>article:nth-of-type(2) h2{
 
     background-color: var(--bg);
 }
+
 main>div>article:nth-of-type(2) h2::after{
     content: "";
     display: block;
@@ -52,7 +55,7 @@ main>div>article:nth-of-type(2) ul {
     overflow-X: auto;
     overflow-Y: hidden;
     scroll-snap-type: x mandatory;
-    overscroll-behavior: none;
+    overscroll-behavior-x: none;
     gap: 4em;
 }
 

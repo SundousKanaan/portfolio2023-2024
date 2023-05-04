@@ -132,7 +132,6 @@ async function makeProject(reposData) {
     for (let i = 0; i < reposData.length; i++){
         const liElement = document.createElement("li");
         liElement.innerHTML= `
-        <li>
             <div>
                 <h3>${reposData[i].name}</h3>
                 <img src="./images/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
@@ -145,8 +144,9 @@ async function makeProject(reposData) {
                 <a href="${reposData[i].site}" target="_blank">To site</a>
                 </div>
             </section>
-        </li>
         `
+
+        liElement.tabIndex = 6;
         projectList.appendChild(liElement)
 
         if (topRepos.includes(reposData[i].name)) {

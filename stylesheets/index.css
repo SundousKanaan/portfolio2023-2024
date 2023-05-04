@@ -40,6 +40,11 @@ html::-webkit-scrollbar-thumb {
   outline-style: none;
 }
 
+p:focus{
+  color: var(--dark-text);
+  background-color: var(--text-color);
+}
+
 
 body {
   width: 100vw;
