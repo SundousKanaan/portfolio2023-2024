@@ -15,58 +15,47 @@ navButton.addEventListener('click', () => {
     }
 })
 
+
 // define the function that runs the countdown
 const runCountdown = () => {
-    // let clock = document.querySelectorAll(".clock");
     let circles = document.querySelectorAll(".clock svg circle:nth-of-type(2)");
     let clockCounter = 0;
     let countDownInt;
 
     const countDown = () => {
-        
-        console.log("clockCounter:", clockCounter);
         for (let i = 0; i < circles.length; i++) {
-            circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
-            
             if (circles[i] === circles[0]) {
-                if (clockCounter === 40) {
-                    clearInterval(countDownInt);
-                };
-                clockCounter ++;
+                if (clockCounter <= 40) {
+                    circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
+                }
+                clockCounter++;
+            } else if (circles[i] === circles[1]) {
+                if (clockCounter <= 15) {
+                    circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
+                }
+                clockCounter++;
+            } else if (circles[i] === circles[2]) {
+                if (clockCounter <= 20) {
+                    circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
+                }
+                clockCounter++;
+            } else if (circles[i] === circles[3]) {
+                if (clockCounter <= 45) {
+                    circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
+                }
+                clockCounter++;
+            } else if (clockCounter <= 25) {
+                circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
+                clockCounter++;
             }
-            
-            else if (circles[i] === circles[1]) {
-                if (clockCounter === 15) {
-                    clearInterval(countDownInt);
-                };
-                clockCounter ++;
-            } 
-            
-            else if (circles[i] === circles[2]) {
-                if (clockCounter === 20) {
-                    clearInterval(countDownInt);
-                };
-                clockCounter ++;
-            } 
-
-            else if (circles[i] === circles[3]) {
-                if (clockCounter === 45) {
-                    clearInterval(countDownInt);
-                };
-                clockCounter ++;
-            } 
-            
-            else {
-                if (clockCounter === 25) {
-                    clearInterval(countDownInt);
-                };
-                clockCounter ++;
+            if (clockCounter === 100) {
+                clearInterval(countDownInt);
             }
         }
     };
     // handle clicking on the clock
     countDownInt = setInterval(countDown, 60);
-}
+};
 
 // call the function when the page is loaded
 window.addEventListener("load", runCountdown);
