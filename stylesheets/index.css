@@ -7,7 +7,7 @@
   caret-color: transparent;
 }
 
-:root{
+:root {
   --text-color: #ebf1f1;
   --dark-text: #2c3f50;
   --bg: #2c3f50;
@@ -17,11 +17,11 @@
   --nav: #ebf1f1;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   width: 100vw;
   height: 100%;
   /* font-family: 'Shadows Into Light', cursive; */
@@ -40,16 +40,17 @@ body{
   background-color: var(--bg);
 }
 
-header{
+header {
   width: 87%;
   height: 2.95em;
 
   position: fixed;
   top: .8em;
+  z-index: 10000000;
 
   background-color: var(--nav);
-  /* border-radius: 5em; */
-  border-radius: 10% 10% 10% 10% / 0% 50% 50% 0% ;
+  border-radius: 5em;
+  /* border-radius: 10% 10% 10% 10% / 0% 50% 50% 0% ; */
 
   display: flex;
   align-items: center;
@@ -69,37 +70,41 @@ header.closeNav {
 }
 
 @keyframes openNav {
-  0%{
+  0% {
     transform: scaleX(0) scaleY(0);
   }
-  5%{
+
+  5% {
     transform: scaleX(.1) scaleY(.9);
   }
-  100%{
+
+  100% {
     transform: scaleX(1) scaleY(1);
   }
 }
 
 @keyframes closeNav {
-  0%{
+  0% {
     transform: scaleX(1) scaleY(1);
   }
-  95%{
+
+  95% {
     transform: scaleX(.1) scaleY(.9);
   }
-  100%{
+
+  100% {
     transform: scaleX(0) scaleY(0);
   }
 }
 
-body > button{
+body>button {
   appearance: none;
-  -webkit-appearance:none;
-  
+  -webkit-appearance: none;
+
   display: block;
   width: 3.5em;
   height: 3.5em;
-  
+
   border: none;
   border-radius: 50%;
   background-color: var(--nav);
@@ -112,22 +117,22 @@ body > button{
   position: fixed;
   left: 1em;
   top: 1em;
-  z-index: 1;
+  z-index: 10000001;
 
   transition: .5s;
 }
 
-body > button:hover{
+body>button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 0 .2em var(--them-color);
 }
 
-body > button:active{
+body>button:active {
   transform: scale(1);
 }
 
 
-body > button span{
+body>button span {
   display: block;
   width: 2em;
   height: .3em;
@@ -138,27 +143,27 @@ body > button span{
 }
 
 
-body > button.openNav{
+body>button.openNav {
   place-items: center;
 }
 
-body > button.openNav span{
+body>button.openNav span {
   position: absolute;
 }
 
-body > button.openNav span:first-of-type{
+body>button.openNav span:first-of-type {
   transform: rotate(45deg);
 }
 
-body > button.openNav span:nth-of-type(2){
-  opacity: 0; 
+body>button.openNav span:nth-of-type(2) {
+  opacity: 0;
 }
 
-body > button.openNav span:last-of-type{
+body>button.openNav span:last-of-type {
   transform: rotate(-45deg);
 }
 
-header nav{
+header nav {
   width: calc(100% - 3.5em);
   height: 100%;
 
@@ -173,7 +178,7 @@ header nav{
   right: 0;
 }
 
-header nav ul{
+header nav ul {
   list-style: none;
 
   width: 100%;
@@ -181,6 +186,7 @@ header nav ul{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: .5em;
 
   border-radius: 5em;
 
@@ -189,27 +195,77 @@ header nav ul{
   /* background-color: blanchedalmond; */
 }
 
-header nav ul li{
-  width: 4em;
+header nav ul li {
+  width: fit-content;
   height: 100%;
+
+  position: relative;
 }
 
-header nav ul li a{
+header nav ul li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: .3em;
+
+  position: absolute;
+  bottom: 0;
+
+  border-radius: 1em;
+
+  background-color: var(--them-color);
+  transform: scaleX(0);
+
+}
+
+header nav ul li:hover::after {
+  animation: liHover .2s 1 both linear;
+}
+
+@keyframes liHover{
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1.5);
+  }
+}
+
+header nav ul li a {
   text-decoration: none;
+
   width: 100%;
   height: 100%;
+
+  font-size: 1rem;
 
   display: grid;
   place-items: center;
+
+  color: var(--dark-text);
 }
 
 
 
-main{
+
+
+
+
+
+
+
+
+
+/* ********************* */
+/* ******** main ******* */
+/* ********************* */
+
+
+main {
   width: 100%;
 }
 
-main > div{
+main>div {
   width: 100%;
 
   display: flex;
@@ -217,7 +273,7 @@ main > div{
 
 }
 
-main > div > article{
+main>div>article {
   width: 100vw;
   /* height: 100vh; */
   padding: 2em 0;
@@ -225,11 +281,11 @@ main > div > article{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 
   gap: 1em;
 
-  scroll-margin-top:4em;
+  scroll-margin-top: 4em;
 
   /* border-bottom: solid .5em red; */
 }
