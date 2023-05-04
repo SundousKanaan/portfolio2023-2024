@@ -107,7 +107,7 @@ async function fetchRepos() {
     console.log(allData);
 
     for (let i = 0; i < allData.length; i++) {
-        if (allData[i].stargazers_count !== 0) {
+        if (allData[i].stargazers_count === 1) {
             const languages_URL = `https://api.github.com/repos/SundousKanaan/${allData[i].name}/languages`;
             const languagesData = await fetchData(languages_URL);
             reposData.push({
@@ -126,6 +126,7 @@ async function fetchRepos() {
 
 fetchRepos();
 
+const topRepos = ["TiltShift"]
 async function makeProject(reposData) {
 
     for (let i = 0; i < reposData.length; i++){
@@ -134,18 +135,23 @@ async function makeProject(reposData) {
         <li>
             <div>
                 <h3>${reposData[i].name}</h3>
+                <img src="./images/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
             </div>
             <section>
                 <p>${reposData[i].description}</p>
-                <p>${reposData[i].languages}</p>
+                <p>Project languages: ${reposData[i].languages}</p>
                 <div>
-                    <a href="${reposData[i].repo}">To repo</a>
-                    <a href="${reposData[i].site}">To site</a>
+                <a href="${reposData[i].repo}">To repo</a>
+                <a href="${reposData[i].site}">To site</a>
                 </div>
             </section>
-         </li>
+        </li>
         `
-
         projectList.appendChild(liElement)
+
+        if (topRepos.includes(reposData[i].name)) {
+            liElement.classList.add("GDA");
+        }
     }
+
 }

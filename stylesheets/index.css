@@ -9,6 +9,7 @@
 
 :root{
   --text-color: #ebf1f1;
+  --dark-text: #2c3f50;
   --bg: #2c3f50;
   --them-color: #e55baf;
   --secondere-color: #e6bc43;
@@ -230,5 +231,5 @@ main > div > article{
 
   scroll-margin-top:4em;
 
-  border-bottom: solid .5em red;
+  /* border-bottom: solid .5em red; */
 }
