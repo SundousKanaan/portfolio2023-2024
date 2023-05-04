@@ -133,9 +133,9 @@ fetchRepos();
 const topRepos = ["TiltShift"]
 async function makeProject(reposData) {
 
-    for (let i = 0; i < reposData.length; i++){
+    for (let i = 0; i < reposData.length; i++) {
         const liElement = document.createElement("li");
-        liElement.innerHTML= `
+        liElement.innerHTML = `
             <div>
                 <h3>${reposData[i].name}</h3>
                 <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
@@ -163,16 +163,39 @@ async function makeProject(reposData) {
 
 // UX/UI
 
-const uxListButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li > button")
-const uxListEtems = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
+const uxList = document.querySelector("main>div>article:nth-of-type(3) ul")
 
-for (let i = 0; i < uxListButtons.length; i++) {
-    uxListButtons[i].addEventListener("click", () => {
+function none() {
+    for (let i = 0; i < 3; i++) {
+        const li = document.createElement("li")
+        li.innerHTML = `
+             <h3>work name</h3>
+             <img src="./projectsimages/BusinessCard.png" alt="">
+        
+            <section>
+                <p>Description</p>
+                <button>Details</button>
+                <a href="">prototype</a>
+            </section>
+        `
+        uxList.appendChild(li)
+    }
+    console.log("hi", uxList);
+}
+
+none();
+
+const uxListEtems = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
+console.log("NN", uxListEtems[0]);
+
+
+for (let i = 0; i < uxListEtems.length; i++) {
+    uxListEtems[i].addEventListener("click", () => {
         if (uxListEtems[i].classList.contains("closeCard")) {
             uxListEtems[i].classList.remove("closeCard");
             uxListEtems[i].classList.add("openCard");
-        } 
-        else if(uxListEtems[i].classList.contains("openCard")) {
+        }
+        else if (uxListEtems[i].classList.contains("openCard")) {
             uxListEtems[i].classList.remove("openCard");
             uxListEtems[i].classList.add("closeCard");
         }
@@ -185,8 +208,9 @@ for (let i = 0; i < uxListButtons.length; i++) {
 
 const uxData = [
     {
-        name:"1",
+        name: "1",
         image: "1",
-        prototype:"1"
+        prototype: "1"
     }
 ]
+
