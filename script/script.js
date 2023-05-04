@@ -141,8 +141,8 @@ async function makeProject(reposData) {
                 <p>${reposData[i].description}</p>
                 <p>Project languages: ${reposData[i].languages}</p>
                 <div>
-                <a href="${reposData[i].repo}">To repo</a>
-                <a href="${reposData[i].site}">To site</a>
+                <a href="${reposData[i].repo}" target="_blank">To repo</a>
+                <a href="${reposData[i].site}" target="_blank">To site</a>
                 </div>
             </section>
         </li>
