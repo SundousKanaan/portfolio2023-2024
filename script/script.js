@@ -99,12 +99,16 @@ async function fetchFunction() {
 
 fetchFunction();
 
+
+// projects
+
+
 const reposData = [];
 const projectList = document.querySelector("main>div>article:nth-of-type(2) ul")
 
 async function fetchRepos() {
     const allData = await fetchData(repos_URL);
-    console.log(allData);
+    // console.log(allData);
 
     for (let i = 0; i < allData.length; i++) {
         if (allData[i].stargazers_count === 1) {
@@ -119,7 +123,7 @@ async function fetchRepos() {
             });
         }
     }
-    console.log(reposData);
+    // console.log(reposData);
 
     makeProject(reposData);
 }
@@ -134,7 +138,7 @@ async function makeProject(reposData) {
         liElement.innerHTML= `
             <div>
                 <h3>${reposData[i].name}</h3>
-                <img src="./images/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
+                <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
             </div>
             <section>
                 <p>${reposData[i].description}</p>
@@ -155,3 +159,34 @@ async function makeProject(reposData) {
     }
 
 }
+
+
+// UX/UI
+
+const uxListButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li > button")
+const uxListEtems = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
+
+for (let i = 0; i < uxListButtons.length; i++) {
+    uxListButtons[i].addEventListener("click", () => {
+        if (uxListEtems[i].classList.contains("closeCard")) {
+            uxListEtems[i].classList.remove("closeCard");
+            uxListEtems[i].classList.add("openCard");
+        } 
+        else if(uxListEtems[i].classList.contains("openCard")) {
+            uxListEtems[i].classList.remove("openCard");
+            uxListEtems[i].classList.add("closeCard");
+        }
+        else {
+            uxListEtems[i].classList.add("openCard");
+        }
+    });
+}
+
+
+const uxData = [
+    {
+        name:"1",
+        image: "1",
+        prototype:"1"
+    }
+]

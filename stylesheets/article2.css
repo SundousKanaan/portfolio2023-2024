@@ -61,7 +61,7 @@ main>div>article:nth-of-type(2) ul li.GDA::after {
     /* background-image: url(); */
 }
 
-main>div>article:nth-of-type(2) ul li:has(:focus).GDA::after,
+main>div>article:nth-of-type(2) ul li:has(:focus-visible).GDA::after,
 main>div>article:nth-of-type(2) ul li:hover.GDA::after {
     top: 9%;
 }
@@ -92,7 +92,7 @@ main>div>article:nth-of-type(2) ul li>div h3 {
     transition: 1s;
 }
 
-main>div>article:nth-of-type(2) ul li:has(:focus)>div h3,
+main>div>article:nth-of-type(2) ul li:has(:focus-visible)>div h3,
 main>div>article:nth-of-type(2) ul li:hover>div h3 {
     opacity: 100%;
 }
@@ -106,7 +106,7 @@ main>div>article:nth-of-type(2) ul li>div img {
     object-position: center;
 }
 
-main>div>article:nth-of-type(2) ul li:has(:focus)>div img,
+main>div>article:nth-of-type(2) ul li:has(:focus-visible)>div img,
 main>div>article:nth-of-type(2) ul li:hover>div img {
     opacity: 20%;
 }
@@ -182,25 +182,25 @@ main>div>article:nth-of-type(2) ul li section div a::after {
     }
 }
 
-main>div>article:nth-of-type(2) ul li section div a:focus,
+main>div>article:nth-of-type(2) ul li section div a:focus-visible,
 main>div>article:nth-of-type(2) ul li section div a:hover {
     outline-color: transparent  ;
     color: var(--dark-text);
     background-color: white;
 }
 
-main>div>article:nth-of-type(2) ul li section div a:focus::after,
+main>div>article:nth-of-type(2) ul li section div a:focus-visible::after,
 main>div>article:nth-of-type(2) ul li section div a:hover::after {
     opacity: 0;
 }
 
-main>div>article:nth-of-type(2) ul li:has(:focus)>div,
+main>div>article:nth-of-type(2) ul li:has(:focus-visible)>div,
 main>div>article:nth-of-type(2) ul li:hover>div {
     border-radius: 2em 2em 0 0;
     transform: translateY(-50%);
 }
 
-main>div>article:nth-of-type(2) ul li:has(:focus) section,
+main>div>article:nth-of-type(2) ul li:has(:focus-visible) section,
 main>div>article:nth-of-type(2) ul li:hover section {
     border-radius: 0 0 2em 2em;
     transform: translateY(50%);

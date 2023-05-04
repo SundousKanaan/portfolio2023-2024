@@ -35,16 +35,15 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5em;
 }
 
-:focus{
+:focus-visible{
   outline-color: transparent;
   outline-style: none;
 }
 
-p:focus{
+p:focus-visible{
   color: var(--dark-text);
   background-color: var(--text-color);
 }
-
 
 body {
   width: 100vw;
@@ -86,8 +85,8 @@ header {
 
 }
 
-body header:has(a:focus),
-body>button:focus ~ header{
+body header:has(a:focus-visible),
+body>button:focus-visible ~ header{
   animation: openNav .3s 1 linear both;
 }
 
@@ -152,7 +151,7 @@ body>button {
   transition: .5s;
 }
 
-body>button:focus,
+body>button:focus-visible,
 body>button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 0 .2em var(--them-color);
@@ -247,7 +246,7 @@ header nav ul li::after {
   transform: scaleX(0);
 }
 
-header nav ul li:has(a:focus)::after,
+header nav ul li:has(a:focus-visible)::after,
 header nav ul li:hover::after {
   animation: liHover .2s 1 both linear;
 }
