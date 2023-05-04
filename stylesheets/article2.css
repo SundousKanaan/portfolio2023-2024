@@ -1,0 +1,48 @@
+main>div>article:nth-of-type(2) ul {
+    width: 100%;
+    height: 40em;
+    list-style: none;
+
+    background-color: rgb(116, 238, 238);
+}
+
+main>div>article:nth-of-type(2) ul li{
+    width: 20em;
+    max-width: 30em;
+    height: 100%;
+
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+
+    background-color: rgb(197, 109, 1);
+}
+
+main>div>article:nth-of-type(2) ul li > div,
+main>div>article:nth-of-type(2) ul li section{
+    width: 100%;
+    height: 40%;
+
+    position: absolute;
+
+    transition: 1s;
+}
+
+main>div>article:nth-of-type(2) ul li > div{
+    z-index: 1;
+    background-color: black;
+}
+
+main>div>article:nth-of-type(2) ul li section{
+    background-color: blueviolet;
+}
+
+main>div>article:nth-of-type(2) ul li:hover > div{
+    transform: translateY(-50%);
+}
+
+main>div>article:nth-of-type(2) ul li:hover section{
+    transform: translateY(50%);
+}
