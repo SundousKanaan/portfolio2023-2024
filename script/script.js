@@ -62,12 +62,12 @@ window.addEventListener("load", runCountdown);
 
 
 const API_URL = "https://api.github.com/users/SundousKanaan";
-const reposAPI_URL = "https://api.github.com/users/SundousKanaan/repos";
+const repos_URL = "https://api.github.com/users/SundousKanaan/repos";
 // const titelsAPI_URL = `https://api.github.com/repos/SundousKanaan/${repoTitel}`;
 
-async function fetchData() {
+async function fetchData(link) {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(link);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -95,7 +95,57 @@ async function fetchFunction() {
     bio.textContent = allData.bio;
     avatarImg.src = allData.avatar_url;
     avatarImg.alt = allData.name + " avatar foto";
-
 }
 
 fetchFunction();
+
+const reposData = [];
+const projectList = document.querySelector("main>div>article:nth-of-type(2) ul")
+
+async function fetchRepos() {
+    const allData = await fetchData(repos_URL);
+    console.log(allData);
+
+    for (let i = 0; i < allData.length; i++) {
+        if (allData[i].stargazers_count !== 0) {
+            const languages_URL = `https://api.github.com/repos/SundousKanaan/${allData[i].name}/languages`;
+            const languagesData = await fetchData(languages_URL);
+            reposData.push({
+                name: allData[i].name,
+                repo: allData[i].html_url,
+                languages: Object.keys(languagesData),
+                site: allData[i].homepage,
+                description: allData[i].description
+            });
+        }
+    }
+    console.log(reposData);
+
+    makeProject(reposData);
+}
+
+fetchRepos();
+
+async function makeProject(reposData) {
+
+    for (let i = 0; i < reposData.length; i++){
+        const liElement = document.createElement("li");
+        liElement.innerHTML= `
+        <li>
+            <div>
+                <h3>${reposData[i].name}</h3>
+            </div>
+            <section>
+                <p>${reposData[i].description}</p>
+                <p>${reposData[i].languages}</p>
+                <div>
+                    <a href="${reposData[i].repo}">To repo</a>
+                    <a href="${reposData[i].site}">To site</a>
+                </div>
+            </section>
+         </li>
+        `
+
+        projectList.appendChild(liElement)
+    }
+}
