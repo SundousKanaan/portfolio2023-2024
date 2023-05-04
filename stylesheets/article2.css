@@ -4,42 +4,6 @@ main>div>article:nth-of-type(2){
     padding: 0 1em;
 }
 
-main>div>article:nth-of-type(2) h2{
-    padding: 0 .5em;
-    display: grid;
-    place-items: center;
-
-    position: relative;
-
-    background-color: var(--bg);
-}
-
-main>div>article:nth-of-type(2) h2::after{
-    content: "";
-    display: block;
-
-    width: 90vw;
-    height: .2em;
-
-    border-radius: 2em;
-    position: absolute;
-    top: calc(50% - .2em / 2);
-    z-index: -1;
-
-    background-color: var(--them-color);
-    animation: lineEffect2 1s 1 both linear;
-}
-
-@keyframes lineEffect2 {
-    from {
-        transform: scaleX(0);
-    }
-
-    to {
-        transform: scaleX(1);
-    }
-}
-
 main>div>article:nth-of-type(2) ul {
     width: 100%;
     height: 30em;

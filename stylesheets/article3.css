@@ -1,0 +1,125 @@
+main>div>article:nth-of-type(3) {
+    /* height: 100vh; */
+    height: fit-content;
+    padding: 0 1em 4em 1em;
+
+    gap: 4em;
+}
+
+main>div>article:nth-of-type(3) section {
+    width: 100%;
+    height: fit-content;
+
+    /* background-color: rgb(83, 51, 8); */
+}
+
+main>div>article:nth-of-type(3) section ul {
+    width: 100%;
+    height: 100%;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+
+    transform-style: preserve-3d;
+    perspective: 50em;
+
+    position: relative;
+
+}
+
+main>div>article:nth-of-type(3) section ul::-webkit-scrollbar {
+    height: .5em;
+}
+
+main>div>article:nth-of-type(3) section ul::-webkit-scrollbar-thumb {
+    background-color: var(--them-color);
+    border-radius: 5em;
+}
+
+main>div>article:nth-of-type(3) section ul li {
+    width: 15em;
+    height: 20em;
+
+    border-radius: 1em;
+
+    box-shadow: 0 0 0 .3em white;
+    /* -1em 1em 0 rgba(255, 255, 255, 0.103); */
+    background-color: black;
+
+    padding: .5em;
+
+    transition: .5s;
+    cursor: pointer;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+main>div>article:nth-of-type(3) section ul li::after {
+    content: "";
+    display: block;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    border: solid .3em white;
+    border-radius: 1em;
+
+    align-self: center;
+    justify-self: center;
+}
+
+main>div>article:nth-of-type(3) section ul li:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+}
+
+main>div>article:nth-of-type(3) section ul li h3{
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0;
+    transition: .5s;
+}
+
+main>div>article:nth-of-type(3) section ul li:hover h3{
+    opacity: 100%;
+}
+
+main>div>article:nth-of-type(3) section ul li img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: .5s;
+}
+
+main>div>article:nth-of-type(3) section ul li:hover img {
+    opacity: 20%;
+}
+
+
+main>div>article:nth-of-type(3) section ul li section {
+    display: none;
+}
+
+main>div>article:nth-of-type(3) section ul li.openCard::after,
+main>div>article:nth-of-type(3) section ul li.openCard h3,
+main>div>article:nth-of-type(3) section ul li.openCard img {
+    display: none;
+}
+
+main>div>article:nth-of-type(3) section ul li.openCard section {
+    display: block;
+}
