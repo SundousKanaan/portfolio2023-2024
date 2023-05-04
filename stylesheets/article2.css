@@ -3,6 +3,11 @@ main>div>article:nth-of-type(2) ul {
     height: 40em;
     list-style: none;
 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2em;
+
     background-color: rgb(116, 238, 238);
 }
 
