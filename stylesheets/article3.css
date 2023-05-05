@@ -3,7 +3,7 @@ main>div>article:nth-of-type(3) {
     height: fit-content;
     padding: 0 1em 4em 1em;
 
-    gap: 4em;
+    gap: 1em;
 }
 
 main>div>article:nth-of-type(3) section {

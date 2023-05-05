@@ -1,0 +1,194 @@
+/* ** prototype page ** */
+/* =====================*/
+
+/* header prototype page  */
+.yae header h1 {
+    letter-spacing: -2px;
+    background-color: var(--hoofd-color-yae);
+}
+
+
+/* Navigation menu */
+.yae header nav {
+    background-color: var(--hoofd-color-yae);
+}
+
+.yae header nav button {
+    background-color: var(--secondary-color-yae);
+}
+
+
+
+/* hoofd section prototype page  */
+.yae main section h2 {
+    text-decoration: underline var(--hoofd-color-yae);
+}
+
+.yae main section:nth-of-type(1) img {
+    position: absolute;
+    left: 18.7cm;
+    top: 1.2cm;
+}
+
+.yae main section:nth-of-type(1) nav {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+.yae main section nav a {
+    color: var(--hoofd-color-yae);
+    text-decoration-color: var(--secondary-color-yae);
+}
+
+.yae main section nav a::before {
+    background-color: var(--hoofd-color-yae);
+}
+
+
+
+/*  main simpelespel page  */
+/* ======================*/
+
+/* background circles */
+.yaecircle {
+    background-color: var(--secondary-color-yae);
+    position: absolute;
+    right: 7%;
+    top: 13%;
+    z-index: -1;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.yaecircle img {
+    width: 12em;
+
+    position: absolute;
+    right: 30%;
+    top: 5%;
+}
+
+.yae main section:nth-of-type(n+2) h4 {
+    color: var(--hoofd-color-yae);
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.yae main section:last-of-type {
+    margin-bottom: 8em;
+}
+
+.yae main section:nth-of-type(n+2) p {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+
+.yae main section>ul {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style-type: none;
+}
+
+.yae main section>ul li::before {
+    content: "\2022";
+    color: var(--basis-font-color);
+    width: 1em;
+    margin-left: -1em;
+
+    position: absolute;
+}
+
+.yae main section:nth-of-type(n+2) img {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    width: 100%;
+}
+
+.scrollimages {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: none;
+    gap: 10px;
+}
+
+.scrolllangimages {
+    width: 100%;
+    
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: none;
+    gap: 10px;
+}
+
+.scrolllangimages::-webkit-scrollbar,
+.scrollimages::-webkit-scrollbar {
+    width: .5em;
+}
+
+.scrolllangimages::-webkit-scrollbar-track, .scrollimages::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .3em var(--hoofd-color-yae);
+}
+
+.scrolllangimages::-webkit-scrollbar-thumb, .scrollimages::-webkit-scrollbar-thumb {
+    background-color: var(--hoofd-color-yae);
+    opacity: 50%;
+    border-radius: 5em;
+}
+
+
+.scrolllangimages img,
+.scrollimages img {
+    scroll-snap-align: center;
+}
+
+.yae main section nav {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    margin: 0;
+}
+
+.yae main section nav ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* works nav*/
+
+.yae main>nav {
+    /* BOX STYLING */
+    background-color: var(--hoofd-color-yae);
+}
+
+.yae main>nav button {
+    /* BOX STYLING */
+    background-color: var(--hoofd-color-yae);
+}

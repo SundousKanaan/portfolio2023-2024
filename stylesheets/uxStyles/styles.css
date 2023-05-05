@@ -1,0 +1,498 @@
+        /*=====================*/
+        /*= custom properties =*/
+        /*=====================*/
+:root{
+    /* font */
+    --hoofd-font: Arial, Helvetica, sans-serif ;
+    --hover-font-color: white;
+    --basis-font-color: rgb(32, 32,32);
+
+    /* background */
+    --background-color: white;
+
+
+    /* home page */
+    --hoofd-color-home: rgb(110, 225, 225);
+    --secondary-color-home: rgb(110, 225, 225, 0.3);
+
+    /* works page  */
+    --hoofd-color-works: rgb(255, 178, 102);
+    --secondary-color-works: rgb(255, 222, 161, 0.3);
+
+    /* gbook page  */
+    --hoofd-color-gbook: rgb(178,102,255);
+    --secondary-color-gbook: rgb(204,153,255, 0.3);
+
+    /* kunstsite page  */
+    --hoofd-color-kunstsite: rgba(255, 102, 178);
+    --secondary-color-kunstsite: rgb(255, 153, 204, 0.3);
+
+    /* simpele spel page  */
+    --hoofd-color-simpelespel: rgba(186,85,211);
+    --secondary-color-simpelespel: rgb(238,130,238, 0.3);
+
+    /* prototype page  */
+    --hoofd-color-prototype: rgba(0,204,102);
+    --secondary-color-prototype: rgb(102,255,178, 0.3);
+
+    /* UX disign */
+    --hoofd-color-uxdesign: rgba(166,124,82);
+    --secondary-color-uxdesign: rgb(160,82,45, 0.3);
+
+    /* website copy  */
+    --hoofd-color-websitecopy: rgba(255, 51, 51);
+    --secondary-color-websitecopy: rgb(255, 102, 102, 0.3);
+
+    /* yae */
+    --hoofd-color-yae: rgba(0, 204, 0);
+    --secondary-color-yae: rgb(0, 255, 0, 0.3);
+
+    /* about page */
+    --hoofd-color-about: rgba(128,128,128);
+    --secondary-color-about: rgba(128, 128, 128, 0.3);
+}
+
+
+        /* ======================*/
+        /* === appear effect  ===*/
+        /* ======================*/
+@keyframes appeareffect{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+section:nth-of-type(n+2).appear{
+    animation-name: appeareffect;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: .5s;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+
+
+
+
+
+        /* =========================*/
+        /* === Algemene stijlen  ===*/
+        /* =========================*/
+body{
+    width: 100%;
+    margin: 0;
+
+    background-color: var(--background-color);
+
+    font-family: 'Courgette', cursive;
+
+}
+
+
+
+
+
+
+
+    /* ============================*/
+    /* === background circles   ===*/
+    /* ============================*/
+
+.circles{
+    pointer-events: none;
+}
+
+.circles .circle1{
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    z-index: -1;
+
+    background-color: var(--secondary-color-home);
+    border-radius: 5em;
+
+    animation-name: flying;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-delay: -2s;
+}
+
+@keyframes flying{
+    0%{ 
+        right: 0%;
+        top: 50%;
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+
+    }
+    100%{
+        right: 50%;
+        top: 0%;
+        opacity: 0%;
+    }
+}
+
+.circles .circle2{
+    position: absolute;
+    z-index: -1;
+
+    background-color: var(--secondary-color-home);
+
+    animation-name: flying2;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+@keyframes flying2{
+    0%{ 
+        width: 10em;
+        height: 10em;
+        border-radius: 10em;
+        left: 0%;
+        top: 50%;
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+
+    }
+    100%{
+        width: 20em;
+        height: 20em;
+        border-radius: 20em;
+        left: 50%;
+        top: 0%;
+        opacity: 0%;
+    }
+}
+
+.circles .circle3{
+    width: 30em;
+    height: 30em;
+
+    position: absolute;
+    right: 7%;
+    top: 22%;
+    z-index: -1;
+
+    border-radius: 30em;
+    background-color: var(--secondary-color-home);
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+
+.circle3 img{
+    position: absolute;
+    right: 25%;
+    top: 5%;
+    width: 17em;
+
+    grid-column-start: 3;
+    grid-row-start: 2;
+
+    animation: none;
+}
+
+@keyframes flying3{
+    0%{ 
+        width: 10em;
+        height: 10em;
+        border-radius: 10em;
+        opacity: 0%;
+    }
+    100%{
+        width: 30em;
+        height: 30em;
+        border-radius: 30em;
+        opacity: 100%;
+    }
+}
+
+.circles .circle4{
+    position: absolute;
+    left: 15%;
+    top: 45%;
+    z-index: -1;
+
+    background-color: var(--secondary-color-home);
+
+    animation-name: flying4;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+
+@keyframes flying4{
+    0%{ 
+        width: 20em;
+        height: 20em;
+        border-radius: 20em;
+        opacity: 0%;
+    }
+    50%{
+        width: 10em;
+        height: 10em;
+        border-radius: 10em;
+        opacity: 100%;
+    }
+    100%{
+        width: 20em;
+        height: 20em;
+        border-radius: 20em;
+        opacity: 0%;
+    }
+}
+
+        /* =================*/
+        /* === algemeen  ===*/
+        /* =================*/
+
+h1,h2,h3,p{
+    pointer-events: none;
+}
+
+
+        /* =======================*/
+        /* === header stijlen  ===*/
+        /* =======================*/
+
+        /* page title */
+        /* ==========*/
+header h1{
+    font-family: var(--hoofd-font) ;
+    font-size: 10em ;
+    color: var(--background-color);
+    letter-spacing: 1.5vw;
+    text-indent: .3cm;
+    writing-mode: vertical-lr;
+    transform: rotate(.5turn);
+
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    width: .91em;
+    height:100%;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:0;
+
+    background-color: var(--hoofd-color-home);
+}
+
+    /* ================*/
+    /* Navigatie menu */
+    /* ================*/
+
+header nav{
+    height: 25em;
+    width: 3em;
+
+    position: fixed;
+    right: 3em;
+    top: 0;
+    z-index: 100;
+
+    padding: 0;
+
+    background-color: var(--hoofd-color-home);
+
+    transform: translateY(-100%);
+    transition:0.5s; 
+}
+
+header nav button{
+    font-size: .8em;
+    font-weight: bold;
+    color: var(--basis-font-color);
+
+    position: absolute;
+    bottom: -1.9em;
+    margin: 0;
+    padding: .4em;
+
+    cursor: pointer;
+
+    background-color: var(--secondary-color-home);
+    border:none;
+}
+
+header nav button:hover{
+    color: var(--hover-font-color);
+}
+
+header nav:hover{
+    transform: translateY(-98%);
+}
+
+header nav ul{
+    writing-mode: vertical-lr;
+    transform: rotate(.5turn);
+
+    margin: 0;
+    padding: 0 1em ;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav.toonNavmenu{
+    transform: translateY(0%);
+}
+
+
+header nav ul li{
+    list-style: none;
+    outline: none;
+}
+
+header nav ul li a{
+    font-family: var(--hoofd-font) ;
+    text-decoration: none;
+    color: var(--hover-font-color);
+}
+
+header nav ul li:focus,
+header nav ul li:hover{
+    font-weight: bold;
+    text-decoration: underline overline;
+}
+
+
+
+
+
+
+
+    /* =====================*/
+    /* === main stijlen  ===*/
+    /* =====================*/
+
+    /* Modeknop */
+#modeknop{
+    width: 5em;
+    height: 1.75em;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    font-size: .8em;
+    font-weight: bold;
+    color: var(--hover-font-color);
+
+    position: fixed;
+    right: 8.5em;
+    top: 0em;
+
+    z-index: 100;
+
+    background-color: var(--basis-font-color);
+    cursor: pointer;
+}
+
+body.darkMode{
+    --hover-font-color: rgb(32, 32,32);
+    --basis-font-color: white;
+
+    --background-color: rgb(32, 32,32);
+}
+
+body.darkMode #modeknop{
+    color: var(--hover-font-color);
+    background-color: var(--basis-font-color);
+}
+
+#modeknop:hover{
+    box-shadow: rgb(80, 80, 80) 0 0 .5em .1em;
+}
+
+body.darkMode #modeknop:active,
+#modeknop:active{
+    font-weight: lighter;
+}
+
+body.darkMode #modeknop:hover{
+    box-shadow: rgb(233, 233, 233) 0 0 .5em .1em ;
+}
+
+    /* main sections  */
+main section{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+main section h2{
+    color: var(--basis-font-color);
+    font-weight: bold;  
+    text-decoration: underline var(--hoofd-color-home);
+    font-size: 3em;
+
+    margin: 0;
+}
+
+main section p{
+    color: var(--basis-font-color);
+    font-size: 20px;
+
+    margin: 0;
+
+    line-height: 25px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+main section p:nth-of-type(1){
+    grid-row-start: 3;
+}
+
+main section p:nth-of-type(2){
+    grid-row-start: 4;
+}
+
+main section p:nth-of-type(3){
+    grid-row-start: 5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

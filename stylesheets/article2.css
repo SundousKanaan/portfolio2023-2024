@@ -1,11 +1,12 @@
 main>div>article:nth-of-type(2){
     height: 100vh;
 
+    /* width: 100vw; */
     padding: 0 1em;
 }
 
 main>div>article:nth-of-type(2) ul {
-    width: 100%;
+    /* width: 100%; */
     height: 30em;
 
     list-style: none;
@@ -16,11 +17,10 @@ main>div>article:nth-of-type(2) ul {
     flex-wrap: nowrap;
     align-items: center;
 
-    overflow-X: auto;
+    overflow-X: scroll;
     overflow-Y: hidden;
     scroll-snap-type: x mandatory;
-    overscroll-behavior-x: none;
-    gap: 4em;
+    gap: 2em;
 }
 
 main>div>article:nth-of-type(2) ul::-webkit-scrollbar {

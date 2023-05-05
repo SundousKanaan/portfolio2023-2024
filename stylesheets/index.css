@@ -303,7 +303,6 @@ main>div {
 
 main>div>article {
   width: 100vw;
-  /* height: 100vh; */
   padding: 2em 0;
 
   display: flex;
@@ -315,7 +314,7 @@ main>div>article {
 
   scroll-margin-top: 1em;
 
-  border-bottom: solid .5em red;
+  border-bottom: solid .5em rgb(255, 255, 255);
 }
 
 main>div>article h2{

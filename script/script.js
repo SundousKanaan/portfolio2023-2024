@@ -206,11 +206,43 @@ for (let i = 0; i < uxListEtems.length; i++) {
 }
 
 
-const uxData = [
-    {
-        name: "1",
-        image: "1",
-        prototype: "1"
-    }
-]
+const Gbook =
+{
+    name: "G-Book",
+    image: "logo.jpg",
+    project: "The present study is focused on the design of a multi-device experience for a specific activity. The approach involves setting user goals before, during, and after the activity, and selecting the most appropriate device for each stage. The aim of the study is to create a seamless and intuitive multi-device experience for users. In order to achieve this goal, a topic related to multi-device experiences will be chosen within the next three weeks, and the necessary functionalities and interactions will be developed gradually to create a detailed screen flow. The study is expected to contribute to the field of multi-device experiences by presenting a comprehensive approach that addresses the user's needs at each stage of the activity, and by providing a practical example of how to design a seamless and intuitive multi-device experience.",
+    idee: "Program to learn how to draw manga characters. An app that can make drawing a Manga character easier for the beginner artists, who want to learn but also create their own positions for their original characters. My focus is on the beginner artists to learn how to draw a manga character, because it is a different style from the other styles.",
+    ideeSketch_img: "gbook-storyboard.jpg",
+    Scenario_imgs: [
+        "gbook-scenario.jpg",
+        "gbook-user-requirements.jpg"
+    ],
+    screenflows_imgs: [
+        "gbook-jobstory1.jpg",
+        "gbook-jobstory2.jpg",
+        "gbook-jobstory3.jpg"
+    ],
+    Wireflow_img: "gbook-wireflow.jpg",
+    fullScreenflow_img: "gbook-screenflow.jpg",
+    site: "https://miro.com/app/board/uXjVOT0ccLU=/?invite_link_id=762314940213"
+}
 
+
+const MAAS = {
+    name: "MAAS ",
+    project: "A UX Designer is responsible for the development of a product's design, usability, and function, with a focus on the user's experience. They oversee the entire user journey and identify new opportunities for the product and the company, while also potentially contributing to branding and marketing efforts.",
+    idee: "The goal of this mission was to improve the user experience with MAAS coffee machines by doing research on the machine, but also the different coffee or tea moments and alternatives and to make a final poster for the main points of the research.",
+    study: [
+        "After some user testing, watching interviews and doing some research I found ten solutions to our user problems and made lo-fi sketches for them.",
+        "uxdesign-schetsen.jpg"
+    ],
+    advice_imgs: [
+        "uxdesign-oplossing0.jpg",
+        "uxdesign-oplossing1.jpg",
+        "uxdesign-oplossing2.jpg",
+        "uxdesign-oplossing3.jpg",
+        "uxdesign-oplossing4.jpg",
+        "uxdesign-oplossing5.jpg"
+    ],
+    post: "uxdesign-Poster.jpg"
+}
