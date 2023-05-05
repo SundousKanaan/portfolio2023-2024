@@ -3,7 +3,7 @@ main>div>article:nth-of-type(3) {
     height: fit-content;
     padding: 0 1em 4em 1em;
 
-    gap: 1em;
+    gap: 3em;
 }
 
 main>div>article:nth-of-type(3) section {
@@ -15,8 +15,8 @@ main>div>article:nth-of-type(3) section {
 
 main>div>article:nth-of-type(3) section ul {
     width: 100%;
+    
     height: 100%;
-
     list-style: none;
 
     display: flex;
@@ -42,8 +42,8 @@ main>div>article:nth-of-type(3) section ul::-webkit-scrollbar-thumb {
 }
 
 main>div>article:nth-of-type(3) section ul li {
-    width: 15em;
-    height: 20em;
+    width: 20em;
+    height: 25em;
 
     border-radius: 1em;
 
@@ -61,7 +61,77 @@ main>div>article:nth-of-type(3) section ul li {
 
     display: grid;
     place-items: center;
+
 }
+
+main>div>article:nth-of-type(3) section ul li:nth-of-type(2)::before{
+    content: "";
+    display: block;
+    width: 30em;
+    height: .5em;
+
+    position: absolute;
+    bottom: 0;
+
+    z-index: 3;
+    background-color: red;
+
+    animation: scanline 2s 1.1s 2 both linear alternate;
+}
+
+@keyframes scanline {
+    0%{
+        transform: translateY(.5em);
+    }
+    50%{
+        transform: translateY(-33em);
+    }
+    100%{
+        transform: translateY(.5em);
+    }
+}
+
+main>div>article:nth-of-type(3) section ul li:nth-of-type(2) {
+
+    animation: scan 1s linear 1 forwards, disper 1s 1.1s linear 4 forwards, backdisper 1s 4.3s linear 1 forwards;
+
+
+    /* animation: disper . 1.5 1 linear ; */
+
+}
+
+@keyframes scan {
+    0%{
+        transform: translateY(0) rotate(0);
+    }
+    50%{
+        transform: translateY(33em) rotate(0);
+    }
+    100%{
+        transform: translateY(33em) rotate(90deg);
+    }
+}
+
+@keyframes disper {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+@keyframes backdisper {
+    0%{
+        opacity: 0%;
+        transform: translateY(33em) rotate(90deg);
+    }
+    100%{
+        opacity: 100%;
+        transform: none;
+    }
+}
+
 
 main>div>article:nth-of-type(3) section ul li:has(button:focus-visible),
 main>div>article:nth-of-type(3) section ul li:hover {
@@ -156,4 +226,14 @@ main>div>article:nth-of-type(3) section ul li.openCard h3{
 
 main>div>article:nth-of-type(3) section ul li.openCard > section {
     display: block;
+}
+
+main>div>article:nth-of-type(3) iframe{
+    width: 90%;
+    aspect-ratio: 16/9;
+    /* height: 80vh; */
+
+    border: solid .3em white;
+    border-radius: 2em;
+    box-shadow: 0 0 .5em white;
 }
