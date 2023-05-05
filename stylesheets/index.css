@@ -35,10 +35,10 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5em;
 }
 
-:focus-visible{
+/* :focus-visible{
   outline-color: transparent;
   outline-style: none;
-}
+} */
 
 p:focus-visible{
   color: var(--dark-text);
