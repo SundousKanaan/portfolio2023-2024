@@ -164,18 +164,31 @@ async function makeProject(reposData) {
 // UX/UI
 
 const uxList = document.querySelector("main>div>article:nth-of-type(3) ul")
+const uxfiles = [{
+            name: "G-Book",
+            link:"gbook",
+           description: "Program for multiple devices to learn how to draw manga characters. An application that can make drawing a Manga character easier for novice artists."
+        },
+        {
+            name: "MAAS",
+            link: "maas",
+            description: "Studying the product (coffee maker from MAS), studying the problems of users, and providing advice to improve the product in the form of an A3 poster."
+        }
+        ]
 
-function none() {
-    for (let i = 0; i < 3; i++) {
+
+//  "maas", "noted", "yae"];
+
+function makeUXCards() {
+    for (let i = 0; i < uxfiles.length; i++) {
         const li = document.createElement("li")
         li.innerHTML = `
-             <h3>work name</h3>
-             <img src="./projectsimages/BusinessCard.png" alt="">
+             <h3>${uxfiles[i].name}</h3>
+             <img src="./projectsimages/BusinessCard.png" alt="${uxfiles[i].name} foto">
         
             <section>
-                <p>Description</p>
-                <button>Details</button>
-                <a href="">prototype</a>
+                <p>${uxfiles[i].description}</p>
+                <a href="./${uxfiles[i].link}.html" target="display-frame" >Details</a>
             </section>
         `
         uxList.appendChild(li)
@@ -183,11 +196,10 @@ function none() {
     console.log("hi", uxList);
 }
 
-none();
+makeUXCards();
 
 const uxListEtems = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
 console.log("NN", uxListEtems[0]);
-
 
 for (let i = 0; i < uxListEtems.length; i++) {
     uxListEtems[i].addEventListener("click", () => {

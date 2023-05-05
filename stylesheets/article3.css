@@ -64,75 +64,6 @@ main>div>article:nth-of-type(3) section ul li {
 
 }
 
-main>div>article:nth-of-type(3) section ul li:nth-of-type(2)::before{
-    content: "";
-    display: block;
-    width: 30em;
-    height: .5em;
-
-    position: absolute;
-    bottom: 0;
-
-    z-index: 3;
-    background-color: red;
-
-    animation: scanline 2s 1.1s 2 both linear alternate;
-}
-
-@keyframes scanline {
-    0%{
-        transform: translateY(.5em);
-    }
-    50%{
-        transform: translateY(-33em);
-    }
-    100%{
-        transform: translateY(.5em);
-    }
-}
-
-main>div>article:nth-of-type(3) section ul li:nth-of-type(2) {
-
-    animation: scan 1s linear 1 forwards, disper 1s 1.1s linear 4 forwards, backdisper 1s 4.3s linear 1 forwards;
-
-
-    /* animation: disper . 1.5 1 linear ; */
-
-}
-
-@keyframes scan {
-    0%{
-        transform: translateY(0) rotate(0);
-    }
-    50%{
-        transform: translateY(33em) rotate(0);
-    }
-    100%{
-        transform: translateY(33em) rotate(90deg);
-    }
-}
-
-@keyframes disper {
-    0%{
-        opacity: 100%;
-    }
-    100%{
-        opacity: 0%;
-    }
-}
-
-@keyframes backdisper {
-    0%{
-        opacity: 0%;
-        transform: translateY(33em) rotate(90deg);
-    }
-    100%{
-        opacity: 100%;
-        transform: none;
-    }
-}
-
-
 main>div>article:nth-of-type(3) section ul li:has(button:focus-visible),
 main>div>article:nth-of-type(3) section ul li:hover {
     transform: rotateY(35deg);
@@ -188,12 +119,6 @@ main>div>article:nth-of-type(3) section ul li.openCard img {
     display: none;
 }
 
-main>div>article:nth-of-type(3) section ul li.openCard{
-    background-color: pink;
-
-    animation: flipping 1s 1 both ease-out;
-}
-
 main>div>article:nth-of-type(3) section ul li.closeCard{
     background-color: black;
 
@@ -218,6 +143,57 @@ main>div>article:nth-of-type(3) section ul li.closeCard{
     }
 }
 
+
+main>div>article:nth-of-type(3) section ul li.scan::before{
+    content: "";
+    display: block;
+    width: 30em;
+    height: .5em;
+
+    position: absolute;
+    bottom: 0;
+
+    z-index: 3;
+    background-color: red;
+
+    animation: scanline 2s 1.1s 2 both linear alternate;
+}
+
+@keyframes scanline {
+    0%{
+        transform: translateY(.5em);
+    }
+    100%{
+        transform: translateY(-33em);
+    }
+}
+
+main>div>article:nth-of-type(3) section ul li.scan {
+    animation: disper 1s 1.1s 4 ease-in-out alternate;
+}
+
+@keyframes disper {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+
+main>div>article:nth-of-type(3) section ul li.openCard{
+    background-color: var(--secondere-color);
+
+    padding: 1em;
+
+    animation: flipping 1s 1 both ease-out;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 main>div>article:nth-of-type(3) section ul li.openCard h3{
     opacity: 100%;
     position: relative;
@@ -226,6 +202,48 @@ main>div>article:nth-of-type(3) section ul li.openCard h3{
 
 main>div>article:nth-of-type(3) section ul li.openCard > section {
     display: block;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: blueviolet; */
+    position: relative;
+}
+
+main>div>article:nth-of-type(3) section ul li.openCard > section p{
+    width: 100%;
+    text-align: center;
+}
+
+main>div>article:nth-of-type(3) section ul li.openCard > section a{
+    position: absolute;
+    bottom: 1em;
+
+    width: 7em;
+    height: 2.5em;
+    text-align: center;
+
+    display: grid;
+    place-items: center;
+    border-radius: 2em;
+    text-decoration: none;
+    color: var(--dark-text);
+
+    background-color: var(--nav);
+    box-shadow: -.2em .2em 0 rgba(0, 0, 0, 0.527);
+
+    transition: .5s;
+}
+
+main>div>article:nth-of-type(3) section ul li.openCard > section a:hover{
+    transform: scale(1.2);
+    color: var(--text-color);
+
+    background-color: var(--bg);
+    box-shadow: inset 0 0 0 .15em rgba(255, 255, 255, 0.671),
+    -.2em .2em 0 rgba(255, 255, 255, 0.527);
 }
 
 main>div>article:nth-of-type(3) iframe{
