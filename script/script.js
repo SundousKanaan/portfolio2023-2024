@@ -165,16 +165,16 @@ async function makeProject(reposData) {
 
 const uxList = document.querySelector("main>div>article:nth-of-type(3) ul")
 const uxfiles = [{
-            name: "G-Book",
-            link:"gbook",
-           description: "Program for multiple devices to learn how to draw manga characters. An application that can make drawing a Manga character easier for novice artists."
-        },
-        {
-            name: "MAAS",
-            link: "maas",
-            description: "Studying the product (coffee maker from MAS), studying the problems of users, and providing advice to improve the product in the form of an A3 poster."
-        }
-        ]
+    name: "G-Book",
+    link: "gbook",
+    description: "Program for multiple devices to learn how to draw manga characters. An application that can make drawing a Manga character easier for novice artists."
+},
+{
+    name: "MAAS",
+    link: "maas",
+    description: "Studying the product (coffee maker from MAS), studying the problems of users, and providing advice to improve the product in the form of an A3 poster."
+}
+]
 
 
 //  "maas", "noted", "yae"];
@@ -189,6 +189,7 @@ function makeUXCards() {
 
             <section>
                 <p>${uxfiles[i].description}</p>
+                <button></button>
                 <a href="./${uxfiles[i].link}.html" target="display-frame" >Details</a>
             </section>
         `
@@ -199,28 +200,29 @@ function makeUXCards() {
 
 makeUXCards();
 
-const uxListEtems = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
-console.log("NN", uxListEtems[0]);
+const openCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li > button")
+const Cards = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
 
-for (let i = 0; i < uxListEtems.length; i++) {
-    uxListEtems[i].addEventListener("click", () => {
-        for (let i = 0; i < uxListEtems.length; i++){
-            if (uxListEtems[i].classList.contains("openCard")) {
-                uxListEtems[i].classList.remove("openCard");
-                uxListEtems[i].classList.add("closeCard");
+for (let i = 0; i < openCardButtons.length; i++) {
+    openCardButtons[i].addEventListener("click", () => {
+        for (let i = 0; i < openCardButtons.length; i++) {
+            if (Cards[i].classList.contains("openCard")) {
+                Cards[i].classList.add("closeCard");
+                Cards[i].classList.remove("openCard");
             }
         }
-        uxListEtems[i].classList.add("openCard");
-        // if (uxListEtems[i].classList.contains("closeCard")) {
-        //     uxListEtems[i].classList.remove("closeCard");
-        //     uxListEtems[i].classList.add("openCard");
-        // }
-        // else if (uxListEtems[i].classList.contains("openCard")) {
-        //     uxListEtems[i].classList.remove("openCard");
-        //     uxListEtems[i].classList.add("closeCard");
-        // }
-        // else {
-        //     uxListEtems[i].classList.add("openCard");
-        // }
+        Cards[i].classList.add("openCard");
     });
 }
+
+
+const closeCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section button")
+
+for (let i = 0; i < closeCardButtons.length; i++) {
+    closeCardButtons[i].addEventListener("click", () => {
+        Cards[i].classList.remove("openCard");
+        Cards[i].classList.add("closeCard");
+    });
+}
+
+
