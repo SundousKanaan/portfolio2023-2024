@@ -167,12 +167,26 @@ const uxList = document.querySelector("main>div>article:nth-of-type(3) ul")
 const uxfiles = [{
     name: "G-Book",
     link: "gbook",
+    image: "gbook.jpg",
     description: "Program for multiple devices to learn how to draw manga characters. An application that can make drawing a Manga character easier for novice artists."
 },
 {
     name: "MAAS",
     link: "maas",
+    image: "maas.png",
     description: "Studying the product (coffee maker from MAS), studying the problems of users, and providing advice to improve the product in the form of an A3 poster."
+},
+{
+    name: "YAE",
+    link: "yae",
+    image:"yae.png",
+    description: "The task was to create an experience for young visitors between the ages of 7 and 12 to Artis Park in Amsterdam. Where they can roam in the park without relying on their parents to guide them."
+},
+{
+    name: "NOTED",
+    link: "noted",
+    image:"noted.jpg",
+    description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
 }
 ]
 
@@ -184,13 +198,13 @@ function makeUXCards() {
         const li = document.createElement("li")
         li.innerHTML = `
              <h3>${uxfiles[i].name}</h3>
-             <img src="./projectsimages/BusinessCard.png" alt="${uxfiles[i].name} foto">
+             <img src="./UXimages/${uxfiles[i].image}" alt="${uxfiles[i].name} foto">
              <button></button>
 
             <section>
                 <p>${uxfiles[i].description}</p>
                 <button></button>
-                <a href="./${uxfiles[i].link}.html" target="display-frame" >Details</a>
+                <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >Details</a>
             </section>
         `
         uxList.appendChild(li)

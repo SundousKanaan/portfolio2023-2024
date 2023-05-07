@@ -3,7 +3,7 @@
         /* =====================*/
 
 /* header prototype page  */
-.prototype header h1{
+.noted header h1{
     font-size: 7em;
     letter-spacing: -2px;
     padding-right: .4em;
@@ -12,38 +12,39 @@
 
 
     /* Navigation menu */
-.prototype header nav{
+.noted header nav{
     background-color: var(--hoofd-color-prototype);
 }
 
-.prototype header nav button{
+.noted header nav button{
     background-color: var(--secondary-color-prototype);
 }
 
 
 
     /* hoofd section prototype page  */
-.prototype main section h2{
+.noted main section h2{
     text-decoration: underline var(--hoofd-color-prototype);
 }
 
-.prototype main section:nth-of-type(1) img{
+.noted main section:nth-of-type(1) img{
     position: absolute;
     left: 18.7cm;
     top: 1.2cm;
 }
-.prototype main section:nth-of-type(1) nav{
+
+.noted main section:nth-of-type(1) nav{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 4;
 }
 
-.prototype main section nav a{
+.noted main section nav a{
     color: var(--hoofd-color-prototype);
     text-decoration-color: var(--secondary-color-prototype);
 }
 
-.prototype main section nav a::before{
+.noted main section nav a::before{
     background-color: var(--hoofd-color-prototype);
 }
 
@@ -53,7 +54,7 @@
     /* ======================*/
 
     /* background circles */
-.prototypecircle{
+.notedcircle{
     background-color: var(--secondary-color-prototype);
     position: absolute;
     right: 7%;
@@ -70,7 +71,7 @@
     animation-timing-function: ease-in-out;
     animation-duration: 2s;
 }
-.prototypecircle img{
+.notedcircle img{
     width: 14em;
 
     position: absolute;
@@ -78,7 +79,7 @@
     top: 15%;
 }
 
-.prototype main section:nth-of-type(n+2) h4{
+.noted main section:nth-of-type(n+2) h4{
     color: var(--hoofd-color-prototype);
     margin: 0;
 
@@ -86,23 +87,23 @@
 }
 
 
-.prototype main section:last-of-type{
+.noted main section:last-of-type{
 margin-bottom: 8em;
 }
 
-.prototype main section:nth-of-type(n+2) h4{
+.noted main section:nth-of-type(n+2) h4{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
 }
 
-.prototype main section:nth-of-type(n+2) p{
+.noted main section:nth-of-type(n+2) p{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 3;
 }
 
-.prototype main section:nth-of-type(n+2) img{
+.noted main section:nth-of-type(n+2) img{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -141,18 +142,20 @@ margin-bottom: 8em;
     scroll-snap-align: center;
 }
 
-.prototype main section:nth-of-type(n+2) nav{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 4;
-}
 
-    /* works nav*/
-.prototype main>nav{
+/* works nav*/
+.noted main>nav{
     background-color: var(--hoofd-color-prototype);
 }
 
-.prototype main>nav button{
+.noted main>nav button{
     background-color: var(--hoofd-color-prototype);
 }
+
+.noted main section:nth-of-type(6) > iframe {
+    width: 375px; /* Width of iPhone 6/7/8 in portrait mode */
+    aspect-ratio: 375/667; /* Aspect ratio of iPhone 6/7/8 in portrait mode */
+    align-self: center;
+}
+  
 

@@ -281,9 +281,9 @@ main>div>article:nth-of-type(3) section ul li.openCard>section a:hover {
 }
 
 main>div>article:nth-of-type(3) iframe {
-    width: 90%;
-    aspect-ratio: 16/9;
-    /* height: 80vh; */
+    width: 95%;
+    aspect-ratio: 9/16;
+    /* height: 50em; */
 
     border: solid .3em white;
     border-radius: 2em;
