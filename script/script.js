@@ -179,13 +179,13 @@ const uxfiles = [{
 {
     name: "YAE",
     link: "yae",
-    image:"yae.png",
+    image: "yae.png",
     description: "The task was to create an experience for young visitors between the ages of 7 and 12 to Artis Park in Amsterdam. Where they can roam in the park without relying on their parents to guide them."
 },
 {
     name: "NOTED",
     link: "noted",
-    image:"noted.jpg",
+    image: "noted.jpg",
     description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
 }
 ]
@@ -216,6 +216,8 @@ makeUXCards();
 
 const openCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li > button")
 const Cards = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
+const CardsList = document.querySelector("main>div>article:nth-of-type(3) ul")
+
 
 for (let i = 0; i < openCardButtons.length; i++) {
     openCardButtons[i].addEventListener("click", () => {
@@ -229,14 +231,32 @@ for (let i = 0; i < openCardButtons.length; i++) {
     });
 }
 
-
 const closeCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section button")
+const detailsButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section a")
+// const uxArticle = document.querySelector("main>div>article:nth-of-type(3)")
+
+const iframeArticle = document.querySelector("main>div>article:nth-of-type(4)")
+const iframe = document.querySelector("main>div>article:nth-of-type(4) iframe")
 
 for (let i = 0; i < closeCardButtons.length; i++) {
     closeCardButtons[i].addEventListener("click", () => {
         Cards[i].classList.remove("openCard");
         Cards[i].classList.add("closeCard");
+        for (let i = 0; i < Cards.length; i++) {
+            if (!Cards[i].classList.contains("openCard")) {
+                iframeArticle.classList.remove("openIframe");
+            }
+        }
     });
 }
 
 
+
+for (let i = 0; i < detailsButtons.length; i++) {
+    detailsButtons[i].addEventListener("click", () => {
+        if (iframe.href !== "") {
+            iframeArticle.classList.add("openIframe");
+            // window.scrollTop = uxArticle.scrollHeight;
+        }
+    });
+}

@@ -17,6 +17,8 @@ main>div>article:nth-of-type(3) section ul {
     width: 100%;
 
     height: 100%;
+
+    /* height: 25em; */
     list-style: none;
 
     display: flex;
@@ -280,12 +282,3 @@ main>div>article:nth-of-type(3) section ul li.openCard>section a:hover {
         -.2em .2em 0 rgba(255, 255, 255, 0.527);
 }
 
-main>div>article:nth-of-type(3) iframe {
-    width: 95%;
-    aspect-ratio: 9/16;
-    /* height: 50em; */
-
-    border: solid .3em white;
-    border-radius: 2em;
-    box-shadow: 0 0 .5em white;
-}

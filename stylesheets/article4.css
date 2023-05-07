@@ -1,0 +1,25 @@
+main>div>article:nth-of-type(4){
+    height: 0;
+}
+
+main>div>article:nth-of-type(4).openIframe{
+    height: fit-content;
+}
+
+main>div>article:nth-of-type(4) iframe {
+    width: 95%;
+    aspect-ratio: 9/14;
+    /* aspect-ratio: 9/16; */
+
+    border: solid .3em white;
+    border-radius: 2em;
+    box-shadow: 0 0 .5em white;
+
+    transform: scaleY(0);
+    transform-origin: top;
+    /* transition: .5s; */
+}
+
+main>div>article:nth-of-type(4).openIframe iframe{
+    transform: scaleY(1);
+}
