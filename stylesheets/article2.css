@@ -19,7 +19,7 @@ main>div>article:nth-of-type(2) ul {
     overflow-X: scroll;
     overflow-Y: hidden;
     scroll-snap-type: x mandatory;
-    overscroll-behavior: contain;
+    overscroll-behavior-x: contain;
     gap: 2em;
 }
 
