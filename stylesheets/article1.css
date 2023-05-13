@@ -1,7 +1,7 @@
 main > div > article:first-of-type {
     /* display: flex;
     align-items: center; */
-
+height: 100dvh;
     gap: 3em;
 }
 

@@ -9,6 +9,8 @@ main>div>article:nth-of-type(3) {
 main>div>article:nth-of-type(3) section {
     width: 100%;
     height: fit-content;
+    perspective: 50em;
+
 }
 
 main>div>article:nth-of-type(3) section ul {
@@ -23,7 +25,6 @@ main>div>article:nth-of-type(3) section ul {
     gap: 3em; */
 
     transform-style: preserve-3d;
-    perspective: 50em;
 
     position: relative;
 
