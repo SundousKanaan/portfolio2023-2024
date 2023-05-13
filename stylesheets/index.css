@@ -298,6 +298,7 @@ main>div {
 
   display: flex;
   flex-direction: column;
+  gap: 4em;
 
 }
 
@@ -314,7 +315,7 @@ main>div>article {
 
   scroll-margin-top: 1em;
 
-  border-bottom: solid .5em rgb(255, 255, 255);
+  /* border-bottom: solid .5em rgb(255, 255, 255); */
 }
 
 main>div>article h2{
