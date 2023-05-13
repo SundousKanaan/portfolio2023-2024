@@ -1,6 +1,5 @@
 main>div>article:nth-of-type(2){
-    height: 100vh;
-
+    /* height: 100vh; */
     /* width: 100vw; */
     padding: 0 1em;
 }
@@ -20,7 +19,7 @@ main>div>article:nth-of-type(2) ul {
     overflow-X: scroll;
     overflow-Y: hidden;
     scroll-snap-type: x mandatory;
-    overscroll-behavior-x: contain;
+    overscroll-behavior: contain;
     gap: 2em;
 }
 
