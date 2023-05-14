@@ -188,8 +188,36 @@ const uxfiles = [{
     image: "noted.jpg",
     description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
 }
+    ,
+{
+    name: "5",
+    link: "noted",
+    image: "noted.jpg",
+    description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
+}
+    ,
+{
+    name: "6",
+    link: "noted",
+    image: "noted.jpg",
+    description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
+}
+    // ,
+    // {
+    //     name: "NOTED",
+    //     link: "noted",
+    //     image: "noted.jpg",
+    //     description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
+    // },
+    // {
+    //     name: "NOTED",
+    //     link: "noted",
+    //     image: "noted.jpg",
+    //     description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
+    // }
 ]
 
+console.log(uxfiles.length);
 
 //  "maas", "noted", "yae"];
 
@@ -214,10 +242,11 @@ function makeUXCards() {
 
 makeUXCards();
 
-const openCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li > button")
-const Cards = document.querySelectorAll("main>div>article:nth-of-type(3) ul li")
-const CardsList = document.querySelector("main>div>article:nth-of-type(3) ul")
-
+const openCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) section ul li > button")
+const Cards = document.querySelectorAll("main>div>article:nth-of-type(3) section ul li")
+const CardsList = document.querySelector("main>div>article:nth-of-type(3) section ul")
+const nextCard = document.querySelector("main>div>article:nth-of-type(3) section > button:first-of-type");
+const previousCard = document.querySelector("main>div>article:nth-of-type(3) section > button:nth-of-type(2)");
 
 for (let i = 0; i < openCardButtons.length; i++) {
     openCardButtons[i].addEventListener("click", () => {
@@ -256,7 +285,37 @@ for (let i = 0; i < detailsButtons.length; i++) {
     detailsButtons[i].addEventListener("click", () => {
         if (iframe.href !== "") {
             iframeArticle.classList.add("openIframe");
+            if (condition) {
+
+            }
             // window.scrollTop = uxArticle.scrollHeight;
         }
     });
+}
+
+// var carousel = document.querySelector(".carousel");
+// CardsList
+
+var currdeg = 0;
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+        rotateCarousel(60);
+    } else if (event.key === "ArrowLeft") {
+        rotateCarousel(-60);
+    }
+});
+
+previousCard.addEventListener("click", () => {
+    console.log(" 1");
+    rotateCarousel(-60);
+});
+
+nextCard.addEventListener("click", () => {
+    rotateCarousel(60);
+});
+
+function rotateCarousel(degrees) {
+    console.log(" 2");
+    currdeg += degrees;
+    CardsList.style.transform = "translateZ(500px) rotateY(" + currdeg + "deg)";
 }

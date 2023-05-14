@@ -8,9 +8,27 @@ main>div>article:nth-of-type(3) {
 
 main>div>article:nth-of-type(3) section {
     width: 100%;
-    height: fit-content;
+    height: 30em;
     perspective: 50em;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
 
+main>div>article:nth-of-type(3) section > button{
+    width: 6em;
+    height: 4em;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+}
+
+main>div>article:nth-of-type(3) section > button:first-of-type{
+    left: 80%;
+}
+
+main>div>article:nth-of-type(3) section > button:last-of-type{
+    right: 80%;
 }
 
 main>div>article:nth-of-type(3) section ul {
@@ -18,15 +36,13 @@ main>div>article:nth-of-type(3) section ul {
     height: 100%;
     list-style: none;
 
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3em; */
-
     transform-style: preserve-3d;
+    transition: transform 1s;
+    transform: translateZ(500px);
 
     position: relative;
+    display: grid;
+    place-items: center;
 
 }
 
@@ -54,13 +70,37 @@ main>div>article:nth-of-type(3) section ul li {
 
     overflow: hidden;
 
-    position: relative;
+    position: absolute;
 
     display: grid;
     place-items: center;
 
     transform-origin: center;
 
+}
+
+main>div>article:nth-of-type(3) section ul li:first-child{
+    transform: rotateY(0deg) translateZ(501px);
+}
+
+main>div>article:nth-of-type(3) section ul li:nth-child(2){
+    transform: rotateY(60deg) translateZ(501px);
+}
+
+main>div>article:nth-of-type(3) section ul li:nth-child(3){
+    transform: rotateY(120deg) translateZ(501px);
+}
+
+main>div>article:nth-of-type(3) section ul li:nth-child(4){
+    transform: rotateY(180deg) translateZ(501px);
+}
+
+main>div>article:nth-of-type(3) section ul li:nth-child(5){
+    transform: rotateY(240deg) translateZ(501px);
+}
+
+main>div>article:nth-of-type(3) section ul li:nth-child(6){
+    transform: rotateY(300deg) translateZ(501px);
 }
 
 main>div>article:nth-of-type(3) section ul li::after {
@@ -241,10 +281,10 @@ main>div>article:nth-of-type(3) section ul li>button {
 }
 
 
-main>div>article:nth-of-type(3) section ul li:has(button:focus-visible),
+/* main>div>article:nth-of-type(3) section ul li:has(button:focus-visible),
 main>div>article:nth-of-type(3) section ul li:has(button:hover) {
     transform: rotateY(35deg);
-}
+} */
 
 main>div>article:nth-of-type(3) section ul li.openCard>section a {
     
@@ -268,7 +308,7 @@ main>div>article:nth-of-type(3) section ul li.openCard>section a {
     transition: .5s;
 }
 
-main>div>article:nth-of-type(3) section ul li.openCard>section a:focus-visible,
+/* main>div>article:nth-of-type(3) section ul li.openCard>section a:focus-visible,
 main>div>article:nth-of-type(3) section ul li.openCard>section a:hover {
     transform: scale(1.2);
     color: var(--text-color);
@@ -276,5 +316,5 @@ main>div>article:nth-of-type(3) section ul li.openCard>section a:hover {
     background-color: var(--bg);
     box-shadow: inset 0 0 0 .15em rgba(255, 255, 255, 0.671),
         -.2em .2em 0 rgba(255, 255, 255, 0.527);
-}
+} */
 
