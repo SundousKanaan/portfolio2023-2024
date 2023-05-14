@@ -245,8 +245,10 @@ makeUXCards();
 const openCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) section ul li > button")
 const Cards = document.querySelectorAll("main>div>article:nth-of-type(3) section ul li")
 const CardsList = document.querySelector("main>div>article:nth-of-type(3) section ul")
-const nextCard = document.querySelector("main>div>article:nth-of-type(3) section > button:first-of-type");
 const previousCard = document.querySelector("main>div>article:nth-of-type(3) section > button:nth-of-type(2)");
+const nextCard = document.querySelector("main>div>article:nth-of-type(3) section > button:first-of-type");
+
+console.log(nextCard);
 
 for (let i = 0; i < openCardButtons.length; i++) {
     openCardButtons[i].addEventListener("click", () => {
@@ -293,9 +295,6 @@ for (let i = 0; i < detailsButtons.length; i++) {
     });
 }
 
-// var carousel = document.querySelector(".carousel");
-// CardsList
-
 var currdeg = 0;
 document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight") {
@@ -306,16 +305,16 @@ document.addEventListener("keydown", (event) => {
 });
 
 previousCard.addEventListener("click", () => {
-    console.log(" 1");
     rotateCarousel(-60);
 });
 
 nextCard.addEventListener("click", () => {
+    console.log(" 1");
     rotateCarousel(60);
 });
 
 function rotateCarousel(degrees) {
-    console.log(" 2");
     currdeg += degrees;
+    console.log(" 2",currdeg);
     CardsList.style.transform = "translateZ(500px) rotateY(" + currdeg + "deg)";
 }
