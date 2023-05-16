@@ -1,7 +1,8 @@
 main>div>article:nth-of-type(3) {
     /* height: 100vh; */
     height: fit-content;
-    padding: 0 1em 4em 1em;
+    padding: 0 1em 0 1em;
+    overflow: hidden;
 
     gap: 3em;
 }
@@ -38,7 +39,8 @@ main>div>article:nth-of-type(3) section ul {
 
     transform-style: preserve-3d;
     transition: transform 1s;
-    transform: translateZ(500px);
+    transform: translateZ(500px) ;
+    /* transform: scale(.6) rotateX(-30deg); */
 
     position: relative;
     display: grid;
@@ -80,27 +82,27 @@ main>div>article:nth-of-type(3) section ul li {
 }
 
 main>div>article:nth-of-type(3) section ul li:first-child{
-    transform: rotateY(0deg) translateZ(501px);
+    transform: rotateY(0deg) translateZ(-501px);
 }
 
 main>div>article:nth-of-type(3) section ul li:nth-child(2){
-    transform: rotateY(60deg) translateZ(501px);
+    transform: rotateY(-60deg) translateZ(-501px);
 }
 
 main>div>article:nth-of-type(3) section ul li:nth-child(3){
-    transform: rotateY(120deg) translateZ(501px);
+    transform: rotateY(-120deg) translateZ(-501px);
 }
 
 main>div>article:nth-of-type(3) section ul li:nth-child(4){
-    transform: rotateY(180deg) translateZ(501px);
+    transform: rotateY(-180deg) translateZ(-501px);
 }
 
 main>div>article:nth-of-type(3) section ul li:nth-child(5){
-    transform: rotateY(240deg) translateZ(501px);
+    transform: rotateY(-240deg) translateZ(-501px);
 }
 
 main>div>article:nth-of-type(3) section ul li:nth-child(6){
-    transform: rotateY(300deg) translateZ(501px);
+    transform: rotateY(-300deg) translateZ(-501px);
 }
 
 main>div>article:nth-of-type(3) section ul li::after {
@@ -147,33 +149,6 @@ main>div>article:nth-of-type(3) section ul li:hover img {
 main>div>article:nth-of-type(3) section ul li>section {
     display: none;
 }
-
-main>div>article:nth-of-type(3) section ul li.closeCard {
-    background-color: black;
-
-    animation: closeflipping 1s 1 both ease-out;
-}
-
-@keyframes flipping {
-    0% {
-        transform: rotateY(0turn);
-    }
-
-    100% {
-        transform: rotateY(3turn);
-    }
-}
-
-@keyframes closeflipping {
-    0% {
-        transform: rotateY(0turn);
-    }
-
-    100% {
-        transform: rotateY(3turn);
-    }
-}
-
 
 main>div>article:nth-of-type(3) section ul li.scan::before {
     content: "";
@@ -260,6 +235,8 @@ main>div>article:nth-of-type(3) section ul li.openCard>section p {
     position: absolute;
 }
 
+
+
 main>div>article:nth-of-type(3) section ul li section button,
 main>div>article:nth-of-type(3) section ul li>button {
     width: 100%;
@@ -279,12 +256,6 @@ main>div>article:nth-of-type(3) section ul li>button {
 
     background-color: transparent;
 }
-
-
-/* main>div>article:nth-of-type(3) section ul li:has(button:focus-visible),
-main>div>article:nth-of-type(3) section ul li:has(button:hover) {
-    transform: rotateY(35deg);
-} */
 
 main>div>article:nth-of-type(3) section ul li.openCard>section a {
     
@@ -308,13 +279,30 @@ main>div>article:nth-of-type(3) section ul li.openCard>section a {
     transition: .5s;
 }
 
-/* main>div>article:nth-of-type(3) section ul li.openCard>section a:focus-visible,
-main>div>article:nth-of-type(3) section ul li.openCard>section a:hover {
-    transform: scale(1.2);
-    color: var(--text-color);
 
-    background-color: var(--bg);
-    box-shadow: inset 0 0 0 .15em rgba(255, 255, 255, 0.671),
-        -.2em .2em 0 rgba(255, 255, 255, 0.527);
+main>div>article:nth-of-type(3) section ul li.closeCard {
+    background-color: black;
+
+    /* animation: closeflipping 1s 1 both ease-out; */
+}
+
+@keyframes flipping {
+    0% {
+        transform: translateZ(-501px) rotateY(0turn);
+    }
+
+    100% {
+        transform: translateZ(-501px) rotateY(3turn);
+    }
+}
+
+/* @keyframes closeflipping {
+    0% {
+        transform: rotateY(0turn);
+    }
+
+    100% {
+        transform: rotateY(3turn);
+    }
 } */
 

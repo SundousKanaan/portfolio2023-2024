@@ -1,9 +1,45 @@
 main>div>article:nth-of-type(4){
-    height: 0;
+    /* height: 0; */
+    display: none;
+
+    position: relative;
+    margin-bottom: 3em;
+
+    /* background-color: aliceblue; */
+}
+
+main>div>article:nth-of-type(5),
+main>div>article:nth-of-type(6){
+    display: none;
 }
 
 main>div>article:nth-of-type(4).openIframe{
     height: fit-content;
+    display: flex;
+}
+
+main>div>article:nth-of-type(4) > button{
+    width: 3em;
+    aspect-ratio: 1/1;
+
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    z-index: 1;
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--them-color);
+
+    /* display: grid; */
+    place-items: center;
+
+    cursor: pointer;
+    display: none;
+}
+
+main>div>article:nth-of-type(4) > button.closedIframe{
+    display: grid;
 }
 
 main>div>article:nth-of-type(4) iframe {

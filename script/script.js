@@ -245,8 +245,8 @@ makeUXCards();
 const openCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) section ul li > button")
 const Cards = document.querySelectorAll("main>div>article:nth-of-type(3) section ul li")
 const CardsList = document.querySelector("main>div>article:nth-of-type(3) section ul")
-const previousCard = document.querySelector("main>div>article:nth-of-type(3) section > button:nth-of-type(2)");
-const nextCard = document.querySelector("main>div>article:nth-of-type(3) section > button:first-of-type");
+const previousCard = document.querySelector("main>div>article:nth-of-type(3) > section > button:nth-of-type(2)");
+const nextCard = document.querySelector("main>div>article:nth-of-type(3) > section > button:first-of-type");
 
 console.log(nextCard);
 
@@ -268,6 +268,7 @@ const detailsButtons = document.querySelectorAll("main>div>article:nth-of-type(3
 
 const iframeArticle = document.querySelector("main>div>article:nth-of-type(4)")
 const iframe = document.querySelector("main>div>article:nth-of-type(4) iframe")
+const closeIframeButton = document.querySelector("main>div>article:nth-of-type(4) > button")
 
 for (let i = 0; i < closeCardButtons.length; i++) {
     closeCardButtons[i].addEventListener("click", () => {
@@ -287,13 +288,39 @@ for (let i = 0; i < detailsButtons.length; i++) {
     detailsButtons[i].addEventListener("click", () => {
         if (iframe.href !== "") {
             iframeArticle.classList.add("openIframe");
-            if (condition) {
-
-            }
-            // window.scrollTop = uxArticle.scrollHeight;
+            closeIframeButton.classList.add("closedIframe");
         }
+        window.scrollTo({
+            top: findPosition(iframeArticle),
+            behavior: "smooth"
+        });
     });
 }
+
+function findPosition(element) {
+    let currentTop = -30;
+    if (element.offsetParent) {
+        do {
+            currentTop += element.offsetTop;
+            element = element.offsetParent;
+        } while (element);
+    }
+    console.log("currentTop",currentTop);
+    return currentTop;
+}
+
+closeIframeButton.addEventListener('click', () => {
+    if (iframe.href !== "") {
+        iframeArticle.classList.remove("openIframe");
+        closeIframeButton.classList.remove("closedIframe");
+
+        window.scrollTo({
+            top: findPosition(document.getElementById("UX-UI")),
+            behavior: "smooth"
+        });
+    }
+})
+
 
 var currdeg = 0;
 document.addEventListener("keydown", (event) => {
@@ -315,6 +342,6 @@ nextCard.addEventListener("click", () => {
 
 function rotateCarousel(degrees) {
     currdeg += degrees;
-    console.log(" 2",currdeg);
+    console.log(" 2", currdeg);
     CardsList.style.transform = "translateZ(500px) rotateY(" + currdeg + "deg)";
 }

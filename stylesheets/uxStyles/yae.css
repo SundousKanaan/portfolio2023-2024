@@ -1,5 +1,16 @@
+
 /* ** prototype page ** */
 /* =====================*/
+
+html::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .3em var(--hoofd-color-yae);
+}
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--hoofd-color-yae);
+    opacity: 50%;
+    border-radius: 5em;
+}
 
 /* header prototype page  */
 .yae header h1 {

@@ -52,6 +52,9 @@
     --secondary-color-about: rgba(128, 128, 128, 0.3);
 }
 
+html::-webkit-scrollbar {
+    width: .5em;
+}
 
         /* ======================*/
         /* === appear effect  ===*/
