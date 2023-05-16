@@ -323,13 +323,6 @@ closeIframeButton.addEventListener('click', () => {
 
 
 var currdeg = 0;
-document.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowRight") {
-        rotateCarousel(60);
-    } else if (event.key === "ArrowLeft") {
-        rotateCarousel(-60);
-    }
-});
 
 previousCard.addEventListener("click", () => {
     rotateCarousel(-60);

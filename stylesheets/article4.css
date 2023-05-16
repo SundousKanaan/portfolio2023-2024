@@ -45,6 +45,8 @@ main>div>article:nth-of-type(4) > button.closedIframe{
 main>div>article:nth-of-type(4) iframe {
     width: 95vw;
     height: 80vh;
+    width: 95dvw;
+    height: 80dvh;
 
     border: solid .3em white;
     border-radius: 2em;

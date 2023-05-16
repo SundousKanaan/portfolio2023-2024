@@ -47,6 +47,7 @@ p:focus-visible{
 
 body {
   width: 100vw;
+  width: 100dvw;
   height: 100%;
   /* font-family: 'Shadows Into Light', cursive; */
   /* letter-spacing: .1em; */
@@ -304,6 +305,7 @@ main>div {
 
 main>div>article {
   width: 100vw;
+  width: 100dvw;
   padding: 2em 0;
 
   display: flex;
@@ -333,6 +335,7 @@ main>div>article h2::after{
   display: block;
 
   width: 90vw;
+  width: 90dvw;
   height: .2em;
 
   border-radius: 2em;
