@@ -190,10 +190,10 @@ const uxfiles = [{
 }
     ,
 {
-    name: "5",
-    link: "noted",
-    image: "noted.jpg",
-    description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
+    name: "Playful-depth",
+    link: "playful-depth",
+    image: "Playful-depth.png",
+    description: "After studying the style and characteristics of a designer, I have to build a conceptual design for him that shows his work, style, and information about him in an interactive way."
 }
     ,
 {
@@ -202,19 +202,6 @@ const uxfiles = [{
     image: "noted.jpg",
     description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
 }
-    // ,
-    // {
-    //     name: "NOTED",
-    //     link: "noted",
-    //     image: "noted.jpg",
-    //     description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
-    // },
-    // {
-    //     name: "NOTED",
-    //     link: "noted",
-    //     image: "noted.jpg",
-    //     description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
-    // }
 ]
 
 console.log(uxfiles.length);
@@ -288,7 +275,7 @@ for (let i = 0; i < detailsButtons.length; i++) {
     detailsButtons[i].addEventListener("click", () => {
         if (iframe.href !== "") {
             iframeArticle.classList.add("openIframe");
-            closeIframeButton.classList.add("closedIframe");
+            closeIframeButton.classList.add("openIframe");
         }
         window.scrollTo({
             top: findPosition(iframeArticle),
@@ -312,7 +299,7 @@ function findPosition(element) {
 closeIframeButton.addEventListener('click', () => {
     if (iframe.href !== "") {
         iframeArticle.classList.remove("openIframe");
-        closeIframeButton.classList.remove("closedIframe");
+        closeIframeButton.classList.remove("openIframe");
 
         window.scrollTo({
             top: findPosition(document.getElementById("UX-UI")),

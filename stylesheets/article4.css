@@ -8,11 +8,6 @@ main>div>article:nth-of-type(4){
     /* background-color: aliceblue; */
 }
 
-main>div>article:nth-of-type(5),
-main>div>article:nth-of-type(6){
-    display: none;
-}
-
 main>div>article:nth-of-type(4).openIframe{
     height: fit-content;
     display: flex;
@@ -38,7 +33,7 @@ main>div>article:nth-of-type(4) > button{
     display: none;
 }
 
-main>div>article:nth-of-type(4) > button.closedIframe{
+main>div>article:nth-of-type(4) > button.openIframe{
     display: grid;
 }
 

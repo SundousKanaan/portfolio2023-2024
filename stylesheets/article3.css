@@ -10,7 +10,7 @@ main>div>article:nth-of-type(3) {
 
 main>div>article:nth-of-type(3) section {
     width: 100%;
-    height: 30em;
+    height: 40em;
     perspective: 50em;
     display: grid;
     place-items: center;
