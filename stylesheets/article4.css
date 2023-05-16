@@ -43,9 +43,8 @@ main>div>article:nth-of-type(4) > button.closedIframe{
 }
 
 main>div>article:nth-of-type(4) iframe {
-    width: 95%;
-    aspect-ratio: 9/14;
-    /* aspect-ratio: 9/16; */
+    width: 95vw;
+    height: 80vh;
 
     border: solid .3em white;
     border-radius: 2em;
@@ -53,7 +52,6 @@ main>div>article:nth-of-type(4) iframe {
 
     transform: scaleY(0);
     transform-origin: top;
-    /* transition: .5s; */
 }
 
 main>div>article:nth-of-type(4).openIframe iframe{

@@ -2,6 +2,7 @@ main>div>article:nth-of-type(3) {
     /* height: 100vh; */
     height: fit-content;
     padding: 0 1em 0 1em;
+    margin-bottom: 2em;
     overflow: hidden;
 
     gap: 3em;
