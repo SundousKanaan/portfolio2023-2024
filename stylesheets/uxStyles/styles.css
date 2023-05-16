@@ -23,9 +23,9 @@
     --hoofd-color-gbook: rgb(178,102,255);
     --secondary-color-gbook: rgb(204,153,255, 0.3);
 
-    /* kunstsite page  */
-    --hoofd-color-kunstsite: rgba(255, 102, 178);
-    --secondary-color-kunstsite: rgb(255, 153, 204, 0.3);
+    /* Plog-de-dag page  */
+    --hoofd-color-Plog-de-dag: rgb(6, 172, 20);
+    --secondary-color-Plog-de-dag: rgba(0, 134, 11, 0.3);
 
     /* simpele spel page  */
     --hoofd-color-simpelespel: rgba(186,85,211);

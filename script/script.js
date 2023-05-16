@@ -197,16 +197,12 @@ const uxfiles = [{
 }
     ,
 {
-    name: "6",
-    link: "noted",
-    image: "noted.jpg",
-    description: "I worked on this project independently and felt nervous at first, but everything went well. It took me a lot of time to write the code properly due to learning it in another subject simultaneously."
+    name: "Plog de dag",
+    link: "plogdedag",
+    image: "plogdedag.png",
+    description: "Design a responsive one-page website for the Plog de dag campaign in the house style of the Municipality of Rotterdam, incorporating the various functions and the supplied content."
 }
 ]
-
-console.log(uxfiles.length);
-
-//  "maas", "noted", "yae"];
 
 function makeUXCards() {
     for (let i = 0; i < uxfiles.length; i++) {
@@ -222,6 +218,8 @@ function makeUXCards() {
                 <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >Details</a>
             </section>
         `
+
+        // li.setAttribute('disabled', 'disabled');
         uxList.appendChild(li)
     }
     console.log("hi", uxList);
@@ -241,7 +239,7 @@ for (let i = 0; i < openCardButtons.length; i++) {
     openCardButtons[i].addEventListener("click", () => {
         for (let i = 0; i < openCardButtons.length; i++) {
             if (Cards[i].classList.contains("openCard")) {
-                Cards[i].classList.add("closeCard");
+                // Cards[i].classList.add("closeCard");
                 Cards[i].classList.remove("openCard");
             }
         }
@@ -260,7 +258,7 @@ const closeIframeButton = document.querySelector("main>div>article:nth-of-type(4
 for (let i = 0; i < closeCardButtons.length; i++) {
     closeCardButtons[i].addEventListener("click", () => {
         Cards[i].classList.remove("openCard");
-        Cards[i].classList.add("closeCard");
+        // Cards[i].classList.add("closeCard");
         for (let i = 0; i < Cards.length; i++) {
             if (!Cards[i].classList.contains("openCard")) {
                 iframeArticle.classList.remove("openIframe");

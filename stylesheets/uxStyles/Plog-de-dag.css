@@ -1,0 +1,214 @@
+
+/* ** prototype page ** */
+/* =====================*/
+
+html::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .3em var(--hoofd-color-Plog-de-dag);
+}
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: var(--hoofd-color-Plog-de-dag);
+    opacity: 50%;
+    border-radius: 5em;
+}
+
+/* header prototype page  */
+.Plog-de-dag header h1 {
+    letter-spacing: -2px;
+    background-color: var(--hoofd-color-Plog-de-dag);
+}
+
+
+/* Navigation menu */
+.Plog-de-dag header nav {
+    background-color: var(--hoofd-color-Plog-de-dag);
+}
+
+.Plog-de-dag header nav button {
+    background-color: var(--secondary-color-Plog-de-dag);
+}
+
+
+
+/* hoofd section prototype page  */
+.Plog-de-dag main section h2 {
+    text-decoration: underline var(--hoofd-color-Plog-de-dag);
+}
+
+.Plog-de-dag main section:nth-of-type(1) img {
+    position: absolute;
+    left: 18.7cm;
+    top: 1.2cm;
+}
+
+.Plog-de-dag main section:nth-of-type(1) nav {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+}
+
+.Plog-de-dag main section nav a {
+    color: var(--hoofd-color-Plog-de-dag);
+    text-decoration-color: var(--secondary-color-Plog-de-dag);
+}
+
+.Plog-de-dag main section nav a::before {
+    background-color: var(--hoofd-color-Plog-de-dag);
+}
+
+
+
+/*  main simpelespel page  */
+/* ======================*/
+
+/* background circles */
+.Plog-de-dagcircle {
+    background-color: var(--secondary-color-Plog-de-dag);
+    position: absolute;
+    right: 7%;
+    top: 13%;
+    z-index: -1;
+
+    width: 30em;
+    height: 30em;
+    border-radius: 30em;
+
+    animation-name: flying3;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+}
+
+.Plog-de-dagcircle img {
+    width: 12em;
+
+    position: absolute;
+    right: 30%;
+    top: 5%;
+}
+
+.Plog-de-dag main section:nth-of-type(n+2) h4 {
+    color: var(--hoofd-color-Plog-de-dag);
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.Plog-de-dag main section:last-of-type {
+    margin-bottom: 8em;
+}
+
+.Plog-de-dag main section:nth-of-type(n+2) p {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+
+.Plog-de-dag main section>ul {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style-type: none;
+}
+
+.Plog-de-dag main section>ul li::before {
+    content: "\2022";
+    color: var(--basis-font-color);
+    width: 1em;
+    margin-left: -1em;
+
+    position: absolute;
+}
+
+.Plog-de-dag main section:nth-of-type(n+2) img {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    width: 100%;
+}
+
+.scrollimages {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior: none;
+    gap: 10px;
+}
+
+.scrolllangimages {
+    width: 100%;
+    /* height: 40em; */
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: none;
+    gap: 10px;
+}
+
+.scrolllangimages::-webkit-scrollbar,
+.scrollimages::-webkit-scrollbar {
+    width: .5em;
+}
+
+.scrolllangimages::-webkit-scrollbar-track, .scrollimages::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .3em var(--hoofd-color-Plog-de-dag);
+}
+
+.scrolllangimages::-webkit-scrollbar-thumb, .scrollimages::-webkit-scrollbar-thumb {
+    background-color: var(--hoofd-color-Plog-de-dag);
+    opacity: 50%;
+    border-radius: 5em;
+}
+
+
+.scrolllangimages img,
+.scrollimages img {
+    scroll-snap-align: center;
+}
+
+.Plog-de-dag main section nav {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    margin: 0;
+}
+
+.Plog-de-dag main section nav ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* works nav*/
+
+.Plog-de-dag main>nav {
+    /* BOX STYLING */
+    background-color: var(--hoofd-color-Plog-de-dag);
+}
+
+.Plog-de-dag main>nav button {
+    /* BOX STYLING */
+    background-color: var(--hoofd-color-Plog-de-dag);
+}
+
+.Plog-de-dag ol{
+    margin: 0;
+    padding: 0;
+}
+
+.Plog-de-dag ol li {
+    margin-bottom: 2em;
+}
