@@ -62,15 +62,16 @@ main>div>article:first-of-type>section:first-of-type div a {
     max-width: 60%;
     text-align: center;
     padding: 0 .5em;
+    color: var(--text-color);
 
     position: relative;
     background-color: var(--bg);
 
     display: grid;
     place-items: center;
-
 }
 
+main>div>article:first-of-type>section:first-of-type div a::before,
 main>div>article:first-of-type>section:first-of-type div h1::before,
 main>div>article:first-of-type>section:first-of-type div p::before {
     content: "";
@@ -99,6 +100,10 @@ main>div>article:first-of-type>section:first-of-type div p::before {
     }
 }
 
+
+main>div>article:first-of-type>section:first-of-type h2{
+    margin-top: 2em;
+}
 
 /* circle */
 

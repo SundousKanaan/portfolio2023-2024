@@ -88,8 +88,7 @@ async function fetchFunction() {
 
     h1Element.textContent = allData.name;
     location.textContent = allData.location;
-    email.href = `mailto: ${allData.email}`;
-    email.textContent = allData.email;
+
     company.textContent = allData.company;
 
     bio.textContent = allData.bio;

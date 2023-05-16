@@ -1,0 +1,23 @@
+main>div>article:nth-of-type(5) ul {
+    list-style: none;
+    width: 90%;
+    height: 20em;
+    display: flex;
+    gap: 1em;
+
+    /* background-color: rgba(127, 255, 212, 0.192); */
+}
+
+main>div>article:nth-of-type(5) ul li{
+    flex: 1;
+    border-radius: 1em;
+
+
+    transition: .5s;
+
+    background-color: rgba(127, 255, 212, 0.192);
+}
+
+main>div>article:nth-of-type(5) ul li:hover{
+    flex: 5;
+}
