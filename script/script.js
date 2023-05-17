@@ -1,5 +1,8 @@
 // import { fetchData } from './modules/fetch.js';
 
+var screenWidth = window.innerWidth;
+var screenHeight = window.innerHeight;
+
 const navButton = document.querySelector("body > button")
 const header = document.querySelector("header")
 
@@ -130,23 +133,31 @@ async function makeProject(reposData) {
 
     for (let i = 0; i < reposData.length; i++) {
         const liElement = document.createElement("li");
-        liElement.innerHTML = `
-            <div>
-                <h3>${reposData[i].name}</h3>
-                <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
-            </div>
-            <section>
-                <p>${reposData[i].description}</p>
-                <p>Project languages: ${reposData[i].languages}</p>
+        if (screenWidth < 1250) {
+            liElement.innerHTML = `
                 <div>
-                <a href="${reposData[i].repo}" target="_blank">To repo</a>
-                <a href="${reposData[i].site}" target="_blank">To site</a>
+                    <h3>${reposData[i].name}</h3>
+                    <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
                 </div>
-            </section>
-        `
-
-        liElement.tabIndex = 6;
-        projectList.appendChild(liElement)
+                <section>
+                    <p>${reposData[i].description}</p>
+                    <p>Project languages: ${reposData[i].languages}</p>
+                    <div>
+                    <a href="${reposData[i].repo}" target="_blank">To repo</a>
+                    <a href="${reposData[i].site}" target="_blank">To site</a>
+                    </div>
+                </section>
+            `
+            projectList.appendChild(liElement)
+        } else if (screenWidth >= 1250) {
+            liElement.innerHTML = `
+                <div>
+                <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
+                </div>
+                <a href="${reposData[i].site}" target="display-repo-frame" > ${reposData[i].name} </a>
+            `
+            projectList.appendChild(liElement)
+        }
 
         if (topRepos.includes(reposData[i].name)) {
             liElement.classList.add("GDA");

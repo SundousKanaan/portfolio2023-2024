@@ -391,10 +391,10 @@ main>div>article h2::after {
     background-color:rgba(197, 197, 197, 0);
     
     transform-style:preserve-3d;
-    transform: scale(.5);
+    /* transform: scale(1) rotateY(30deg); */
     
-    transform:translatez(76vmin);
-    /* transform: rotateY(180deg); */
+    /* transform:translatez(76vmin); */
+    transform: translatez(82vmin);
     transition:1s;
     
   	/* animation:draai 10s infinite linear; */
@@ -422,7 +422,7 @@ main>div>article h2::after {
 
   main>div>article:first-of-type {
     inset:0;
-    transform:translatez(25vmin);
+    transform:translatez(-25vmin);
     background-color:#f006;
   }
 
@@ -434,25 +434,25 @@ main>div>article h2::after {
   
   main>div>article:nth-of-type(3) {
     inset:0;
-    transform:rotateY(.25turn) translatez(25vmin);
+    transform:rotateY(.25turn) translatez(-25vmin);
     background-color:#ff06;
   }
 
   main>div>article:nth-of-type(4) {
     inset:0;
-    transform:rotateY(.75turn) translatez(25vmin);
+    transform:rotateY(.75turn) translatez(-25vmin);
     background-color:#0ff6;
   }
 
   main>div>article:nth-of-type(5) {
     inset:-50% 0;
-    transform:rotateX(.25turn) translatez(12.5vmin);
+    transform:rotateX(.25turn) translatez(-12.5vmin);
     background-color:#00f6;
   }
 
   main>div>article:nth-of-type(6) {
     inset:-50% 0;
-    transform:rotateX(-.25turn) translatez(12.5vmin);
+    transform:rotateX(-.25turn) translatez(-12.5vmin);
     background-color:#f0F6;
   }
 
