@@ -24,13 +24,22 @@ main>div>article:nth-of-type(4) > button{
     border: none;
     border-radius: 50%;
 
+    color: var(--text-color);
     background-color: var(--them-color);
-
+    
     /* display: grid; */
     place-items: center;
-
+    
     cursor: pointer;
     display: none;
+}
+
+main>div>article:nth-of-type(4) > button:focus-visible,
+main>div>article:nth-of-type(4) > button:hover{
+    outline-color: transparent;
+    color: var(--dark-text);
+    background-color: var(--bg);
+    border: solid .3em var(--them-color);
 }
 
 main>div>article:nth-of-type(4) > button.openIframe{

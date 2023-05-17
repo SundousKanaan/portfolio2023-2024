@@ -322,6 +322,15 @@ main>div>article:nth-of-type(3) section ul li.openCard>section a {
     transition: .5s;
 }
 
+main>div>article:nth-of-type(3) section ul li.openCard>section a:focus-visible,
+main>div>article:nth-of-type(3) section ul li.openCard>section a:hover{
+    color: var(--text-color);
+    background-color: var(--them-color);
+}
+
+main>div>article:nth-of-type(3) section ul li.openCard>section a:active{
+    transform: scale(.8);
+}
 
 main>div>article:nth-of-type(3) section ul li.closeCard {
     animation: closeflipping 1s 1 both ease-out;

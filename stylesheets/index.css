@@ -8,13 +8,14 @@
 }
 
 :root {
-  --text-color: #ebf1f1;
-  --dark-text: #2c3f50;
-  --bg: #2c3f50;
-  --them-color: #e55baf;
-  --secondere-color: #8b8b8b;
+  --text-color: #f2ebe9;
+  --dark-text: #264143;
+  --titels-color: #264143;
+  --bg: #eddcd9;
+  --them-color: #de5499;
+  --secondere-color: #e99f4c;
 
-  --nav: #ebf1f1;
+  --nav: #f2ebe9;
 }
 
 html {
@@ -316,8 +317,6 @@ main>div>article {
   gap: 1em;
 
   scroll-margin-top: 1em;
-
-  /* border-bottom: solid .5em rgb(255, 255, 255); */
 }
 
 main>div>article h2{
@@ -327,6 +326,7 @@ main>div>article h2{
 
   position: relative;
 
+  color: var(--titels-color);
   background-color: var(--bg);
 }
 
