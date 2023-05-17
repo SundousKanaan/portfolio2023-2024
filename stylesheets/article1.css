@@ -12,15 +12,61 @@ main>div>article:first-of-type>section:first-of-type {
     gap: 1em;
 }
 
-main>div>article:first-of-type>section:first-of-type img {
-    display: block;
+main>div>article:first-of-type>section:first-of-type div:first-of-type{
     width: 13em;
     height: 13em;
+    position: relative;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 1em;
+}
+
+main>div>article:first-of-type>section:first-of-type div:first-of-type:after{
+    content: "";
+    display: block;
+    width: 107%;
+    height: 107%;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: -1;
+
+    background-color: transparent;
+    background-image: repeating-conic-gradient(
+        from var(--angle, 0deg),
+        var(--them-color) 44.8deg,
+        transparent 45.2deg);
+    animation: borderRotate 4s -1s linear infinite;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+main>div>article:first-of-type>section:first-of-type div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
 
     align-self: center;
-
-    border-radius: 50%;
-    animation: shadow 1s -.5s infinite linear both alternate, shadow2 1s -.5s infinite linear both alternate;
+    
+    /* box-shadow: -.5em .5em 0 var(--secondere-color); */
+    /* animation: shadow 1s -.5s infinite linear both alternate; */
 }
 
 @keyframes shadow {
@@ -30,16 +76,6 @@ main>div>article:first-of-type>section:first-of-type img {
 
     to {
         box-shadow: .5em -.5em 0 var(--secondere-color);
-    }
-}
-
-@keyframes shadow2 {
-    from {
-        box-shadow: -.5em -.5em 0 var(--them-color);
-    }
-
-    to {
-        box-shadow: .5em .5em 0 var(--them-color);
     }
 }
 
