@@ -72,8 +72,7 @@ main>div>article:nth-of-type(3) section ul {
 
     transform-style: preserve-3d;
     transition: transform 1s;
-    transform: translateZ(500px) ;
-    /* transform: scale(.6) rotateX(-30deg); */
+    transform: translateZ(500px);
 
     position: relative;
     display: grid;
@@ -95,11 +94,8 @@ main>div>article:nth-of-type(3) section ul li {
     height: 25em;
 
     border-radius: 1em;
-
     box-shadow: 0 0 0 .3em white;
-    /* -1em 1em 0 rgba(255, 255, 255, 0.103); */
     background-color: black;
-
     transition: .5s;
     transform-style: preserve-3d;
 

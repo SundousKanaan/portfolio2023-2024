@@ -1,23 +1,77 @@
+main > div > article:nth-of-type(5){
+    margin-bottom: 5em;
+    gap: 3em;
+}
+
 main>div>article:nth-of-type(5) ul {
     list-style: none;
     width: 90%;
     height: 20em;
     display: flex;
     gap: 1em;
-
-    /* background-color: rgba(127, 255, 212, 0.192); */
 }
 
 main>div>article:nth-of-type(5) ul li{
-    flex: 1;
+    flex: .5;
     border-radius: 1em;
+    overflow: hidden;
 
+    transition: 1s;
 
-    transition: .5s;
+    display: grid;
+    place-items: center;
+    position: relative;
 
-    background-color: rgba(127, 255, 212, 0.192);
+    background-color: black;
 }
 
 main>div>article:nth-of-type(5) ul li:hover{
-    flex: 5;
+    flex:7;
+}
+
+main>div>article:nth-of-type(5) ul li h3{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+}
+
+main>div>article:nth-of-type(5) ul li a{
+    width: fit-content;
+    height: 2em;
+    padding: .4em 1em .5em 1em;
+    position: absolute;
+    top: 60%;
+    z-index: 1;
+
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 5em;
+
+    background-color: var(--nav);
+    transition: .5s;
+    opacity: 0;
+}
+
+main>div>article:nth-of-type(5) ul li a:hover{
+    color: var(--text-color);
+    background-color: var(--them-color);
+}
+
+main>div>article:nth-of-type(5) ul li img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 1s;
+}
+
+main>div>article:nth-of-type(5) ul li:hover img{
+    opacity: 30%;
+}
+
+main>div>article:nth-of-type(5) ul li:hover a,
+main>div>article:nth-of-type(5) ul li:hover h3{
+    opacity: 100%;
 }

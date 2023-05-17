@@ -53,18 +53,21 @@ main>div>article:nth-of-type(2) ul li.GDA::after {
     height: var(--width);
 
     position: absolute;
-    top: 29%;
+    top: 28%;
     left: calc(-1 * var(--width) /3);
     z-index: 2;
 
     transition: 1s;
-    background-color: red;
-    /* background-image: url(); */
+    background-color: transparent;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/512px-Star_icon_stylized.svg.png?20220926045328);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 main>div>article:nth-of-type(2) ul li:has(:focus-visible).GDA::after,
 main>div>article:nth-of-type(2) ul li:hover.GDA::after {
-    top: 9%;
+    top: 8%;
 }
 
 main>div>article:nth-of-type(2) ul li>div,
@@ -125,6 +128,7 @@ main>div>article:nth-of-type(2) ul li section {
 main>div>article:nth-of-type(2) ul li section p {
     color: var(--dark-text);
     padding: .5em;
+    font-size: .95em;
 }
 
 main>div>article:nth-of-type(2) ul li section p:first-of-type {
