@@ -75,3 +75,14 @@ main>div>article:nth-of-type(5) ul li:hover a,
 main>div>article:nth-of-type(5) ul li:hover h3{
     opacity: 100%;
 }
+
+
+/* ************ */
+/* larg screens */
+/* ************ */
+
+@media (min-width: 1250px){
+    main>div>article:nth-of-type(5){
+        margin-bottom: 0;
+    }
+}

@@ -250,9 +250,9 @@ for (let i = 0; i < openCardButtons.length; i++) {
 const closeCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section button")
 const detailsButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section a")
 
-const iframeArticle = document.querySelector("main>div>article:nth-of-type(4)")
-const iframe = document.querySelector("main>div>article:nth-of-type(4) iframe")
-const closeIframeButton = document.querySelector("main>div>article:nth-of-type(4) > button")
+const iframeArticle = document.querySelector("main>div>article:nth-of-type(3) > article")
+const iframe = document.querySelector("main>div>article:nth-of-type(3) > article iframe")
+const closeIframeButton = document.querySelector("main>div>article:nth-of-type(3) > article > button")
 
 for (let i = 0; i < closeCardButtons.length; i++) {
     closeCardButtons[i].addEventListener("click", () => {

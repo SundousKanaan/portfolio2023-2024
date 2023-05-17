@@ -210,3 +210,15 @@ main>div>article:nth-of-type(2) ul li:hover section {
     border-radius: 0 0 2em 2em;
     transform: translateY(50%);
 }
+
+
+
+/* ************ */
+/* larg screens */
+/* ************ */
+
+@media (min-width: 1250px){
+    main>div>article:nth-of-type(2){
+        background-color: green;
+    }
+}

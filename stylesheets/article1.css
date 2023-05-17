@@ -193,3 +193,15 @@ main>div>article:first-of-type>section:nth-of-type(2){
     stroke: var(--them-color);
     stroke-dashoffset: calc(817 - (817 * 0) / 100);
 }
+
+
+
+/* ************ */
+/* larg screens */
+/* ************ */
+
+@media (min-width: 1250px){
+    main>div>article:first-of-type{
+        background-color: red;
+    }
+}

@@ -7,6 +7,8 @@ main>div>article:nth-of-type(3) {
     gap: 3em;
 }
 
+
+
 main>div>article:nth-of-type(3) > section {
     width: 100%;
     height: 40em;
@@ -345,3 +347,88 @@ main>div>article:nth-of-type(3) section ul li.closeCard {
     }
 }
 
+
+
+/* iframe */
+
+main>div>article:nth-of-type(3) > article{
+    width: 98%;
+    display: none;
+
+    position: relative;
+    margin-top: 3em;
+
+    /* background-color: aliceblue; */
+}
+
+main>div>article:nth-of-type(3) > article.openIframe{
+    height: fit-content;
+    display: flex;
+}
+
+main>div>article:nth-of-type(3) > article > button{
+    width: 3em;
+    aspect-ratio: 1/1;
+
+    position: absolute;
+    top: -1.5%;
+    right: -1.5%;
+    z-index: 1;
+    border: none;
+    border-radius: 50%;
+
+    color: var(--text-color);
+    background-color: var(--them-color);
+    
+    display: none;
+    place-items: center;
+    
+    cursor: pointer;
+}
+
+main>div>article:nth-of-type(3) > article > button:focus-visible,
+main>div>article:nth-of-type(3) > article > button:hover{
+    outline-color: transparent;
+    color: var(--dark-text);
+    background-color: var(--bg);
+    border: solid .3em var(--them-color);
+}
+
+main>div>article:nth-of-type(3) > article > button.openIframe{
+    display: grid;
+}
+
+main>div>article:nth-of-type(3) > article iframe {
+    width: 95vw;
+    height: 80vh;
+    width: 95dvw;
+    height: 80dvh;
+
+    border: solid .3em white;
+    border-radius: 2em;
+    box-shadow: 0 0 .5em white;
+
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+main>div>article:nth-of-type(3) > article.openIframe iframe{
+    transform: scaleY(1);
+}
+
+
+
+
+
+
+
+
+/* ************ */
+/* larg screens */
+/* ************ */
+
+@media (min-width: 1250px){
+    main>div>article:nth-of-type(3){
+        height: unset;
+    }
+}
