@@ -156,7 +156,7 @@ main>div>article:first-of-type>section:nth-of-type(2){
     place-items: center;
     transition: 0.5s;
     position: relative;
-    background-color: #151932;
+    background-color: var(--dark-bg);
 }
 
 .clock svg {
