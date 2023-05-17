@@ -84,7 +84,6 @@ const email = document.querySelector("main > div > article:first-of-type > secti
 
 async function fetchFunction() {
     const allData = await fetchData(API_URL);
-    // console.log("allData", allData);
 
     h1Element.textContent = allData.name;
     location.textContent = allData.location;
@@ -107,7 +106,6 @@ const projectList = document.querySelector("main>div>article:nth-of-type(2) ul")
 
 async function fetchRepos() {
     const allData = await fetchData(repos_URL);
-    // console.log(allData);
 
     for (let i = 0; i < allData.length; i++) {
         if (allData[i].stargazers_count === 1) {
@@ -122,8 +120,6 @@ async function fetchRepos() {
             });
         }
     }
-    // console.log(reposData);
-
     makeProject(reposData);
 }
 
@@ -238,17 +234,21 @@ for (let i = 0; i < openCardButtons.length; i++) {
     openCardButtons[i].addEventListener("click", () => {
         for (let i = 0; i < openCardButtons.length; i++) {
             if (Cards[i].classList.contains("openCard")) {
-                // Cards[i].classList.add("closeCard");
-                Cards[i].classList.remove("openCard");
+                Cards[i].classList.replace("openCard", "closeCard")
             }
         }
-        Cards[i].classList.add("openCard");
+        
+        if (Cards[i].classList.contains("closeCard")) {
+            Cards[i].classList.replace("closeCard", "openCard")
+        } else {
+
+            Cards[i].classList.add("openCard");
+        }
     });
 }
 
 const closeCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section button")
 const detailsButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section a")
-// const uxArticle = document.querySelector("main>div>article:nth-of-type(3)")
 
 const iframeArticle = document.querySelector("main>div>article:nth-of-type(4)")
 const iframe = document.querySelector("main>div>article:nth-of-type(4) iframe")
@@ -257,7 +257,7 @@ const closeIframeButton = document.querySelector("main>div>article:nth-of-type(4
 for (let i = 0; i < closeCardButtons.length; i++) {
     closeCardButtons[i].addEventListener("click", () => {
         Cards[i].classList.remove("openCard");
-        // Cards[i].classList.add("closeCard");
+        Cards[i].classList.add("closeCard");
         for (let i = 0; i < Cards.length; i++) {
             if (!Cards[i].classList.contains("openCard")) {
                 iframeArticle.classList.remove("openIframe");
