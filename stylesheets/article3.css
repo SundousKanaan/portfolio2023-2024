@@ -235,6 +235,16 @@ main>div>article:nth-of-type(3) section ul li.openCard {
     gap: 1em;
 }
 
+@keyframes flipping {
+    0% {
+        transform: translateZ(-501px) rotateY(0turn);
+    }
+
+    100% {
+        transform: translateZ(-501px) rotateY(3turn);
+    }
+}
+
 main>div>article:nth-of-type(3) section ul li.openCard>button,
 main>div>article:nth-of-type(3) section ul li.openCard::after,
 main>div>article:nth-of-type(3) section ul li.openCard img {
@@ -321,15 +331,6 @@ main>div>article:nth-of-type(3) section ul li.closeCard {
     /* animation: closeflipping 1s 1 both ease-out; */
 }
 
-@keyframes flipping {
-    0% {
-        transform: translateZ(-501px) rotateY(0turn);
-    }
-
-    100% {
-        transform: translateZ(-501px) rotateY(3turn);
-    }
-}
 
 /* @keyframes closeflipping {
     0% {
