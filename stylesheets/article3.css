@@ -250,7 +250,6 @@ main>div>article:nth-of-type(3) section ul li.openCard img {
 }
 
 main>div>article:nth-of-type(3) section ul li.openCard h3 {
-    color: var(--dark-text);
     font-size: 1.5em;
     opacity: 100%;
     position: absolute;
@@ -266,7 +265,6 @@ main>div>article:nth-of-type(3) section ul li.openCard>section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: blueviolet; */
     position: absolute;
     bottom: 0;
 }

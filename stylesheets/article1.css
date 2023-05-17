@@ -27,8 +27,8 @@ main>div>article:first-of-type>section:first-of-type div:first-of-type{
 main>div>article:first-of-type>section:first-of-type div:first-of-type:after{
     content: "";
     display: block;
-    width: 107%;
-    height: 107%;
+    width: 110%;
+    height: 110%;
     border-radius: 50%;
 
     position: absolute;

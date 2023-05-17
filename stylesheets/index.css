@@ -8,14 +8,14 @@
 }
 
 :root {
-  --text-color: #f2ebe9;
+  --text-color: #f2f2f2;
   --dark-text: #264143;
   --titels-color: #264143;
-  --bg: #eddcd9;
-  --them-color: #de5499;
-  --secondere-color: #e99f4c;
+  --bg: #ffffcc;
+  --them-color: #ff47a3;
+  --secondere-color: #58004d;
 
-  --nav: #f2ebe9;
+  --nav: #f2f2f2;
 }
 
 html {
