@@ -342,3 +342,27 @@ function rotateCarousel(degrees) {
     console.log(" 2", currdeg);
     CardsList.style.transform = "translateZ(500px) rotateY(" + currdeg + "deg)";
 }
+
+
+// +++++++++++++++++++++++
+
+const leftWall = document.querySelector("main > button:first-of-type")
+const rightWall = document.querySelector("main > button:last-of-type")
+const roomBox = document.querySelector("main>div")
+
+leftWall.addEventListener("click", () => {
+    rotateRoom(-.25);
+});
+
+rightWall.addEventListener("click", () => {
+    console.log(" 1");
+    rotateRoom(.25);
+});
+
+
+function rotateRoom(degrees) {
+    currdeg += degrees;
+    console.log(" 2", currdeg);
+    roomBox.style.transform = "translateZ(90vmin) rotateY(" + currdeg + "turn)";
+}
+// translateZ(90vmin)

@@ -9,6 +9,6 @@ main>div>article:nth-of-type(6){
 
 @media (min-width: 1250px){
     main>div>article:nth-of-type(6){
-       display: block;
+        display: block;
     }
 }

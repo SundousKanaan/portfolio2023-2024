@@ -413,6 +413,25 @@ main>div>article h2::after {
     perspective: 100vmin;
   }
 
+  main> button{
+    width: 10em;
+    height: 5em;
+    position: fixed;
+    left: calc(50% - 10em /2);
+    bottom: 2em;
+    /* background-color: brown; */
+    cursor: pointer;
+    z-index: 10000000;
+}
+
+main> button:first-of-type{
+  transform: translateX(-15em);
+}
+
+main> button:last-of-type{
+  transform: translateX(15em);
+}
+
   main > div{
     position:relative;
     inline-size:50vmin;
@@ -420,8 +439,8 @@ main>div>article h2::after {
     background-color:rgba(197, 197, 197, 0);
     
     transform-style:preserve-3d;
-    transform: translatez(90vmin) rotateY(.25turn);
-    /* transform: translatez(20vmin) rotateY(.75turn); */
+    /* transform: translatez(90vmin) rotateY(0turn); */
+    transform: translatez(90vmin) rotatex(0turn);
 
     transition:1s;
     pointer-events:none;
@@ -449,7 +468,7 @@ main>div>article h2::after {
     display: none;
   }
 
-  main>div>article:not(:nth-of-type(2)):not(:nth-of-type(3)) *{
+  main>div>article:not(:nth-of-type(2)):not(:nth-of-type(3)):not(:nth-of-type(5)) *{
     opacity: 0;
   }
 
@@ -478,7 +497,7 @@ main>div>article h2::after {
   }
   
   main>div>article:nth-of-type(5) {
-    inset:-50% 0;
+    inset: -50% 0;
     transform:rotateX(.25turn) translatez(-12.5vmin);
     background-color:#00f6;
   }
@@ -487,6 +506,7 @@ main>div>article h2::after {
     inset:-50% 0;
     transform:rotateX(-.25turn) translatez(-12.5vmin);
     background-color:#f0F6;
+    opacity: 0;
   }
 
 }
