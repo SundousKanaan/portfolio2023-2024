@@ -415,7 +415,7 @@ main>div>article h2::after {
     overflow: hidden;
   }
 
-  body>button:nth-last-of-type(-n+2) {
+  body>button:nth-last-of-type(-n+4) {
     width: 10em;
     height: 5em;
     position: fixed;
@@ -437,6 +437,9 @@ main>div>article h2::after {
     transform: translateX(15em);
   }
 
+  body>button.hiddenButton{
+    visibility: hidden;
+  }
 
 
 

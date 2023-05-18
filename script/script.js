@@ -346,23 +346,45 @@ function rotateCarousel(degrees) {
 
 // +++++++++++++++++++++++
 
+const fore = document.querySelector("body > button:nth-last-of-type(3)")
+const back = document.querySelector("body > button:nth-last-of-type(4)")
 const leftWall = document.querySelector("body > button:nth-last-of-type(2)")
 const rightWall = document.querySelector("body > button:last-of-type")
 const roomBox = document.querySelector("main>div")
 
-leftWall.addEventListener("click", () => {
-    rotateRoom(-.25);
+let translateZ = 82;
+let currDegrees = 0;
+let currRoomdeg = 0;
+
+fore.addEventListener("click", () => {
+    fore.classList.add("hiddenButton")
+    rightWall.classList.add("hiddenButton")
+    leftWall.classList.add("hiddenButton")
+    back.classList.remove("hiddenButton")
+
+    rotateRoom(currDegrees,86);
+});
+
+back.addEventListener("click", () => {
+    back.classList.add("hiddenButton")
+    fore.classList.remove("hiddenButton")
+    rightWall.classList.remove("hiddenButton")
+    leftWall.classList.remove("hiddenButton")
+
+    rotateRoom(currDegrees,82);
 });
 
 rightWall.addEventListener("click", () => {
-    console.log(" 1");
-    rotateRoom(.25);
+    currRoomdeg += .25;
+    rotateRoom(currRoomdeg,translateZ);
 });
 
+leftWall.addEventListener("click", () => {
+    currRoomdeg += -.25;
+    rotateRoom(currRoomdeg,translateZ);
+});
 
-function rotateRoom(degrees) {
-    currdeg += degrees;
-    console.log(" 2", currdeg);
-    roomBox.style.transform = "translateZ(82vmin) rotateY(" + currdeg + "turn)";
+function rotateRoom(currRoomdeg,translateZ) {
+    currDegrees = currRoomdeg;
+    roomBox.style.transform = `translateZ(${translateZ}vmin) rotateY(${currRoomdeg}turn)`;
 }
-// translateZ(90vmin)
