@@ -355,14 +355,14 @@ main>div>article:nth-of-type(2)>div {
     main>div>article:nth-of-type(2)::before {
         content: "";
         width: 50%;
-        height: 3em;
+        height: 2.1em;
         background-image: linear-gradient(to right,
                 var(--table) 5%,
                 transparent 0 95%,
                 var(--table) 0 100%);
 
         position: absolute;
-        bottom: -.8em;
+        bottom: 0em;
         right: calc(50% - 50% /2);
     }
 
