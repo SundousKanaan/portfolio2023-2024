@@ -1,4 +1,4 @@
-main > div > article:first-of-type {
+main>div>article:first-of-type {
     gap: 3em;
 }
 
@@ -12,7 +12,7 @@ main>div>article:first-of-type>section:first-of-type {
     gap: 1em;
 }
 
-main>div>article:first-of-type>section:first-of-type div:first-of-type{
+main>div>article:first-of-type>section:first-of-type div:first-of-type {
     width: 13em;
     height: 13em;
     position: relative;
@@ -24,7 +24,7 @@ main>div>article:first-of-type>section:first-of-type div:first-of-type{
     margin-bottom: 1em;
 }
 
-main>div>article:first-of-type>section:first-of-type div:first-of-type:after{
+main>div>article:first-of-type>section:first-of-type div:first-of-type:after {
     content: "";
     display: block;
     width: 110%;
@@ -35,17 +35,16 @@ main>div>article:first-of-type>section:first-of-type div:first-of-type:after{
     z-index: -1;
 
     background-color: transparent;
-    background-image: repeating-conic-gradient(
-        from var(--angle, 0deg),
-        var(--them-color) 44.8deg,
-        transparent 45.2deg);
+    background-image: repeating-conic-gradient(from var(--angle, 0deg),
+            var(--them-color) 44.8deg,
+            transparent 45.2deg);
     animation: borderRotate 4s -1s linear infinite;
 }
 
 @keyframes borderRotate {
-	100% {
-		--angle: 360deg;
-	}
+    100% {
+        --angle: 360deg;
+    }
 }
 
 @property --angle {
@@ -64,7 +63,7 @@ main>div>article:first-of-type>section:first-of-type div img {
     border-radius: 50%;
 
     align-self: center;
-    
+
     /* box-shadow: -.5em .5em 0 var(--secondere-color); */
     /* animation: shadow 1s -.5s infinite linear both alternate; */
 }
@@ -133,13 +132,13 @@ main>div>article:first-of-type>section:first-of-type div p::before {
 }
 
 
-main>div>article:first-of-type>section:first-of-type h2{
+main>div>article:first-of-type>section:first-of-type h2 {
     margin-top: 2em;
 }
 
 /* circle */
 
-main>div>article:first-of-type>section:nth-of-type(2){
+main>div>article:first-of-type>section:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -194,14 +193,100 @@ main>div>article:first-of-type>section:nth-of-type(2){
     stroke-dashoffset: calc(817 - (817 * 0) / 100);
 }
 
+main>div>article:first-of-type>button {
+    display: none;
+}
+
+
+
+
+
+
+
 
 
 /* ************ */
 /* larg screens */
 /* ************ */
 
-/* @media (min-width: 1250px){
-    main>div>article:first-of-type{
-        background-color: red;
+@media (min-width: 1250px) {
+    main>div>article:first-of-type {
+        display: grid;
+        place-items: center;
+        padding: 0;
     }
-} */
+
+    main>div>article:first-of-type>section:first-of-type {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        position: absolute;
+    }
+
+    /* my foto */
+    main>div>article:first-of-type>section:first-of-type div:first-of-type {
+        width: 10em;
+        border-radius: 0;
+
+        position: absolute;
+        right: 10%;
+
+        margin: 0;
+    }
+
+    main>div>article:first-of-type>section:first-of-type div:first-of-type:after {
+        display: none;
+        /* border-radius: 0;
+        background-image: none; */
+    }
+
+    main>div>article:first-of-type>section:first-of-type div:first-of-type img {
+        border-radius: 0;
+    }
+
+
+
+
+    /* my data */
+    main>div>article:first-of-type>section:nth-of-type(2){
+        display: none;
+    }
+
+
+    /* the door */
+    main>div>article:first-of-type>button {
+        display: block;
+        appearance: none;
+        --webkit-appearance: none;
+
+        width: 8em;
+        height: 85%;
+
+        position: absolute;
+        left: 2em;
+        bottom: 0;
+
+        border: none;
+        border-radius: 5em 5em 0 0;
+
+        background-color: var(--wood);
+        box-shadow:
+            0 0 0 .5em var(--wood-shadow),
+            0 0 0 .2em var(--wood);
+    }
+
+    main>div>article:first-of-type>button::after {
+        content: "";
+        display: block;
+        width: 1em;
+        height: 1em;
+
+        position: absolute;
+        left: .5em;
+
+        border-radius: 50%;
+
+        background-color: var(--bookcase);
+        box-shadow: inset 0 -.2em var(--bookcase-shadow);
+    }
+}

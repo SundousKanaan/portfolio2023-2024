@@ -396,7 +396,7 @@ main>div>article h2::after {
     --bed-cover-shadow: hsl(324, 63%, 75%);
 
     --bookcase: rgb(255, 224, 124);
-    --bookcase-shadow: rgb(247, 208, 82);
+    --bookcase-shadow: rgb(230, 187, 48);
 
     --bookcase-part: rgb(243, 201, 64);
     --bookcase-part-shadow: rgb(212, 171, 37);
@@ -452,7 +452,7 @@ main> button:last-of-type{
     background-color:rgba(197, 197, 197, 0);
     
     transform-style:preserve-3d;
-    transform: translatez(90vmin) rotateY(0turn);
+    transform: translatez(90vmin) rotateY(.5turn);
     /* transform: translatez(90vmin) rotateY(-.25turn); */
 
     transition:1s;
@@ -487,7 +487,7 @@ main> button:last-of-type{
 
   main>div>article:first-of-type {
     inset:0;
-    transform:translatez(25vmin);
+    transform: translatez(25vmin) rotateY(180deg);
     background-color:#f006;
   }
 
