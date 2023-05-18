@@ -123,7 +123,7 @@ async function fetchRepos() {
             });
         }
     }
-    
+
     makeProject(reposData);
 }
 
@@ -211,20 +211,28 @@ const uxfiles = [{
 }
 ]
 
+console.log(uxfiles.length, "s");
+
 function makeUXCards() {
     for (let i = 0; i < uxfiles.length; i++) {
         const li = document.createElement("li")
-        li.innerHTML = `
-             <h3>${uxfiles[i].name}</h3>
-             <img src="./UXimages/${uxfiles[i].image}" alt="${uxfiles[i].name} foto">
-             <button></button>
-
-            <section>
-                <p>${uxfiles[i].description}</p>
-                <button></button>
-                <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >Details</a>
-            </section>
-        `
+        if (screenWidth < 1250){
+            li.innerHTML = `
+                 <h3>${uxfiles[i].name}</h3>
+                 <img src="./UXimages/${uxfiles[i].image}" alt="${uxfiles[i].name} foto">
+                 <button></button>
+    
+                <section>
+                    <p>${uxfiles[i].description}</p>
+                    <button></button>
+                    <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >Details</a>
+                </section>
+            `
+        } else if (screenWidth >= 1250){
+            li.innerHTML = `
+                <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >${uxfiles[i].name}</a>
+            `
+        }
 
         // li.setAttribute('disabled', 'disabled');
         uxList.appendChild(li)

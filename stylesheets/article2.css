@@ -221,11 +221,6 @@ main>div>article:nth-of-type(2)>div {
 
 @media (min-width: 1250px) {
 
-    :root {
-        --table: rgb(190, 118, 51);
-        --screen: rgb(43, 43, 43);
-    }
-
     main>div>article:nth-of-type(2) {
 
         background-color: var(--bg);
