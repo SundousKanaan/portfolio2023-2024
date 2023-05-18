@@ -328,6 +328,7 @@ main>div>article:nth-of-type(2)>div {
         right: calc(50% - 1em /2);
     }
 
+    /* the table */
     main>div>article:nth-of-type(2)>div::before {
         content: "";
         width: 5em;
@@ -345,7 +346,8 @@ main>div>article:nth-of-type(2)>div {
         width: 60%;
         height: 1em;
         border-radius: 5em;
-        background-color: var(--table);
+        background-color: var(--wood);
+        box-shadow: inset 0 -.2em 0 var(--wood-shadow);
 
         position: absolute;
         bottom: 2.1em;
@@ -356,10 +358,11 @@ main>div>article:nth-of-type(2)>div {
         content: "";
         width: 50%;
         height: 2.1em;
-        background-image: linear-gradient(to right,
-                var(--table) 5%,
+        background-image:
+        linear-gradient(to right,
+                var(--wood) 5%,
                 transparent 0 95%,
-                var(--table) 0 100%);
+                var(--wood) 0 100%);
 
         position: absolute;
         bottom: 0em;

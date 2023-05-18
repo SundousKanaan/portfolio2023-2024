@@ -384,11 +384,24 @@ main>div>article h2::after {
 
 @media (min-width: 1250px) {
   :root{
-    --table: rgb(190, 118, 51);
+    --wood: rgb(179, 100, 26);
+    --wood-shadow: rgba(109, 57, 8, 0.692);
+
     --screen: rgb(43, 43, 43);
 
-    --bookcase: rgb(255, 213, 77);
-    --bookcase-shadow: rgb(233, 179, 30);
+    --bed-sheet: hsl(323, 100%, 78%);
+    --bed-cover: hsl(324, 100%, 88%);
+
+    --bed-sheet-shadow: hsl(323, 78%, 67%);
+    --bed-cover-shadow: hsl(324, 63%, 75%);
+
+    --bookcase: rgb(255, 224, 124);
+    --bookcase-shadow: rgb(247, 208, 82);
+
+    --bookcase-part: rgb(243, 201, 64);
+    --bookcase-part-shadow: rgb(212, 171, 37);
+
+    --screen-shadow: #fdfdb6;
   }
 
   body > button,
@@ -439,8 +452,8 @@ main> button:last-of-type{
     background-color:rgba(197, 197, 197, 0);
     
     transform-style:preserve-3d;
-    /* transform: translatez(90vmin) rotateY(0turn); */
-    transform: translatez(90vmin) rotatex(0turn);
+    transform: translatez(90vmin) rotateY(0turn);
+    /* transform: translatez(90vmin) rotateY(-.25turn); */
 
     transition:1s;
     pointer-events:none;
@@ -461,16 +474,16 @@ main> button:last-of-type{
     width: unset;
     height: unset;
 
-    box-shadow: inset 0 0 0 .15em white;
+    box-shadow: inset 0 0 0 .05em white;
   }
 
   main>div>article h2::after{
     display: none;
   }
 
-  main>div>article:not(:nth-of-type(2)):not(:nth-of-type(3)):not(:nth-of-type(5)) *{
+  /* main>div>article:first-of-type *{
     opacity: 0;
-  }
+  } */
 
   main>div>article:first-of-type {
     inset:0;
@@ -493,7 +506,7 @@ main> button:last-of-type{
   main>div>article:nth-of-type(4) {
     inset:0;
     transform:rotateY(.25turn) translatez(-25vmin);
-    background-color:#0ff6;
+    /* background-color:#0ff6; */
   }
   
   main>div>article:nth-of-type(5) {
