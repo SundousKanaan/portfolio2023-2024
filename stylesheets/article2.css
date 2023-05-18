@@ -232,7 +232,7 @@ main>div>article:nth-of-type(2)>div {
 /* larg screens */
 /* ************ */
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
 
     main>div>article:nth-of-type(2) h2 {
         display: none;

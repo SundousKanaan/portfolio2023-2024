@@ -346,8 +346,8 @@ function rotateCarousel(degrees) {
 
 // +++++++++++++++++++++++
 
-const leftWall = document.querySelector("main > button:first-of-type")
-const rightWall = document.querySelector("main > button:last-of-type")
+const leftWall = document.querySelector("body > button:nth-last-of-type(2)")
+const rightWall = document.querySelector("body > button:last-of-type")
 const roomBox = document.querySelector("main>div")
 
 leftWall.addEventListener("click", () => {
@@ -363,6 +363,6 @@ rightWall.addEventListener("click", () => {
 function rotateRoom(degrees) {
     currdeg += degrees;
     console.log(" 2", currdeg);
-    roomBox.style.transform = "translateZ(90vmin) rotateY(" + currdeg + "turn)";
+    roomBox.style.transform = "translateZ(82vmin) rotateY(" + currdeg + "turn)";
 }
 // translateZ(90vmin)
