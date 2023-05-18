@@ -10,6 +10,12 @@ main>div>article:nth-of-type(5){
     main>div>article:nth-of-type(5){
         display: block;
         margin-bottom: 0;
+
+        background-image: url(https://www.garrisoncollection.com/wordpress/wp-content/uploads/2021/12/Contractors-Choice-Premium-Red-Oak-Unfinished-2.25-inch-Hardwood-Plank.jpg);
+        background-position: center;
+        background-size: contain;
+
+        opacity: 50%;
     }
 }
 

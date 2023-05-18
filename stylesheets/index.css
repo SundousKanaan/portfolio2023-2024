@@ -383,7 +383,7 @@ main>div>article h2::after {
 
 
 @media (min-width: 1250px) {
-  :root{
+  :root {
     --wood: rgb(179, 100, 26);
     --wood-shadow: rgba(109, 57, 8, 0.692);
 
@@ -404,13 +404,13 @@ main>div>article h2::after {
     --screen-shadow: #fdfdb6;
   }
 
-  body > button,
-  header{
+  body>button,
+  header {
     display: none;
   }
 
-  body{
-    height:100dvh;
+  body {
+    height: 100dvh;
     display: block;
     overflow: hidden;
   }
@@ -426,7 +426,7 @@ main>div>article h2::after {
     perspective: 100vmin;
   }
 
-  main> button{
+  main>button {
     width: 10em;
     height: 5em;
     position: fixed;
@@ -435,42 +435,39 @@ main>div>article h2::after {
     /* background-color: brown; */
     cursor: pointer;
     z-index: 10000000;
-}
+  }
 
-main> button:first-of-type{
-  transform: translateX(-15em);
-}
+  main>button:first-of-type {
+    transform: translateX(-15em);
+  }
 
-main> button:last-of-type{
-  transform: translateX(15em);
-}
+  main>button:last-of-type {
+    transform: translateX(15em);
+  }
 
-  main > div{
-    position:relative;
-    inline-size:50vmin;
-    aspect-ratio:2;
-    background-color:rgba(197, 197, 197, 0);
-    
-    transform-style:preserve-3d;
-    transform: translatez(90vmin) rotateY(.5turn);
+  main>div {
+    position: relative;
+    inline-size: 50vmin;
+    aspect-ratio: 2;
+    background-color: rgba(197, 197, 197, 0);
+
+    transform-style: preserve-3d;
+    transform: translatez(90vmin) rotateY(0turn);
     /* transform: translatez(90vmin) rotateY(-.25turn); */
 
-    transition:1s;
-    pointer-events:none;
-  	/* animation:draai 10s infinite linear; */
-    /* transform:translatez(76vmin) rotatey( calc( 90deg * var(--draai, 0) ) ); */
-    
-    /* background-color: rgba(0, 128, 0, 0.582); */
-  }
-
-  @keyframes draai{
-    to {
-  		transform:translatez(76vmin) rotatey(1turn);
+    transition: 1s;
+    pointer-events: none;
+    /* animation:draai 10s infinite linear; */
     }
-  }
 
-  main>div>article{
-    position:absolute;
+  /* @keyframes draai {
+    to {
+      transform: translatez(76vmin) rotatey(1turn);
+    }
+  } */
+
+  main>div>article {
+    position: absolute;
     width: unset;
     height: unset;
 
@@ -478,7 +475,7 @@ main> button:last-of-type{
     background-color: var(--bg);
   }
 
-  main>div>article h2::after{
+  main>div>article h2::after {
     display: none;
   }
 
@@ -487,39 +484,40 @@ main> button:last-of-type{
   } */
 
   main>div>article:first-of-type {
-    inset:0;
+    inset: 0;
     transform: translatez(25vmin) rotateY(180deg);
     /* background-color:#f006; */
   }
 
   main>div>article:nth-of-type(2) {
-    inset:0;
-    transform:rotateY(0turn) translatez(-25vmin);
+    inset: 0;
+    transform: rotateY(0turn) translatez(-25vmin);
     /* background-color:#0f06; */
   }
-  
+
   main>div>article:nth-of-type(3) {
-    inset:0;
-    transform:rotateY(.75turn) translatez(-25vmin);
+    inset: 0;
+    transform: rotateY(.75turn) translatez(-25vmin);
     /* background-color:#ff06; */
   }
-  
+
   main>div>article:nth-of-type(4) {
-    inset:0;
-    transform:rotateY(.25turn) translatez(-25vmin);
+    inset: 0;
+    transform: rotateY(.25turn) translatez(-25vmin);
     /* background-color:#0ff6; */
   }
-  
+
+  /* floor */
   main>div>article:nth-of-type(5) {
     inset: -50% 0;
-    transform:rotateX(.25turn) translatez(-12.5vmin);
-    background-color:#00f6;
+    transform: rotateX(.25turn) translatez(-12.5vmin);
+    /* background-color:#00f6; */
   }
 
   main>div>article:nth-of-type(6) {
-    inset:-50% 0;
-    transform:rotateX(-.25turn) translatez(-12.5vmin);
-    background-color:#f0F6;
+    inset: -50% 0;
+    transform: rotateX(-.25turn) translatez(-12.5vmin);
+    background-color: #f0F6;
   }
 
 }

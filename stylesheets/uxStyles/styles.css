@@ -480,7 +480,11 @@ main section p:nth-of-type(3){
     grid-row-start: 5;
 }
 
-
+/* @media (min-width: 600px){
+    main section h2{
+        font-size: 1em;
+    }
+} */
 
 
 

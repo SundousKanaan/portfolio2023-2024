@@ -284,6 +284,11 @@ main>div>article:first-of-type>section:nth-of-type(3){
         box-shadow:
             0 0 0 .5em var(--wood-shadow),
             0 0 0 .2em var(--wood);
+
+        background-image: url(https://movieplayer.net-cdn.it/t/images/2023/02/23/suzume-recensione-anime-makoto-shinkai_XriQhpo_jpg_1600x900_crop_q85.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
     main>div>article:first-of-type>button::after {
