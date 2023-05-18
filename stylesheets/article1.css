@@ -198,6 +198,9 @@ main>div>article:first-of-type>button {
 }
 
 
+main>div>article:first-of-type>section:nth-of-type(3){
+    display: none;
+}
 
 
 
@@ -216,28 +219,33 @@ main>div>article:first-of-type>button {
         padding: 0;
     }
 
+    main>div>article:first-of-type h2 {
+        visibility: hidden;
+    }
+
     main>div>article:first-of-type>section:first-of-type {
         width: 100%;
         height: 100%;
-        background-color: red;
+        /* background-color: red; */
         position: absolute;
+        display: block;
     }
 
     /* my foto */
     main>div>article:first-of-type>section:first-of-type div:first-of-type {
-        width: 10em;
+        width: 8em;
+        height: 10em;
         border-radius: 0;
-
         position: absolute;
-        right: 10%;
+        
+        right: 25%;
+        top: .5em;
 
         margin: 0;
     }
 
     main>div>article:first-of-type>section:first-of-type div:first-of-type:after {
         display: none;
-        /* border-radius: 0;
-        background-image: none; */
     }
 
     main>div>article:first-of-type>section:first-of-type div:first-of-type img {
@@ -245,10 +253,13 @@ main>div>article:first-of-type>button {
     }
 
 
+    main>div>article:first-of-type>section:first-of-type div:nth-of-type(2) {
+        display: none;
+    }
 
 
     /* my data */
-    main>div>article:first-of-type>section:nth-of-type(2){
+    main>div>article:first-of-type>section:nth-of-type(2) {
         display: none;
     }
 
@@ -263,7 +274,7 @@ main>div>article:first-of-type>button {
         height: 85%;
 
         position: absolute;
-        left: 2em;
+        left: 5em;
         bottom: 0;
 
         border: none;
@@ -288,5 +299,92 @@ main>div>article:first-of-type>button {
 
         background-color: var(--bookcase);
         box-shadow: inset 0 -.2em var(--bookcase-shadow);
+    }
+
+    main>div>article:first-of-type>section:nth-of-type(3){
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: grid;
+        place-items: center;
+    }
+
+    /* cmd icon */
+    main>div>article:first-of-type>section:nth-of-type(3) > img:first-of-type{
+        height: 80%;
+        position: absolute;
+        left: .3em;
+        bottom: 0;
+    }
+
+    /* NL flag */
+    main>div>article:first-of-type>section:nth-of-type(3) > img:nth-of-type(2){
+        width: 5em;
+        position: absolute;
+        left: 5em;
+        top: 0;
+    }
+
+    /* HvA logo */
+    main>div>article:first-of-type>section:nth-of-type(3) > img:nth-of-type(3){
+        width: 3em;
+        position: absolute;
+        left: .3em;
+        top: .5em;
+    }
+
+    main>div>article:first-of-type>section:nth-of-type(3) div{
+        width: 3em;
+        height: 95%;
+
+        position: absolute;
+        right: -.5em;
+
+        /* background-color: aliceblue; */
+    }
+
+    main>div>article:first-of-type>section:nth-of-type(3) div img:first-of-type{
+        width: 100%;
+        height: 100%;
+    }
+
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(2),
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(3),
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(4),
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(5),
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(6){
+        width: 1em;
+        position: absolute;
+        right: 2.5em;
+    }
+
+    /* figma logo */
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(2){
+        width: .8em;
+
+        bottom: 25%;
+    }
+    
+    /* photoshop logo */
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(3){
+        bottom: 65%;
+    }
+
+    /* adobe xd logo */
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(4){
+        bottom: 25%;
+        right: 3.5em;
+    }
+
+    /* css logo */
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(5){
+        bottom: 75%;
+    }
+
+    /* js logo */
+    main>div>article:first-of-type>section:nth-of-type(3) div img:nth-of-type(6){
+        width: 2em;
+        bottom: 45%;
+        right: 2em;
     }
 }
