@@ -506,7 +506,6 @@ main> button:last-of-type{
     inset:-50% 0;
     transform:rotateX(-.25turn) translatez(-12.5vmin);
     background-color:#f0F6;
-    opacity: 0;
   }
 
 }
