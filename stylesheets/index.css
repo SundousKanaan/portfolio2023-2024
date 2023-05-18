@@ -382,7 +382,7 @@ main>div>article h2::after {
 
 
 
-@media (min-width: 1150px) {
+@media (min-width: 1250px) {
   :root {
     --wood: rgb(179, 100, 26);
     --wood-shadow: rgba(109, 57, 8, 0.692);

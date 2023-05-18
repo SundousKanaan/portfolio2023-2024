@@ -7,7 +7,7 @@ main>div>article:nth-of-type(6){
 /* larg screens */
 /* ************ */
 
-@media (min-width: 1150px){
+@media (min-width: 1250px){
     main>div>article:nth-of-type(6){
         display: block;
     }

@@ -212,7 +212,7 @@ main>div>article:first-of-type>section:nth-of-type(3){
 /* larg screens */
 /* ************ */
 
-@media (min-width: 1150px) {
+@media (min-width: 1250px) {
     main>div>article:first-of-type {
         display: grid;
         place-items: center;
