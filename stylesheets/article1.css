@@ -200,8 +200,8 @@ main>div>article:first-of-type>section:nth-of-type(2){
 /* larg screens */
 /* ************ */
 
-@media (min-width: 1250px){
+/* @media (min-width: 1250px){
     main>div>article:first-of-type{
         background-color: red;
     }
-}
+} */

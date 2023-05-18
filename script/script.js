@@ -109,7 +109,7 @@ const projectList = document.querySelector("main>div>article:nth-of-type(2) ul")
 
 async function fetchRepos() {
     const allData = await fetchData(repos_URL);
-
+    console.log(allData.length);
     for (let i = 0; i < allData.length; i++) {
         if (allData[i].stargazers_count === 1) {
             const languages_URL = `https://api.github.com/repos/SundousKanaan/${allData[i].name}/languages`;
@@ -123,6 +123,7 @@ async function fetchRepos() {
             });
         }
     }
+    
     makeProject(reposData);
 }
 

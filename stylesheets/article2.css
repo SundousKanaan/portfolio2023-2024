@@ -253,6 +253,7 @@ main>div>article:nth-of-type(2)>div {
 
         position: relative;
         left: -.5em;
+        z-index: 100000;
     }
 
     main>div>article:nth-of-type(2) ul li {

@@ -393,8 +393,8 @@ main>div>article h2::after {
     transform-style:preserve-3d;
     /* transform: scale(1) rotateY(30deg); */
     
-    /* transform:translatez(76vmin); */
-    transform: translatez(82vmin);
+    transform:translatez(10vmin) rotateY(45deg);
+    /* transform: translatez(101vmin); */
     transition:1s;
     
   	/* animation:draai 10s infinite linear; */
@@ -402,6 +402,7 @@ main>div>article h2::after {
     /* transform:translatez(76vmin) rotatey( calc( 90deg * var(--draai, 0) ) ); */
     
     pointer-events:none;
+    background-color: rgba(0, 128, 0, 0.582);
   }
 
   @keyframes draai{
@@ -422,7 +423,7 @@ main>div>article h2::after {
 
   main>div>article:first-of-type {
     inset:0;
-    transform:translatez(-25vmin);
+    transform:translatez(25vmin);
     background-color:#f006;
   }
 
