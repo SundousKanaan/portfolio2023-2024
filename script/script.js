@@ -155,7 +155,7 @@ async function makeProject(reposData) {
                 <div>
                 <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
                 </div>
-                <a href="https://htmlpreview.github.io/?${reposData[i].site}" target="display-repo-frame" > ${reposData[i].name} </a>
+                <a href="https://htmlpreview.github.io/?${reposData[i].repo}" target="display-repo-frame" > ${reposData[i].name} </a>
             `
             projectList.appendChild(liElement)
         }
