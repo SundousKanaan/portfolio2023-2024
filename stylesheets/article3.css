@@ -445,7 +445,11 @@ main>div>article:nth-of-type(3)>div {
     main>div>article:nth-of-type(3)>section {
         height: 100%;
         position: absolute;
-        perspective: none;
+        /* perspective: none; */
+
+        transform-style: preserve-3d;
+        perspective: 50em;
+
     }
 
     main>div>article:nth-of-type(3)>section>button {
@@ -456,7 +460,9 @@ main>div>article:nth-of-type(3)>div {
         width: 90%;
         height: 30%;
 
-        transform-style: unset;
+        /* transform-style: unset; */
+        transform-style: preserve-3d;
+        transform: translateZ(3em) translateY(-0.45em);
         position: absolute;
         bottom: 0;
         border-radius: .5em .5em 0 0;
@@ -467,6 +473,7 @@ main>div>article:nth-of-type(3)>div {
 
         background-color: var(--bookcase);
         box-shadow: inset 0 -.2em 0 var(--bookcase-shadow);
+
     }
 
     main>div>article:nth-of-type(3)>section ul::before,
@@ -502,6 +509,9 @@ main>div>article:nth-of-type(3)>div {
 
         background-color: var(--bookcase-part);
         box-shadow: inset 0 .4em 0 var(--bookcase-part-shadow);
+
+        transform-style: preserve-3d;
+        transform: translateZ(4em) translateY(-0.6em);
     }
 
     main>div>article:nth-of-type(3) section::before{

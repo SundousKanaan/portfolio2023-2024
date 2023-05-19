@@ -526,7 +526,7 @@ body>button:nth-last-of-type(-n+4){
     /* transform: translatez(90vmin) rotateY(-.25turn); */
 
     transition: 1s;
-    pointer-events: none;
+    /* pointer-events: none; */
     /* animation:draai 10s infinite linear; */
     }
 

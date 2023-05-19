@@ -169,6 +169,11 @@ main>div>article:nth-of-type(4)>article {
 
     /* the bed */
 
+    /* main>div>article:nth-of-type(4)>div:first-of-type{
+        transform-style: preserve-3d;
+        transform: translateZ(1em) translateY(-0.2em) translateX(0.2em);
+    } */
+
     main>div>article:nth-of-type(4)>div:first-of-type,
     main>div>article:nth-of-type(4)>div:first-of-type div {
         display: block;
