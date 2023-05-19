@@ -312,10 +312,17 @@ main>div>article:nth-of-type(2)>div {
 
     main>div>article:nth-of-type(2)>div {
         display: block;
-        position: absolute;
 
         width: 40%;
         height: 7em;
+
+        position: absolute;
+        z-index: 100000;
+
+        background-image: url(../hobbyesimages/my-room.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
 
