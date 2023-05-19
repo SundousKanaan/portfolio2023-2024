@@ -25,6 +25,10 @@ main>div>article:nth-of-type(4) ul li {
     background-color: black;
 }
 
+main>div>article:nth-of-type(4) ul li:nth-child(n+7){
+    display: none;
+}
+
 main>div>article:nth-of-type(4) ul li:hover {
     flex: 7;
 }
