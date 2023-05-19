@@ -367,7 +367,9 @@ main>div>article h2::after {
 
 
 
-
+body>button:nth-last-of-type(-n+4){
+  display: none;
+}
 
 
 
