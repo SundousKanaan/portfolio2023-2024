@@ -240,7 +240,7 @@ main>div>article:nth-of-type(2)>div {
 
     main>div>article:nth-of-type(2) ul {
         width: 95%;
-        height: 90%;
+        height: 95%;
         padding: 0;
         overflow: unset;
         scroll-snap-type: none;
@@ -406,5 +406,17 @@ main>div>article:nth-of-type(2)>div {
     main>div>article:nth-of-type(2) ul li a:hover{
         outline: none;
         color: var(--dark-text);
+    }
+}
+
+
+@media (max-height: 900px) and (min-width: 1250px) {
+    main>div>article:nth-of-type(2) ul{
+        column-gap: 1.3em;
+    }
+
+    main>div>article:nth-of-type(2) ul li{
+        width: 3.5em;
+        height: 2.5em;
     }
 }
