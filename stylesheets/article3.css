@@ -527,6 +527,8 @@ main>div>article:nth-of-type(3)>div {
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+
+        transform: translateZ(4em) translateY(-0.6em);
     }
 
 
