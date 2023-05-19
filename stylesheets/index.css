@@ -481,6 +481,14 @@ body>button:nth-last-of-type(-n+4){
     bottom: 3em;
   }
 
+  body>button:nth-last-of-type(3){
+    transform:translateX(-5em);
+  }
+
+  body>button:nth-last-of-type(4){
+    transform:translateX(5em);
+  }
+
   /* fore */
   body>button:nth-last-of-type(3):focus-visible,
   body>button:nth-last-of-type(3):hover img{

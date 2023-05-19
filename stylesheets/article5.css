@@ -6,6 +6,8 @@ main>div>article:nth-of-type(5){
 /* larg screens */
 /* ************ */
 
+/* floor */
+
 @media (min-width: 1250px){
     main>div>article:nth-of-type(5){
         display: block;
@@ -15,7 +17,7 @@ main>div>article:nth-of-type(5){
         background-position: center;
         background-size: contain;
 
-        opacity: 50%;
+        /* opacity: 50%; */
     }
 }
 

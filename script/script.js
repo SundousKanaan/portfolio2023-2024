@@ -352,26 +352,41 @@ const leftWall = document.querySelector("body > button:nth-last-of-type(2)")
 const rightWall = document.querySelector("body > button:last-of-type")
 const roomBox = document.querySelector("main>div")
 
-let translateZ = 82;
+let translateZ = 80;
 let currDegrees = 0;
 let currRoomdeg = 0;
 
 fore.addEventListener("click", () => {
-    fore.classList.add("hiddenButton")
     rightWall.classList.add("hiddenButton")
     leftWall.classList.add("hiddenButton")
     back.classList.remove("hiddenButton")
 
-    rotateRoom(currDegrees,86);
+    // rotateRoom(currDegrees,86);
+
+    translateZ += 5; 
+    rotateRoom(currDegrees,translateZ);
+
+    if (translateZ >= 100) {
+        fore.classList.add("hiddenButton")
+    }
 });
 
 back.addEventListener("click", () => {
-    back.classList.add("hiddenButton")
-    fore.classList.remove("hiddenButton")
-    rightWall.classList.remove("hiddenButton")
-    leftWall.classList.remove("hiddenButton")
+    // back.classList.add("hiddenButton")
+    // fore.classList.remove("hiddenButton")
+    // rightWall.classList.remove("hiddenButton")
+    // leftWall.classList.remove("hiddenButton")
 
-    rotateRoom(currDegrees,82);
+    // rotateRoom(currDegrees,82);
+    fore.classList.remove("hiddenButton")
+    translateZ -= 5; 
+    rotateRoom(currDegrees,translateZ);
+
+    if (translateZ === 80) {
+        back.classList.add("hiddenButton")
+        rightWall.classList.remove("hiddenButton")
+        leftWall.classList.remove("hiddenButton")
+    }
 });
 
 rightWall.addEventListener("click", () => {
