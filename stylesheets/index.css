@@ -530,7 +530,7 @@ body>button:nth-last-of-type(-n+4){
     background-color: rgba(197, 197, 197, 0);
 
     transform-style: preserve-3d;
-    transform: translatez(82vmin) rotateY(0turn);
+    transform: translatez(80vmin) rotateY(0turn);
     /* transform: translatez(90vmin) rotateY(-.25turn); */
 
     transition: 1s;
