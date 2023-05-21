@@ -133,6 +133,11 @@ main>div>article:nth-of-type(4)>article {
     main>div>article:nth-of-type(4) ul li {
         display: none;
         border-radius: 0;
+        cursor: pointer;
+    }
+
+    main>div>article:nth-of-type(4) ul li:hover img{
+        opacity: 30%;
     }
 
     main>div>article:nth-of-type(4) ul li:nth-child(n+7) {
@@ -161,9 +166,13 @@ main>div>article:nth-of-type(4)>article {
 
 
     main>div>article:nth-of-type(4) ul li h3 {
-        opacity: 100%;
+        opacity: 0%;
         text-align: center;
         font-size: .2em;
+    }
+
+    main>div>article:nth-of-type(4) ul li:hover h3 {
+        opacity: 100%;
     }
 
 
