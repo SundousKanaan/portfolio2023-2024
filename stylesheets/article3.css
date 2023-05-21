@@ -435,6 +435,7 @@ main>div>article:nth-of-type(3)>div {
         height: unset;
         display: grid;
         place-items: center;
+        overflow: visible;
     }
 
     main>div>article:nth-of-type(3) h2 {
