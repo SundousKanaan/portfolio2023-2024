@@ -529,7 +529,19 @@ main>div>article:nth-of-type(3)>div {
         background-size: contain;
         background-repeat: no-repeat;
 
+        transform-origin: 50% 100%;
         transform: translateZ(4em) translateY(-0.6em);
+
+        animation: shaking .5s infinite both linear alternate;
+    }
+
+    @keyframes shaking {
+        from{
+            transform: translateZ(4em) translateY(-0.6em) rotate(-3deg);
+        }
+        to{
+            transform: translateZ(4em) translateY(-0.6em) rotate(3deg);
+        }
     }
 
 
