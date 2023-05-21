@@ -237,9 +237,9 @@ main>div>article:first-of-type>section:nth-of-type(3){
         height: 10em;
         border-radius: 0;
         position: absolute;
-        
         right: 25%;
         top: .5em;
+        z-index: 2;
 
         margin: 0;
     }
