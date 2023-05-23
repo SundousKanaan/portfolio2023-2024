@@ -65,9 +65,9 @@ const runCountdown = () => {
 window.addEventListener("load", runCountdown);
 
 // git my data from gihub ===========================================================================
-
 const API_URL = "https://api.github.com/users/SundousKanaan";
 const repos_URL = "https://api.github.com/users/SundousKanaan/repos";
+
 
 async function fetchData(link) {
     try {
@@ -125,13 +125,14 @@ async function fetchRepos() {
     }
 
     makeProject(reposData);
+
+    return reposData;
 }
 
 fetchRepos();
 
 const topRepos = ["TiltShift"]
 async function makeProject(reposData) {
-
     for (let i = 0; i < reposData.length; i++) {
         const liElement = document.createElement("li");
         liElement.innerHTML = `
@@ -166,11 +167,26 @@ async function makeProject(reposData) {
 // room size projects
 
 const projectsButtons = document.querySelectorAll("main > div > article:nth-of-type(2) ul li > button")
+const screen = document.querySelector("main>div>article:nth-of-type(2)>div")
 console.log(projectsButtons);
 
 for (let i = 0; i < projectsButtons.length; i++) {
-    projectsButtons[i].addEventListener("click" , () => {
+    projectsButtons[i].addEventListener("click" , async () => {
+        screen.classList.add("projectOpen");
+        let repoName = projectsButtons[i].textContent;
+        const repo_URL = `https://api.github.com/repos/SundousKanaan/${repoName}`
+        const repoData = await fetchData (repo_URL)
+        console.log("reposData",repoData);
         console.log("test", projectsButtons[i].textContent);
+
+        screen.innerHTML=`
+        <section>
+            <h3>title</h3>
+            <img src="./projectsimages/BusinessCard.png" alt="">
+            <a href="">repo ></a>
+            <a href="">site ></a>
+        </section>
+        `
     })
 }
 
