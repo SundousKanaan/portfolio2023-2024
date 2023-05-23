@@ -387,13 +387,13 @@ function rotateRoom(currRoomdeg,translateZ) {
 
 
 doorButton.addEventListener('click', (e)=> {
-    e.preventDefault();
+    // e.preventDefault();
     console.log("bey");
     // window.close();
     
-    if (confirm("Close Window?")) {
-        close();
-        // alert(close())
-      }
+    // if (confirm("Close Window?")) {
+    //     close();
+    //     // alert(close())
+    //   }
     // e.returnValue = '';
 });
