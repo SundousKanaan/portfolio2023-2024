@@ -110,7 +110,6 @@ const projectList = document.querySelector("main>div>article:nth-of-type(2) ul")
 
 async function fetchRepos() {
     const allData = await fetchData(repos_URL);
-    console.log(allData.length);
     for (let i = 0; i < allData.length; i++) {
         if (allData[i].stargazers_count === 1) {
             const languages_URL = `https://api.github.com/repos/SundousKanaan/${allData[i].name}/languages`;
@@ -135,7 +134,7 @@ async function makeProject(reposData) {
 
     for (let i = 0; i < reposData.length; i++) {
         const liElement = document.createElement("li");
-            liElement.innerHTML = `
+        liElement.innerHTML = `
                 <div>
                     <h3>${reposData[i].name}</h3>
                     <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
@@ -152,9 +151,10 @@ async function makeProject(reposData) {
                 <div class="desktop-version">
                 <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
                 </div>
-                <a href="${reposData[i].site}" target="display-repo-frame" > ${reposData[i].name} </a>
-            `
-            projectList.appendChild(liElement)
+                <button>${reposData[i].name} </button>
+                `
+        // <a href="${reposData[i].site}" target="display-repo-frame" > ${reposData[i].name} </a>
+        projectList.appendChild(liElement)
 
         if (topRepos.includes(reposData[i].name)) {
             liElement.classList.add("GDA");
@@ -163,6 +163,16 @@ async function makeProject(reposData) {
 
 }
 
+// room size projects
+
+const projectsButtons = document.querySelectorAll("main > div > article:nth-of-type(2) ul li > button")
+console.log(projectsButtons);
+
+for (let i = 0; i < projectsButtons.length; i++) {
+    projectsButtons[i].addEventListener("click" , () => {
+        console.log("test", projectsButtons[i].textContent);
+    })
+}
 
 // UX/UI ===========================================================================
 
@@ -207,12 +217,10 @@ const uxfiles = [{
 }
 ]
 
-console.log(uxfiles.length, "s");
-
 function makeUXCards() {
     for (let i = 0; i < uxfiles.length; i++) {
         const li = document.createElement("li")
-            li.innerHTML = `
+        li.innerHTML = `
                  <h3>${uxfiles[i].name}</h3>
                  <img src="./UXimages/${uxfiles[i].image}" alt="${uxfiles[i].name} foto">
                  <button></button>
@@ -226,7 +234,6 @@ function makeUXCards() {
             `
         uxList.appendChild(li)
     }
-    console.log("hi", uxList);
 }
 
 makeUXCards();
@@ -251,7 +258,7 @@ for (let i = 0; i < openCardButtons.length; i++) {
                 Cards[i].classList.replace("openCard", "closeCard")
             }
         }
-        
+
         if (Cards[i].classList.contains("closeCard")) {
             Cards[i].classList.replace("closeCard", "openCard")
         } else {
@@ -297,7 +304,6 @@ function findPosition(element) {
             element = element.offsetParent;
         } while (element);
     }
-    console.log("currentTop",currentTop);
     return currentTop;
 }
 
@@ -321,20 +327,17 @@ previousCard.addEventListener("click", () => {
 });
 
 nextCard.addEventListener("click", () => {
-    console.log(" 1");
     rotateCarousel(60);
 });
 
 function rotateCarousel(degrees) {
     currdeg += degrees;
-    console.log(" 2", currdeg);
     CardsList.style.transform = "translateZ(500px) rotateY(" + currdeg + "deg)";
 }
 
 // room size
 
 const uxWorks = document.querySelectorAll("main>div>article:nth-of-type(3)>section ul li > a")
-console.log(uxWorks);
 
 for (let i = 0; i < uxWorks.length; i++) {
     uxWorks[i].addEventListener("click", () => {
@@ -367,8 +370,8 @@ fore.addEventListener("click", () => {
     leftWall.classList.add("hiddenButton")
     back.classList.remove("hiddenButton")
 
-    translateZ += 5; 
-    rotateRoom(currDegrees,translateZ);
+    translateZ += 5;
+    rotateRoom(currDegrees, translateZ);
 
     if (translateZ >= 100) {
         fore.classList.add("hiddenButton")
@@ -377,8 +380,8 @@ fore.addEventListener("click", () => {
 
 back.addEventListener("click", () => {
     fore.classList.remove("hiddenButton")
-    translateZ -= 5; 
-    rotateRoom(currDegrees,translateZ);
+    translateZ -= 5;
+    rotateRoom(currDegrees, translateZ);
 
     if (translateZ === 80) {
         back.classList.add("hiddenButton")
@@ -389,24 +392,24 @@ back.addEventListener("click", () => {
 
 rightWall.addEventListener("click", () => {
     currRoomdeg += .25;
-    rotateRoom(currRoomdeg,translateZ);
+    rotateRoom(currRoomdeg, translateZ);
 });
 
 leftWall.addEventListener("click", () => {
     currRoomdeg += -.25;
-    rotateRoom(currRoomdeg,translateZ);
+    rotateRoom(currRoomdeg, translateZ);
 });
 
-function rotateRoom(currRoomdeg,translateZ) {
+function rotateRoom(currRoomdeg, translateZ) {
     currDegrees = currRoomdeg;
     roomBox.style.transform = `translateZ(${translateZ}vmin) rotateY(${currRoomdeg}turn)`;
 }
 
-doorButton.addEventListener('click', (e)=> {
+doorButton.addEventListener('click', (e) => {
     if (confirm("Do you want to close the window and go to the repo?")) {
         close();
-        window.location='https://github.com/SundousKanaan/portfolio2023';
-      }
+        window.location = 'https://github.com/SundousKanaan/portfolio2023';
+    }
 });
 
 lightButton.addEventListener("click", () => {
@@ -423,14 +426,14 @@ lightButton.addEventListener("click", () => {
 
 function modeCheck() {
     if (localStorage.getItem("siteMode") === "dark") {
-      lightButton.classList.add("darkmode");
-      body.classList.add("darkmode");
+        lightButton.classList.add("darkmode");
+        body.classList.add("darkmode");
     }
     else {
         lightButton.classList.remove("darkmode");
         body.classList.remove("darkmode");
     }
-  }
-  
-  // Roep de functie modeCheck aan bij het laden van de pagina
-  window.addEventListener("DOMContentLoaded", modeCheck);
+}
+
+// Roep de functie modeCheck aan bij het laden van de pagina
+window.addEventListener("DOMContentLoaded", modeCheck);
