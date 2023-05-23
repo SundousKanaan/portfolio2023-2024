@@ -134,7 +134,6 @@ async function makeProject(reposData) {
 
     for (let i = 0; i < reposData.length; i++) {
         const liElement = document.createElement("li");
-        if (screenWidth < 1250) {
             liElement.innerHTML = `
                 <div>
                     <h3>${reposData[i].name}</h3>
@@ -148,17 +147,13 @@ async function makeProject(reposData) {
                     <a href="${reposData[i].site}" target="_blank">To site</a>
                     </div>
                 </section>
-            `
-            projectList.appendChild(liElement)
-        } else if (screenWidth >= 1250) {
-            liElement.innerHTML = `
-                <div>
+
+                <div class="desktop-version">
                 <img src="./projectsimages/${reposData[i].name}.png" alt="project ${reposData[i].name} foto">
                 </div>
                 <a href="${reposData[i].site}" target="display-repo-frame" > ${reposData[i].name} </a>
             `
             projectList.appendChild(liElement)
-        }
 
         if (topRepos.includes(reposData[i].name)) {
             liElement.classList.add("GDA");
@@ -216,7 +211,6 @@ console.log(uxfiles.length, "s");
 function makeUXCards() {
     for (let i = 0; i < uxfiles.length; i++) {
         const li = document.createElement("li")
-        if (screenWidth < 1250){
             li.innerHTML = `
                  <h3>${uxfiles[i].name}</h3>
                  <img src="./UXimages/${uxfiles[i].image}" alt="${uxfiles[i].name} foto">
@@ -227,13 +221,8 @@ function makeUXCards() {
                     <button></button>
                     <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >Details</a>
                 </section>
-            `
-        } else if (screenWidth >= 1250){
-            li.innerHTML = `
                 <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >${uxfiles[i].name}</a>
             `
-        }
-
         // li.setAttribute('disabled', 'disabled');
         uxList.appendChild(li)
     }

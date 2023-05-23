@@ -103,7 +103,7 @@ html::-webkit-scrollbar-track {
 .gbook main section:nth-of-type(n+2) h4{
     color: var(--hoofd-color-gbook);
     margin: 0;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
 }
 
 .gbook main section:last-of-type{

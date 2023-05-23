@@ -91,7 +91,7 @@ html::-webkit-scrollbar-track {
 .Playful-depth main section:nth-of-type(n+2) h4 {
     color: var(--hoofd-color-Playful-depth);
     margin: 0;
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
 }
 
 .Playful-depth main section:last-of-type {

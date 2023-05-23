@@ -25,7 +25,7 @@ main>div>article:nth-of-type(4) ul li {
     background-color: black;
 }
 
-main>div>article:nth-of-type(4) ul li:nth-child(n+7){
+main>div>article:nth-of-type(4) ul li:nth-child(n+7) {
     display: none;
 }
 
@@ -115,8 +115,8 @@ main>div>article:nth-of-type(4)>article {
     }
 
     main>div>article:nth-of-type(4) ul {
-        width: 40%;
-        height: 60%;
+        width: 45%;
+        height: 65%;
         position: absolute;
         left: 2em;
         top: .5em;
@@ -127,21 +127,35 @@ main>div>article:nth-of-type(4)>article {
         gap: .3em;
 
         perspective: none;
+        transform-style: preserve-3d;
         /* background-color: antiquewhite; */
     }
 
     main>div>article:nth-of-type(4) ul li {
         display: none;
         border-radius: 0;
-        cursor: pointer;
     }
 
-    main>div>article:nth-of-type(4) ul li:hover img{
+    main>div>article:nth-of-type(4) ul li:hover img {
         opacity: 30%;
     }
 
     main>div>article:nth-of-type(4) ul li:nth-child(n+7) {
         display: grid;
+        transform-style: preserve-3d;
+    }
+
+    main>div>article:nth-of-type(4) ul li:nth-child(n+7) a {
+        width: 50%;
+        height: fit-content;
+        font-size: .3em;
+        text-align: center;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    main>div>article:nth-of-type(4) ul li:nth-child(n+7) a:hover {
+        background-color: var(--them-color);
     }
 
     main>div>article:nth-of-type(4) ul li:nth-last-child(1) {
@@ -150,6 +164,7 @@ main>div>article:nth-of-type(4)>article {
 
     main>div>article:nth-of-type(4) ul li:nth-last-child(2) {
         grid-area: 1/1/5/3;
+        /* align-self: center; */
     }
 
     main>div>article:nth-of-type(4) ul li:nth-last-child(3) {
@@ -192,6 +207,7 @@ main>div>article:nth-of-type(4)>article {
         position: absolute;
         bottom: 0;
         left: .6em;
+        z-index: 2;
 
         background-color: var(--wood);
         box-shadow: inset 0 .3em 0 var(--wood-shadow);
@@ -247,7 +263,7 @@ main>div>article:nth-of-type(4)>article {
         background-color: var(--wood);
     }
 
-    main>div>article:nth-of-type(4)>div:first-of-type::after{
+    main>div>article:nth-of-type(4)>div:first-of-type::after {
         content: "";
         display: block;
         width: 2.5em;
@@ -276,9 +292,10 @@ main>div>article:nth-of-type(4)>article {
         bottom: 4em;
         /* border-bottom: solid .3em var(--wood); */
 
-        box-shadow: 
-        0 .1em 0 var(--wood-shadow),
-        0 .3em 0 var(--wood);
+        box-shadow:
+            0 .1em 0 var(--wood-shadow),
+            0 .3em 0 var(--wood);
+    
         transform-style: preserve-3d;
         transform-origin: bottom;
         transform: translateZ(3em) rotateX(10deg);
@@ -287,7 +304,7 @@ main>div>article:nth-of-type(4)>article {
         /* background-image: linear-gradient(to right, transparent 0 30%, brown 0 70%, transparent 0 100%); */
     }
 
-    main>div>article:nth-of-type(4)>article::before{
+    main>div>article:nth-of-type(4)>article::before {
         content: "";
         width: .3em;
         height: 10em;
@@ -301,7 +318,7 @@ main>div>article:nth-of-type(4)>article {
         background-color: var(--wood);
     }
 
-    main>div>article:nth-of-type(4)>article::after{
+    main>div>article:nth-of-type(4)>article::after {
         content: "";
         width: 5em;
         height: 9em;
@@ -312,28 +329,51 @@ main>div>article:nth-of-type(4)>article {
 
         transform: translateZ(-1em) rotateX(0deg);
 
-        background-image: conic-gradient(
-            from 90deg
-            at 50% 0,
-        transparent 0 75deg ,
-        var(--wood) 75deg 78deg ,
-        transparent 78deg 102deg,
-        var(--wood) 102deg 105deg ,
-        transparent 105deg 360deg
-        );
+        background-image: conic-gradient(from 90deg at 50% 0,
+                transparent 0 75deg,
+                var(--wood) 75deg 78deg,
+                transparent 78deg 102deg,
+                var(--wood) 102deg 105deg,
+                transparent 105deg 360deg);
     }
 
-    main>div>article:nth-of-type(4)>article img{
+    main>div>article:nth-of-type(4)>article img {
         width: 100%;
         height: 100%;
         /* object-fit: cover; */
         object-position: center;
     }
 
+    main>div>article:nth-of-type(4)>article a {
+        padding: 0.2em 0.5em;
+        background-color: var(--bg);
+        color: var(--dark-text);
+        width: 3vw;
+        height: fit-content;
+        text-align: center;
+        text-decoration: none;
+        font-size: .5vw;
+        border-radius: 5em;
+        position: absolute;
+        bottom: 15%;
+        left: calc(50% - 3vw /2);
+
+        opacity: 0;
+        transition: .5s;
+    }
+
+    main>div>article:nth-of-type(4)>article:hover a {
+        opacity: 100%;
+    }
+
+    main>div>article:nth-of-type(4)>article a:hover{
+        background-color: var(--them-color);
+        color: var(--text-color);
+    }
 
     /* wall shelves */
 
-    main>div>article:nth-of-type(4)>div:nth-of-type(2){
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) {
         width: 45%;
         height: 90%;
         display: block;
@@ -343,8 +383,8 @@ main>div>article:nth-of-type(4)>article {
         display: grid;
         place-items: center;
     }
-    
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div{
+
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div {
         width: 5em;
         height: .3em;
         position: absolute;
@@ -352,14 +392,14 @@ main>div>article:nth-of-type(4)>article {
         background-color: var(--wood);
         box-shadow: inset 0 -.1em 0 var(--wood-shadow);
     }
-    
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type{
+
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type {
         left: 0;
         top: 20%;
     }
 
-    
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2){
+
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2) {
         right: 0;
         top: 35%;
     }
@@ -367,34 +407,34 @@ main>div>article:nth-of-type(4)>article {
     main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type::after,
     main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type::before,
     main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::after,
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::before{
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::before {
         content: "";
         width: 2em;
         height: 2.5em;
         display: block;
-    
+
         position: absolute;
         bottom: .1em;
         z-index: -1;
-        
+
         background-color: transparent;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type::after{
+
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type::after {
         background-image: url(https://www.sideshow.com/cdn-cgi/image/width=500,quality=80,f=auto/https://www.sideshow.com/storage/product-images/910900/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_silo_md.png);
         width: 3em;
         right: 0;
     }
-    
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type::before{
+
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type::before {
         background-image: url(https://cdn.shopify.com/s/files/1/0318/2649/products/2655200-removebg-preview.png?v=1629786705);
         left: 5%;
     }
 
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::after{
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::after {
         background-image: url(../hobbyesimages/naruto-figure.png);
         width: 2em;
         height: 2em;
@@ -402,9 +442,8 @@ main>div>article:nth-of-type(4)>article {
         background-size: cover;
     }
 
-    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::before{
+    main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::before {
         background-image: url(https://cdn.shopify.com/s/files/1/0018/4428/1419/products/product-image-1725780976_640x640.png?v=1619608413);
         left: 5%;
     }
 }
-

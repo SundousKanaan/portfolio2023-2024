@@ -85,7 +85,7 @@ html::-webkit-scrollbar-track {
     color: var(--hoofd-color-uxdesign);
     margin: 0;
 
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
 }
 
 

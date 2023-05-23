@@ -392,54 +392,6 @@ header nav ul li:hover{
     /* === main stijlen  ===*/
     /* =====================*/
 
-    /* Modeknop */
-#modeknop{
-    width: 5em;
-    height: 1.75em;
-
-    margin: 0;
-    padding: 0;
-    border: 0;
-
-    font-size: .8em;
-    font-weight: bold;
-    color: var(--hover-font-color);
-
-    position: fixed;
-    right: 8.5em;
-    top: 0em;
-
-    z-index: 100;
-
-    background-color: var(--basis-font-color);
-    cursor: pointer;
-}
-
-body.darkMode{
-    --hover-font-color: rgb(32, 32,32);
-    --basis-font-color: white;
-
-    --background-color: rgb(32, 32,32);
-}
-
-body.darkMode #modeknop{
-    color: var(--hover-font-color);
-    background-color: var(--basis-font-color);
-}
-
-#modeknop:hover{
-    box-shadow: rgb(80, 80, 80) 0 0 .5em .1em;
-}
-
-body.darkMode #modeknop:active,
-#modeknop:active{
-    font-weight: lighter;
-}
-
-body.darkMode #modeknop:hover{
-    box-shadow: rgb(233, 233, 233) 0 0 .5em .1em ;
-}
-
     /* main sections  */
 main section{
     padding: 2em;
@@ -452,18 +404,21 @@ main section h2{
     color: var(--basis-font-color);
     font-weight: bold;  
     text-decoration: underline var(--hoofd-color-home);
-    font-size: 3em;
+    /* font-size: 3em; */
+    font-size: 5vw;
 
     margin: 0;
 }
 
 main section p{
     color: var(--basis-font-color);
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 3vw;
 
     margin: 0;
 
-    line-height: 25px;
+    /* line-height: 25px; */
+    line-height:4vw;
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -480,13 +435,19 @@ main section p:nth-of-type(3){
     grid-row-start: 5;
 }
 
+main section h4{
+    font-size: 3.5vw;
+}
 /* @media (min-width: 600px){
     main section h2{
         font-size: 1em;
     }
 } */
 
-
+.scrolllangimages::-webkit-scrollbar, .scrollimages::-webkit-scrollbar{
+    /* width: 37vw; */
+    height: 1.5vw;
+}
 
 
 

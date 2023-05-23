@@ -422,6 +422,10 @@ main>div>article:nth-of-type(3)>div {
 
 
 
+main>div>article:nth-of-type(3)>section ul li > a{
+    display: none;
+}
+
 
 
 
@@ -556,6 +560,22 @@ main>div>article:nth-of-type(3)>div {
         z-index: 1;
     }
 
+    main>div>article:nth-of-type(3) section ul li.openCard h3,
+    main>div>article:nth-of-type(3)>section ul li h3,
+    main>div>article:nth-of-type(3) section ul li.openCard img,
+    main>div>article:nth-of-type(3)>section ul li img,
+    main>div>article:nth-of-type(3) section ul li.openCard > button,
+    main>div>article:nth-of-type(3)>section ul li > button,
+    main>div>article:nth-of-type(3) section ul li.openCard>section,
+    main>div>article:nth-of-type(3)>section ul li section{
+        display: none;
+    }
+
+    main>div>article:nth-of-type(3) section ul li.openCard{
+        padding: 0;
+        animation: none;
+    }
+
     main>div>article:nth-of-type(3)>section ul li:nth-child(-n+3){
         grid-area: 1/2/2/3;
         /* transform: rotate(90deg); */
@@ -612,7 +632,8 @@ main>div>article:nth-of-type(3)>div {
         display: none;
     }
 
-    main>div>article:nth-of-type(3)>section ul li a{
+    main>div>article:nth-of-type(3)>section ul li > a{
+        display: block;
         text-decoration: none;
         font-size: .4em;
         /* transform: rotate(-90deg); */
@@ -638,6 +659,11 @@ main>div>article:nth-of-type(3)>div {
         background-color: white;
 
         box-shadow: 0 .15em 0 var(--screen-shadow);
+    }
+
+    main>div>article:nth-of-type(3)>article>button.openIframe,
+    main>div>article:nth-of-type(3)>article>button{
+        display: none;
     }
 
     main>div>article:nth-of-type(3)>article iframe {
