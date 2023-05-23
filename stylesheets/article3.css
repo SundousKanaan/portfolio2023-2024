@@ -422,7 +422,7 @@ main>div>article:nth-of-type(3)>div {
 
 
 
-main>div>article:nth-of-type(3)>section ul li > a{
+main>div>article:nth-of-type(3)>section ul li>a {
     display: none;
 }
 
@@ -442,12 +442,12 @@ main>div>article:nth-of-type(3)>section ul li > a{
         overflow: visible;
 
         background-image: url(https://sticker-collection.com/stickers/plain/Hanako_kkkun/512/413c3de2-e2c8-4ba8-ba2f-45185fa2e79afile_3156765.webp),
-        url(https://sticker-collection.com/stickers/plain/Hanako_kkkun/512/e2bd8b43-1175-425a-b0b8-15620685841efile_3156774.webp);
-        background-position: left 5% bottom 40% , right 4% bottom 36%;
-        background-position: left -26% bottom , right -12% bottom;
-        background-repeat: no-repeat,no-repeat;
-        background-size: 15%,15%;
-        background-size: 44%,36%;
+            url(https://sticker-collection.com/stickers/plain/Hanako_kkkun/512/e2bd8b43-1175-425a-b0b8-15620685841efile_3156774.webp);
+        background-position: left 5% bottom 40%, right 4% bottom 36%;
+        background-position: left -26% bottom, right -12% bottom;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 15%, 15%;
+        background-size: 44%, 36%;
         background-blend-mode: luminosity;
     }
 
@@ -528,7 +528,7 @@ main>div>article:nth-of-type(3)>section ul li > a{
         transform: translateZ(4em) translateY(-0.6em);
     }
 
-    main>div>article:nth-of-type(3) section::before{
+    main>div>article:nth-of-type(3) section::before {
         content: "";
         display: block;
         width: 6em;
@@ -549,16 +549,17 @@ main>div>article:nth-of-type(3)>section ul li > a{
     }
 
     @keyframes shaking {
-        from{
+        from {
             transform: translateZ(4em) translateY(-0.6em) rotate(-3deg);
         }
-        to{
+
+        to {
             transform: translateZ(4em) translateY(-0.6em) rotate(3deg);
         }
     }
 
 
-    
+
     main>div>article:nth-of-type(3)>section ul li {
         width: 5em;
         height: 1em;
@@ -573,42 +574,42 @@ main>div>article:nth-of-type(3)>section ul li > a{
     main>div>article:nth-of-type(3)>section ul li h3,
     main>div>article:nth-of-type(3) section ul li.openCard img,
     main>div>article:nth-of-type(3)>section ul li img,
-    main>div>article:nth-of-type(3) section ul li.openCard > button,
-    main>div>article:nth-of-type(3)>section ul li > button,
+    main>div>article:nth-of-type(3) section ul li.openCard>button,
+    main>div>article:nth-of-type(3)>section ul li>button,
     main>div>article:nth-of-type(3) section ul li.openCard>section,
-    main>div>article:nth-of-type(3)>section ul li section{
+    main>div>article:nth-of-type(3)>section ul li section {
         display: none;
     }
 
-    main>div>article:nth-of-type(3) section ul li.openCard{
+    main>div>article:nth-of-type(3) section ul li.openCard {
         padding: 0;
         animation: none;
     }
 
-    main>div>article:nth-of-type(3)>section ul li:nth-child(-n+3){
+    main>div>article:nth-of-type(3)>section ul li:nth-child(-n+3) {
         grid-area: 1/2/2/3;
         /* transform: rotate(90deg); */
     }
 
-    main>div>article:nth-of-type(3)>section ul li:nth-last-child(-n+3){
+    main>div>article:nth-of-type(3)>section ul li:nth-last-child(-n+3) {
         grid-area: 1/6/2/7;
         /* transform: rotate(90deg); */
     }
 
-    main>div>article:nth-of-type(3)>section ul li:nth-child(1){
+    main>div>article:nth-of-type(3)>section ul li:nth-child(1) {
         background-color: rgb(46, 46, 46);
         box-shadow: inset 0 .2em rgb(17, 17, 17);
         bottom: 0em;
     }
 
-    main>div>article:nth-of-type(3)>section ul li:nth-child(2){
+    main>div>article:nth-of-type(3)>section ul li:nth-child(2) {
         background-color: rgb(173, 49, 11);
         box-shadow: inset 0 .2em rgb(131, 34, 4);
         bottom: 1em;
         right: 1em;
     }
-  
-    main>div>article:nth-of-type(3)>section ul li:nth-child(3){
+
+    main>div>article:nth-of-type(3)>section ul li:nth-child(3) {
         width: 4em;
         background-color: rgb(26, 155, 21);
         box-shadow: inset 0 .2em rgb(10, 116, 6);
@@ -616,20 +617,20 @@ main>div>article:nth-of-type(3)>section ul li > a{
         left: 1.5em;
     }
 
-    main>div>article:nth-of-type(3)>section ul li:nth-last-child(1){
+    main>div>article:nth-of-type(3)>section ul li:nth-last-child(1) {
         background-color: rgb(41, 116, 38);
         box-shadow: inset 0 .2em rgb(26, 83, 25);
         bottom: 0em;
     }
 
-    main>div>article:nth-of-type(3)>section ul li:nth-last-child(2){
+    main>div>article:nth-of-type(3)>section ul li:nth-last-child(2) {
         background-color: rgb(64, 105, 219);
         box-shadow: inset 0 .2em rgb(5, 98, 185);
         bottom: 1em;
         left: 1em;
     }
-  
-    main>div>article:nth-of-type(3)>section ul li:nth-last-child(3){
+
+    main>div>article:nth-of-type(3)>section ul li:nth-last-child(3) {
         background-color: rgb(122, 122, 122);
         box-shadow: inset 0 .2em rgb(107, 107, 107);
         right: 1em;
@@ -641,7 +642,7 @@ main>div>article:nth-of-type(3)>section ul li > a{
         display: none;
     }
 
-    main>div>article:nth-of-type(3)>section ul li > a{
+    main>div>article:nth-of-type(3)>section ul li>a {
         display: block;
         text-decoration: none;
         font-size: .4em;
@@ -668,10 +669,35 @@ main>div>article:nth-of-type(3)>section ul li > a{
         background-color: white;
 
         box-shadow: 0 .15em 0 var(--screen-shadow);
+
+        /* the gif from Dribbble */
+        background-image: url(https://cdn.dribbble.com/users/795597/screenshots/5885477/ui-ux_design8.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    main>div>article:nth-of-type(3)>article.projectingStart{
+        background-image: none;
+    }
+    main>div>article:nth-of-type(3)>article.projecting {
+        background-image: none;
+        animation: projecting .4s infinite linear both;
+
+    }
+
+    @keyframes projecting {
+        from {
+            filter: Contrast(0);
+        }
+
+        to {
+            filter: Contrast(100%);
+        }
     }
 
     main>div>article:nth-of-type(3)>article>button.openIframe,
-    main>div>article:nth-of-type(3)>article>button{
+    main>div>article:nth-of-type(3)>article>button {
         display: none;
     }
 

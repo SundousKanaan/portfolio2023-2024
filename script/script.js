@@ -331,6 +331,21 @@ function rotateCarousel(degrees) {
     CardsList.style.transform = "translateZ(500px) rotateY(" + currdeg + "deg)";
 }
 
+// room size
+
+const uxWorks = document.querySelectorAll("main>div>article:nth-of-type(3)>section ul li > a")
+console.log(uxWorks);
+
+for (let i = 0; i < uxWorks.length; i++) {
+    uxWorks[i].addEventListener("click", () => {
+        iframeArticle.classList.add("projectingStart")
+        iframeArticle.classList.add("projecting")
+
+        setTimeout(() => {
+            iframeArticle.classList.remove("projecting")
+        }, 1500);
+    })
+}
 
 // the room (larg screens) ===========================================================================
 
