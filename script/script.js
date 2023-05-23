@@ -1,4 +1,3 @@
-// import { fetchData } from './modules/fetch.js';
 
 var screenWidth = window.innerWidth;
 var screenHeight = window.innerHeight;
@@ -18,6 +17,8 @@ navButton.addEventListener('click', () => {
     }
 })
 
+
+// skils circels (mobile size) ===========================================================================
 
 // define the function that runs the countdown
 const runCountdown = () => {
@@ -63,10 +64,10 @@ const runCountdown = () => {
 // call the function when the page is loaded
 window.addEventListener("load", runCountdown);
 
+// git my data from gihub ===========================================================================
 
 const API_URL = "https://api.github.com/users/SundousKanaan";
 const repos_URL = "https://api.github.com/users/SundousKanaan/repos";
-// const titelsAPI_URL = `https://api.github.com/repos/SundousKanaan/${repoTitel}`;
 
 async function fetchData(link) {
     try {
@@ -101,7 +102,7 @@ async function fetchFunction() {
 fetchFunction();
 
 
-// projects
+// projects ===========================================================================
 
 
 const reposData = [];
@@ -163,7 +164,7 @@ async function makeProject(reposData) {
 }
 
 
-// UX/UI
+// UX/UI ===========================================================================
 
 const uxList = document.querySelector("main>div>article:nth-of-type(3) ul")
 const uxfiles = [{
@@ -223,7 +224,6 @@ function makeUXCards() {
                 </section>
                 <a href="./uxprojects/${uxfiles[i].link}.html" target="display-frame" >${uxfiles[i].name}</a>
             `
-        // li.setAttribute('disabled', 'disabled');
         uxList.appendChild(li)
     }
     console.log("hi", uxList);
@@ -236,8 +236,13 @@ const Cards = document.querySelectorAll("main>div>article:nth-of-type(3) section
 const CardsList = document.querySelector("main>div>article:nth-of-type(3) section ul")
 const previousCard = document.querySelector("main>div>article:nth-of-type(3) > section > button:nth-of-type(2)");
 const nextCard = document.querySelector("main>div>article:nth-of-type(3) > section > button:first-of-type");
+const closeCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section button")
+const detailsButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section a")
 
-console.log(nextCard);
+const iframeArticle = document.querySelector("main>div>article:nth-of-type(3) > article")
+const iframe = document.querySelector("main>div>article:nth-of-type(3) > article iframe")
+const closeIframeButton = document.querySelector("main>div>article:nth-of-type(3) > article > button")
+
 
 for (let i = 0; i < openCardButtons.length; i++) {
     openCardButtons[i].addEventListener("click", () => {
@@ -256,12 +261,6 @@ for (let i = 0; i < openCardButtons.length; i++) {
     });
 }
 
-const closeCardButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section button")
-const detailsButtons = document.querySelectorAll("main>div>article:nth-of-type(3) ul li section a")
-
-const iframeArticle = document.querySelector("main>div>article:nth-of-type(3) > article")
-const iframe = document.querySelector("main>div>article:nth-of-type(3) > article iframe")
-const closeIframeButton = document.querySelector("main>div>article:nth-of-type(3) > article > button")
 
 for (let i = 0; i < closeCardButtons.length; i++) {
     closeCardButtons[i].addEventListener("click", () => {
@@ -333,8 +332,9 @@ function rotateCarousel(degrees) {
 }
 
 
-// +++++++++++++++++++++++
+// the room (larg screens) ===========================================================================
 
+const doorButton = document.querySelector("main>div>article:first-of-type>button")
 const fore = document.querySelector("body > button:nth-last-of-type(3)")
 const back = document.querySelector("body > button:nth-last-of-type(4)")
 const leftWall = document.querySelector("body > button:nth-last-of-type(2)")
@@ -350,8 +350,6 @@ fore.addEventListener("click", () => {
     leftWall.classList.add("hiddenButton")
     back.classList.remove("hiddenButton")
 
-    // rotateRoom(currDegrees,86);
-
     translateZ += 5; 
     rotateRoom(currDegrees,translateZ);
 
@@ -361,12 +359,6 @@ fore.addEventListener("click", () => {
 });
 
 back.addEventListener("click", () => {
-    // back.classList.add("hiddenButton")
-    // fore.classList.remove("hiddenButton")
-    // rightWall.classList.remove("hiddenButton")
-    // leftWall.classList.remove("hiddenButton")
-
-    // rotateRoom(currDegrees,82);
     fore.classList.remove("hiddenButton")
     translateZ -= 5; 
     rotateRoom(currDegrees,translateZ);
@@ -392,3 +384,16 @@ function rotateRoom(currRoomdeg,translateZ) {
     currDegrees = currRoomdeg;
     roomBox.style.transform = `translateZ(${translateZ}vmin) rotateY(${currRoomdeg}turn)`;
 }
+
+
+doorButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+    console.log("bey");
+    // window.close();
+    
+    if (confirm("Close Window?")) {
+        close();
+        // alert(close())
+      }
+    // e.returnValue = '';
+});

@@ -456,10 +456,10 @@ main>div>article:nth-of-type(2) ul li > a{
         0 .2em .05em rgba(53, 53, 53, 0.699);
         transform-origin: 50% 5%;
         transform: rotate(5deg);
-        animation: rr 1s -.5s infinite both alternate ease-in-out;
+        animation: fotoRotate 1s -.5s infinite both alternate ease-in-out;
     }
 
-    @keyframes rr {
+    @keyframes fotoRotate {
         0%{
             transform:rotate(5deg)
         }
