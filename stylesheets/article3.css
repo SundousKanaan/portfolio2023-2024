@@ -5,14 +5,6 @@ main>div>article:nth-of-type(3) {
     overflow: hidden;
 
     gap: 3em;
-    background-image: url(https://sticker-collection.com/stickers/plain/Hanako_kkkun/512/413c3de2-e2c8-4ba8-ba2f-45185fa2e79afile_3156765.webp),
-    url(https://sticker-collection.com/stickers/plain/Hanako_kkkun/512/e2bd8b43-1175-425a-b0b8-15620685841efile_3156774.webp);
-    background-position: left 5% bottom 40% , right 4% bottom 36%;
-    background-position: left -26% bottom , right -12% bottom;
-    background-repeat: no-repeat,no-repeat;
-    background-size: 15%,15%;
-    background-size: 44%,36%;
-    background-blend-mode: luminosity;
 }
 
 
@@ -448,6 +440,15 @@ main>div>article:nth-of-type(3)>section ul li > a{
         display: grid;
         place-items: center;
         overflow: visible;
+
+        background-image: url(https://sticker-collection.com/stickers/plain/Hanako_kkkun/512/413c3de2-e2c8-4ba8-ba2f-45185fa2e79afile_3156765.webp),
+        url(https://sticker-collection.com/stickers/plain/Hanako_kkkun/512/e2bd8b43-1175-425a-b0b8-15620685841efile_3156774.webp);
+        background-position: left 5% bottom 40% , right 4% bottom 36%;
+        background-position: left -26% bottom , right -12% bottom;
+        background-repeat: no-repeat,no-repeat;
+        background-size: 15%,15%;
+        background-size: 44%,36%;
+        background-blend-mode: luminosity;
     }
 
     main>div>article:nth-of-type(3) h2 {
