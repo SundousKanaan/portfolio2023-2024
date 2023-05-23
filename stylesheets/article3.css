@@ -648,7 +648,7 @@ main>div>article:nth-of-type(3)>section ul li > a{
 
     /* screen */
     main>div>article:nth-of-type(3)>article {
-        width: 90%;
+        width: 60%;
         height: 65%;
         display: block;
         margin: 0;

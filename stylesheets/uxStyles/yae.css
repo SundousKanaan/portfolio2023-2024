@@ -94,10 +94,6 @@ html::-webkit-scrollbar-track {
     /* font-size: 1.5em; */
 }
 
-.yae main section:last-of-type {
-    margin-bottom: 8em;
-}
-
 .yae main section:nth-of-type(n+2) p {
     grid-column-start: 2;
     grid-column-end: 3;

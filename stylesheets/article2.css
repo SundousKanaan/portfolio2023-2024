@@ -373,7 +373,7 @@ main>div>article:nth-of-type(2) ul li > a{
         background-color: var(--screen);
 
         position: absolute;
-        bottom: -1.2em;
+        bottom: -1.4em;
         right: calc(50% - 5em /2);
     }
 

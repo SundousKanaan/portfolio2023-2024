@@ -94,9 +94,6 @@ html::-webkit-scrollbar-track {
     /* font-size: 1.5em; */
 }
 
-.Plog-de-dag main section:last-of-type {
-    margin-bottom: 8em;
-}
 
 .Plog-de-dag main section:nth-of-type(n+2) p {
     grid-column-start: 2;
