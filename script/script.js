@@ -334,7 +334,9 @@ function rotateCarousel(degrees) {
 
 // the room (larg screens) ===========================================================================
 
-const doorButton = document.querySelector("main>div>article:first-of-type>button")
+const doorButton = document.querySelector("main>div>article:first-of-type>button:first-of-type")
+const lightButton = document.querySelector("main>div>article:first-of-type>button:nth-of-type(2)")
+const body = document.querySelector("body")
 const fore = document.querySelector("body > button:nth-last-of-type(3)")
 const back = document.querySelector("body > button:nth-last-of-type(4)")
 const leftWall = document.querySelector("body > button:nth-last-of-type(2)")
@@ -385,15 +387,35 @@ function rotateRoom(currRoomdeg,translateZ) {
     roomBox.style.transform = `translateZ(${translateZ}vmin) rotateY(${currRoomdeg}turn)`;
 }
 
-
 doorButton.addEventListener('click', (e)=> {
-    e.preventDefault();
-    console.log("bey");
-    // window.close();
-    
-    // if (confirm("Close Window?")) {
-    //     close();
-    //     // alert(close())
-    //   }
-    // e.returnValue = '';
+    if (confirm("Do you want to close the window and go to the repo?")) {
+        close();
+        window.location='https://github.com/SundousKanaan/portfolio2023';
+      }
 });
+
+lightButton.addEventListener("click", () => {
+    if (body.classList.contains("darkmode")) {
+        lightButton.classList.remove("darkmode")
+        body.classList.remove("darkmode")
+        localStorage.setItem("siteMode", "light");
+    } else {
+        lightButton.classList.add("darkmode")
+        body.classList.add("darkmode")
+        localStorage.setItem("siteMode", "dark");
+    }
+})
+
+function modeCheck() {
+    if (localStorage.getItem("siteMode") === "dark") {
+      lightButton.classList.add("darkmode");
+      body.classList.add("darkmode");
+    }
+    else {
+        lightButton.classList.remove("darkmode");
+        body.classList.remove("darkmode");
+    }
+  }
+  
+  // Roep de functie modeCheck aan bij het laden van de pagina
+  window.addEventListener("DOMContentLoaded", modeCheck);

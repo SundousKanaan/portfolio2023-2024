@@ -267,7 +267,7 @@ main>div>article:first-of-type>section:first-of-type > a{
 
 
     /* the door */
-    main>div>article:first-of-type>button {
+    main>div>article:first-of-type>button:first-of-type {
         display: block;
         appearance: none;
         --webkit-appearance: none;
@@ -298,11 +298,11 @@ main>div>article:first-of-type>section:first-of-type > a{
         transition: .5s transform;
     }
 
-    main>div>article:first-of-type>button:active{
+    main>div>article:first-of-type>button:first-of-type:active{
         transform: rotateY(-5deg);
     }
 
-    main>div>article:first-of-type>button::after {
+    main>div>article:first-of-type>button:first-of-type::after {
         content: "";
         display: block;
         width: 1em;
@@ -317,7 +317,7 @@ main>div>article:first-of-type>section:first-of-type > a{
         box-shadow: inset 0 -.2em var(--bookcase-shadow);
     }
     
-    main>div>article:first-of-type>button:hover::after{
+    main>div>article:first-of-type>button:first-of-type:hover::after{
         animation: shakingDoorHand .5s infinite both linear alternate;
     }
 
@@ -338,6 +338,41 @@ main>div>article:first-of-type>section:first-of-type > a{
         place-items: center;
 
         transform-style: preserve-3d;
+    }
+
+    /* light button */
+    main>div>article:first-of-type>button:nth-of-type(2){
+        width: 0.7em;
+        aspect-ratio: 1/2;
+        display: block;
+        position: absolute;
+        left: 39%;
+        bottom: 30%;
+        border: none;
+        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 -0.7em 0 var(--bed-sheet-shadow);
+        background-color: var(--bed-sheet);
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    main>div>article:first-of-type>button:nth-of-type(2):hover{
+        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 -0.4em 0 var(--bed-sheet-shadow);
+    }
+
+    main>div>article:first-of-type>button:nth-of-type(2):active{
+        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 0.4em 0 var(--bed-sheet-shadow);
+    }
+
+    main>div>article:first-of-type>button:nth-of-type(2).darkmode{
+        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 0.7em 0 var(--bed-sheet-shadow);
+    }
+
+    main>div>article:first-of-type>button:nth-of-type(2).darkmode:hover{
+        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 0.4em 0 var(--bed-sheet-shadow);
+    }
+
+    main>div>article:first-of-type>button:nth-of-type(2).darkmode:active{
+        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 -0.4em 0 var(--bed-sheet-shadow);
     }
 
     /* cmd icon */
