@@ -387,7 +387,7 @@ function rotateRoom(currRoomdeg,translateZ) {
 
 
 doorButton.addEventListener('click', (e)=> {
-    // e.preventDefault();
+    e.preventDefault();
     console.log("bey");
     // window.close();
     
