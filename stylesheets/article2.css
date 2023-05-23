@@ -240,6 +240,11 @@ main>div>article:nth-of-type(2) ul li > a{
         transform-style: preserve-3d;
         perspective: 50em;
         padding: 0;
+
+        background-image: url(https://www.pngarts.com/files/3/Butterflies-Transparent-Images.png);
+        background-size: 40%;
+        background-position: left top;
+        background-blend-mode: color-burn;
     }
 
     main>div>article:nth-of-type(2) h2 {
@@ -258,23 +263,16 @@ main>div>article:nth-of-type(2) ul li > a{
         overscroll-behavior-x: none;
 
         display: grid;
-        /* grid-template-columns: 5em 5em; */
-        /* grid-template-columns: repeat(auto-fill, minmax(10%, .5fr)); */
         grid-template-columns: repeat(6, 1fr );
         grid-template-rows: repeat(3, 20% );
         gap: 1em;
-        /* row-gap: .5em; */
-
-        /* background-color: bisque; */
 
         position: absolute;
-        /* left: -.5em; */
+        top: 0;
         z-index: 100000;
     }
 
     main>div>article:nth-of-type(2) ul li {
-        /* width: 4em;
-        height: 3em; */
         width: 100%;
         height: 100%;
         align-self: center;
@@ -286,7 +284,25 @@ main>div>article:nth-of-type(2) ul li > a{
 
         position: relative;
         z-index: 4;
-        box-shadow: 0 0 0 .1em var(--them-color);
+        box-shadow: 0 0 0 .1em var(--them-color),
+        0 .2em .05em rgba(53, 53, 53, 0.699);
+    }
+
+    main>div>article:nth-of-type(2) ul li::before{
+        content: "";
+        width: .5em;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 1%;
+        left: calc(50% - .5em /2);
+        z-index: 2;
+
+        background-color: var(--bookcase);
+        box-shadow: 
+        inset 0 -.1em var(--bookcase-shadow),
+        0 .1em .05em rgba(53, 53, 53, 0.699);
     }
 
     main>div>article:nth-of-type(2) ul li div,
@@ -341,6 +357,8 @@ main>div>article:nth-of-type(2) ul li > a{
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+
+        box-shadow: 0 0 0 0.3em var(--screen);
     }
 
 
@@ -433,8 +451,21 @@ main>div>article:nth-of-type(2) ul li > a{
 
     main>div>article:nth-of-type(2) ul li:has(:focus-visible),
     main>div>article:nth-of-type(2) ul li:has(:hover){
-        transform: scale(1.15);
-        box-shadow: 0 0 0 .1em var(--secondere-color);
+        /* transform: scale(1.15); */
+        box-shadow: 0 0 0 .1em var(--secondere-color),
+        0 .2em .05em rgba(53, 53, 53, 0.699);
+        transform-origin: 50% 5%;
+        transform: rotate(5deg);
+        animation: rr 1s -.5s infinite both alternate ease-in-out;
+    }
+
+    @keyframes rr {
+        0%{
+            transform:rotate(5deg)
+        }
+        100%{
+            transform:rotate(-5deg)
+        }
     }
 
     main>div>article:nth-of-type(2) ul li a:focus-visible,

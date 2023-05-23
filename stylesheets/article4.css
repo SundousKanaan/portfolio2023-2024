@@ -1,6 +1,12 @@
 main>div>article:nth-of-type(4) {
     margin-bottom: 5em;
     gap: 3em;
+
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b857126b-0769-4ab0-a37f-3dbcb2d39d86/d95ih9w-a517298d-8d69-478e-a16b-cfd1acf4a92f.png/v1/fill/w_500,h_337/kuroko_no_basuke_tetsuya_2_by_animeboszi7_d95ih9w-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzM3IiwicGF0aCI6IlwvZlwvYjg1NzEyNmItMDc2OS00YWIwLWEzN2YtM2RiY2IyZDM5ZDg2XC9kOTVpaDl3LWE1MTcyOThkLThkNjktNDc4ZS1hMTZiLWNmZDFhY2Y0YTkyZi5wbmciLCJ3aWR0aCI6Ijw9NTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Pl_EBkAjR-zjvn8lO7V8FaRnra4yTXXSDir2R0hpWWI);
+    background-position: right 2% bottom;
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-blend-mode: luminosity;
 }
 
 main>div>article:nth-of-type(4) ul {
