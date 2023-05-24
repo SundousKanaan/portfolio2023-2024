@@ -14,24 +14,61 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 # 🛠️ Features Combined
 
 - Works on screens of different sizes (phone, tablet, desktop) ✅
-- Loading state ✅
-    <details>
-    <summary>Loading state</summary>
-
+- <details>
+    <summary>Loading state ✅</summary>
     <img src="./readmeimages/loading-state.png" alt="loading-state.png">
     </details>
+
 - phone, tablet:
-  - Works in light and dark mode ✅
-  - 3D interactions ✅
+  - <details>
+    <summary> Works in light and dark mode ✅</summary>
+    <img src="./readmeimages/mobile-view-light-mode.png" alt="room-view-light-mode" width="45%">
+    <img src="./readmeimages/mobile-view-dark-mode.png" alt="room-view-dark-mode" width="45%">
+    </details>
+  - <details>
+    <summary> 3D interactions ✅</summary>
+    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    </details>
   - effect for appearing ✅
+
 - desktop:
-  - Desktop style is 3D room ✅
-  - Possibility to move left and right ✅
-  - The possibility of approaching and moving away from the wall to a certain extent ✅
-  - Different interactions for each element group ✅
-  - button to adjust the mode (light / dark) ✅
+  
+  - <details>
+    <summary>Desktop style is 3D room ✅</summary>
+    <img src="./readmeimages/room-view-light-mode.png" alt="mobile-view-3d-list" width="90%">
+    </details>
+
+  - <details>
+    <summary>Possibility to move left and right ✅</summary>
+    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    </details>
+
+  - <details>
+    <summary>The possibility of approaching and moving away from the wall to a certain extent ✅</summary>
+    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    </details>
+
+  - <details>
+    <summary>Different interactions for each article ✅</summary>
+    <img src="./readmeimages/room-view-dark-mode.png" alt="mobile-view-3d-list" width="90%">
+    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+
+    </details>
+
+  - <details>
+    <summary>button to adjust the mode (light / dark) ✅</summary>
+    <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png" width="90%">
+    <img src="./readmeimages/room-view-dark-mode.png" alt="room-view-dark-mode.png" width="90%">
+
+    </details>
+
   - Save room mode in localstorage ✅
-  - Leave the room completely ✅
+  - <details>
+    <summary>Leave the room completely ✅</summary>
+    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    </details>
 
 # 👁️ Demo Link!
 
