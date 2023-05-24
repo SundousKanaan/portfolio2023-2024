@@ -17,6 +17,14 @@ navButton.addEventListener('click', () => {
     }
 })
 
+// loading state ===========================================================================
+
+const loadingScreen = document.querySelector("body > div.loading")
+
+setTimeout(() => {
+    loadingScreen.classList.remove("loading")
+}, 1500);
+
 
 // skils circels (mobile size) ===========================================================================
 
@@ -63,7 +71,7 @@ const runCountdown = () => {
       // Start de countdown na een vertraging van 2 seconden
   setTimeout(() => {
     countDownInt = setInterval(countDown, 60);
-  }, 4000);
+  }, 1600);
 };
 
 // call the function when the page is loaded
