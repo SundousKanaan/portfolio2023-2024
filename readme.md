@@ -16,6 +16,8 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 - Works on screens of different sizes (phone, tablet, desktop) ✅
 - Loading state ✅
     <details>
+    <summary>Loading state</summary>
+
     <img src="./readmeimages/loading-state.png" alt="loading-state.png">
     </details>
 - phone, tablet:
