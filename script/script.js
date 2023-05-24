@@ -371,6 +371,8 @@ for (let i = 0; i < uxWorks.length; i++) {
 const doorButton = document.querySelector("main>div>article:first-of-type>button:first-of-type")
 const lightButton = document.querySelector("main>div>article:first-of-type>button:nth-of-type(2)")
 const body = document.querySelector("body")
+const lamp = document.querySelector("body > div")
+
 const fore = document.querySelector("body > button:nth-last-of-type(3)")
 const back = document.querySelector("body > button:nth-last-of-type(4)")
 const leftWall = document.querySelector("body > button:nth-last-of-type(2)")
@@ -385,6 +387,7 @@ fore.addEventListener("click", () => {
     rightWall.classList.add("hiddenButton")
     leftWall.classList.add("hiddenButton")
     back.classList.remove("hiddenButton")
+    lamp.classList.add("hidden")
 
     translateZ += 5;
     rotateRoom(currDegrees, translateZ);
@@ -398,11 +401,12 @@ back.addEventListener("click", () => {
     fore.classList.remove("hiddenButton")
     translateZ -= 5;
     rotateRoom(currDegrees, translateZ);
-
+    
     if (translateZ === 80) {
         back.classList.add("hiddenButton")
         rightWall.classList.remove("hiddenButton")
         leftWall.classList.remove("hiddenButton")
+        lamp.classList.remove("hidden")
     }
 });
 

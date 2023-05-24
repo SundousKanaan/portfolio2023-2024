@@ -625,3 +625,7 @@ body.darkmode>div {
   box-shadow: 0 0 6em white, 0 0 6em white, 0 0 6em white, inset 0 0 0.5em #808080ed, 0 0 0.5em #808080ed;
 }
 
+body>div.hidden{
+  opacity: 0;
+}
+
