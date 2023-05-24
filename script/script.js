@@ -34,12 +34,12 @@ const runCountdown = () => {
                 }
                 clockCounter++;
             } else if (circles[i] === circles[1]) {
-                if (clockCounter <= 15) {
+                if (clockCounter <= 25) {
                     circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
                 }
                 clockCounter++;
             } else if (circles[i] === circles[2]) {
-                if (clockCounter <= 20) {
+                if (clockCounter <= 30) {
                     circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
                 }
                 clockCounter++;
@@ -48,7 +48,7 @@ const runCountdown = () => {
                     circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
                 }
                 clockCounter++;
-            } else if (clockCounter <= 25) {
+            } else if (clockCounter <= 35) {
                 circles[i].style.cssText = `stroke-dashoffset: calc(817 - (817 * ${clockCounter}) / 100);`;
                 clockCounter++;
             }
@@ -57,8 +57,13 @@ const runCountdown = () => {
             }
         }
     };
-    // handle clicking on the clock
+    // // handle clicking on the clock
+    // countDownInt = setInterval(countDown, 60);
+
+      // Start de countdown na een vertraging van 2 seconden
+  setTimeout(() => {
     countDownInt = setInterval(countDown, 60);
+  }, 4000);
 };
 
 // call the function when the page is loaded
@@ -71,6 +76,7 @@ const repos_URL = "https://api.github.com/users/SundousKanaan/repos";
 
 async function fetchData(link) {
     try {
+        console.log("hi fetch");
         const response = await fetch(link);
         const data = await response.json();
         return data;
@@ -129,10 +135,8 @@ async function fetchRepos() {
     return reposData;
 }
 
-fetchRepos();
-
 const topRepos = ["TiltShift"]
-async function makeProject(reposData) {
+function makeProject(reposData) {
     for (let i = 0; i < reposData.length; i++) {
         const liElement = document.createElement("li");
         liElement.innerHTML = `
@@ -157,37 +161,43 @@ async function makeProject(reposData) {
         // <a href="${reposData[i].site}" target="display-repo-frame" > ${reposData[i].name} </a>
         projectList.appendChild(liElement)
 
+        // const projectButtons = document.querySelectorAll("main > div > article:nth-of-type(2) ul li > button")
+        // projectsButtons.push(projectButton)
+
         if (topRepos.includes(reposData[i].name)) {
             liElement.classList.add("GDA");
         }
     }
-
 }
 
-// room size projects
+gitProjectsButtons();
 
-const projectsButtons = document.querySelectorAll("main > div > article:nth-of-type(2) ul li > button")
-const screen = document.querySelector("main>div>article:nth-of-type(2)>div")
-console.log(projectsButtons);
+async function gitProjectsButtons() {
+    await fetchRepos();
+    const screen = document.querySelector("main>div>article:nth-of-type(2)>div")
+    const projectsButtons = document.querySelectorAll("main > div > article:nth-of-type(2) ul li > button");
 
-for (let i = 0; i < projectsButtons.length; i++) {
-    projectsButtons[i].addEventListener("click" , async () => {
-        screen.classList.add("projectOpen");
-        let repoName = projectsButtons[i].textContent;
-        const repo_URL = `https://api.github.com/repos/SundousKanaan/${repoName}`
-        const repoData = await fetchData (repo_URL)
-        console.log("reposData",repoData);
-        console.log("test", projectsButtons[i].textContent);
+    for (let i = 0; i < projectsButtons.length; i++) {
+        projectsButtons[i].addEventListener("click", async () => {
+            console.log(projectsButtons[i]);
+            screen.classList.add("projectOpen");
+            let repoName = projectsButtons[i].textContent;
+            const repo_URL = `https://api.github.com/repos/SundousKanaan/${repoName}`
+            const repoData = await fetchData(repo_URL)
+            console.log("reposData", repoData);
+            console.log("test", projectsButtons[i].textContent);
 
-        screen.innerHTML=`
-        <section>
-            <h3>title</h3>
-            <img src="./projectsimages/BusinessCard.png" alt="">
-            <a href="">repo ></a>
-            <a href="">site ></a>
-        </section>
-        `
-    })
+            screen.innerHTML = `
+            <section>
+                <h3>${repoData.name}</h3>
+                <a href="${repoData.html_url}">repo ></a>
+                <a href="${repoData.homepage}">site ></a>
+                <img src="./projectsimages/${repoData.name}.png" alt="project ${reposData.name} foto">
+            </section>
+            `
+        })
+    }
+
 }
 
 // UX/UI ===========================================================================
@@ -371,7 +381,7 @@ for (let i = 0; i < uxWorks.length; i++) {
 const doorButton = document.querySelector("main>div>article:first-of-type>button:first-of-type")
 const lightButton = document.querySelector("main>div>article:first-of-type>button:nth-of-type(2)")
 const body = document.querySelector("body")
-const lamp = document.querySelector("body > div")
+const lamp = document.querySelector("body > div:last-of-type")
 
 const fore = document.querySelector("body > button:nth-last-of-type(3)")
 const back = document.querySelector("body > button:nth-last-of-type(4)")
@@ -401,7 +411,7 @@ back.addEventListener("click", () => {
     fore.classList.remove("hiddenButton")
     translateZ -= 5;
     rotateRoom(currDegrees, translateZ);
-    
+
     if (translateZ === 80) {
         back.classList.add("hiddenButton")
         rightWall.classList.remove("hiddenButton")
@@ -434,26 +444,47 @@ doorButton.addEventListener('click', (e) => {
 
 lightButton.addEventListener("click", () => {
     if (body.classList.contains("darkmode")) {
-        lightButton.classList.remove("darkmode")
-        body.classList.remove("darkmode")
+        lightButton.classList.remove("darkmode");
+        body.classList.remove("darkmode");
         localStorage.setItem("siteMode", "light");
     } else {
-        lightButton.classList.add("darkmode")
-        body.classList.add("darkmode")
+        lightButton.classList.add("darkmode");
+        body.classList.add("darkmode");
         localStorage.setItem("siteMode", "dark");
     }
-})
+});
 
 function modeCheck() {
     if (localStorage.getItem("siteMode") === "dark") {
         lightButton.classList.add("darkmode");
         body.classList.add("darkmode");
-    }
-    else {
+    } else {
         lightButton.classList.remove("darkmode");
         body.classList.remove("darkmode");
     }
 }
 
-// Roep de functie modeCheck aan bij het laden van de pagina
 window.addEventListener("DOMContentLoaded", modeCheck);
+
+
+
+// OBSERVER
+
+const allAnimationItems = document.querySelectorAll('main > div > article')
+console.log(allAnimationItems);
+
+const options = {
+threshold: .1
+}
+
+function callbackFunction(entries) {
+entries.forEach(entry => {
+if (entry.intersectionRatio > 0) {
+entry.target.classList.add('appear');
+}
+})
+}
+const observer = new IntersectionObserver(callbackFunction, options)
+allAnimationItems.forEach(item => {
+observer.observe(item)
+})

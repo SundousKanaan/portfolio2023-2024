@@ -19,7 +19,7 @@
   --nav: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) and (max-width: 1250px) {
   :root {
     --bg: #1B2430;
     --titels-color: #ffffff;
@@ -66,6 +66,200 @@ body {
 
   background-color: var(--bg);
 }
+
+/* loading */
+
+body > div{
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+
+  position: fixed;
+  top: 0;
+  z-index: 100000000000000;
+
+  place-items: center;
+
+  background-color: var(--bg);
+
+  display: none;
+}
+
+/* face */
+body > div > div{
+  width: 30%;
+  aspect-ratio: 1/.9;
+
+  background-color: transparent;
+
+  background-image: url(../images/calumon-ear-face.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+/* ears */
+body > div > div > div:nth-of-type(-n+2){
+  width: 90%;
+  height: 90%;
+
+  position: absolute;
+  z-index: -1;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body > div > div > div:first-of-type{
+  background-image: url(../images/calumon-ear-left.png);
+  left: -55%;
+  top: -25%;
+}
+
+body > div > div > div:nth-of-type(2){
+  background-image: url(../images/calumon-ear-right.png);
+  right: -55%;
+  top: -25%;
+}
+
+/* eyes */
+body > div > div div:nth-of-type(3){
+  width: 80%;
+  aspect-ratio: 1/.5;
+
+  position: absolute;
+  top: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* background-color: red; */
+}
+
+body > div > div div:nth-of-type(3) div{
+  width: 35%;
+  height: 100%;
+
+  position: relative;
+
+  border: solid .2em black;
+  border-radius:50% 50% 50% 50% / 50% 50% 50% 50% ;
+
+  overflow: hidden;
+
+  background-color: white;
+}
+
+body > div > div div:nth-of-type(3) div span{
+  width: 85%;
+  height: 90%;
+
+  position: absolute;
+  /* left: -.2em; */
+
+  background-image: 
+  radial-gradient(black 35%,transparent 0),
+  radial-gradient(circle at 50% 80%, rgb(179, 235, 96) 30% ,rgb(113, 188, 0) 0)
+  ;
+
+  border: solid .2em black;
+  border-radius:50% 50% 50% 50% / 50% 50% 50% 50% ;
+  overflow: hidden;
+}
+
+body > div > div div:nth-of-type(3) div span::before{
+  content: "";
+  display: block;
+  width: 60%;
+  aspect-ratio: 1/1.2;
+
+  position: absolute;
+  left: 7%;
+  border-radius:50% 50% 50% 50% / 50% 50% 50% 50% ;
+
+  background-color: white;
+}
+
+body > div > div div:nth-of-type(3) div span::after{
+  content: "";
+  display: block;
+  width: 30%;
+  aspect-ratio: 1/1.2;
+
+  position: absolute;
+  right: 20%;
+  bottom: 10%;
+  border-radius:50% 50% 50% 50% / 50% 50% 50% 50% ;
+
+  background-color: white;
+}
+
+
+
+
+/* mouth */
+body > div > div div:nth-of-type(4){
+  width: 25%;
+  aspect-ratio: 1/1.3;
+
+  position: absolute;
+  bottom: 10%;
+  z-index: 2;
+
+  background-color: rgba(255, 0, 0, 0.356);
+  /* animation: openMouth .5s 1 linear both ; */
+}
+
+/* @keyframes openMouth {
+  from{
+    aspect-ratio: 1/1;
+    bottom: 30%;
+
+  }
+  to{
+    aspect-ratio: .7/1.1;
+    transform: rotateX(180deg);
+    background-color: red;
+    bottom: 5%;
+
+  }
+} */
+
+body > div > div div:nth-of-type(4) span:first-of-type{
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+
+  border-left: solid .3em transparent;
+  border-right: solid .3em transparent;
+  border-bottom: solid .3em black;
+  position: absolute;
+  bottom: 30%;
+  z-index: 2;
+
+  background-color: red;
+}
+
+/* body > div > div div:nth-of-type(4) span{
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+} */
+
+/* div.loading{
+  display: grid;
+} */
 
 header {
   width: 87%;
@@ -315,10 +509,33 @@ main>div>article {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-
   gap: 1em;
 
   scroll-margin-top: 1em;
+
+  opacity: 0;
+}
+
+/* ======================*/
+/* === appear effect  ===*/
+/* ======================*/
+@keyframes appeareffect {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+/* 
+main > div > article:nth-of-type(n+2){
+  opacity: 0;
+} */
+
+main > div > article.appear {
+  animation: appeareffect 1s 1 both linear;
+  animation-delay: .8s;
 }
 
 main>div>article h2 {
@@ -359,17 +576,22 @@ main>div>article h2::after {
   }
 }
 
-
-
-
-
-
-
-
-
 body>button:nth-last-of-type(-n+4) {
   display: none;
 }
+
+body>div:last-of-type {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -406,7 +628,7 @@ body>button:nth-last-of-type(-n+4) {
     --screen-shadow: #fdfdb6;
   }
 
-  body>div {
+  body>div:last-of-type {
     display: block;
     width: 5em;
     height: 5em;
@@ -417,6 +639,10 @@ body>button:nth-last-of-type(-n+4) {
     z-index: 1000000000;
     background-color: rgba(255, 255, 255, 0.623);
     box-shadow: inset 0 0 0.5em #80808070, 0 0 .1em rgba(255, 255, 255, 0.623);
+  }
+
+  body>div:last-of-type.hidden {
+    opacity: 0;
   }
 
   body>button:first-of-type,
@@ -593,39 +819,21 @@ body>button:nth-last-of-type(-n+4) {
     transform: rotateX(-.25turn) translatez(-12.5vmin);
   }
 
-}
-
-@media (prefers-color-scheme: dark) and (min-width: 1250px){
-  body {
+  body.darkmode {
     --bg: #ffffe7;
     --titels-color: #264143;
   }
 
-  main {
-    filter: brightness(50%);
+  body.darkmode main {
+    filter: brightness(70%);
   }
 
-  body>div {
+  body.darkmode>div {
     background-color: white;
     box-shadow: 0 0 6em white, 0 0 6em white, 0 0 6em white, inset 0 0 0.5em #808080ed, 0 0 0.5em #808080ed;
   }
-}
 
-body.darkmode {
-  --bg: #ffffe7;
-  --titels-color: #264143;
+  body>div:last-of-type.hidden {
+    opacity: 0;
+  }
 }
-
-body.darkmode main {
-  filter: brightness(50%);
-}
-
-body.darkmode>div {
-  background-color: white;
-  box-shadow: 0 0 6em white, 0 0 6em white, 0 0 6em white, inset 0 0 0.5em #808080ed, 0 0 0.5em #808080ed;
-}
-
-body>div.hidden{
-  opacity: 0;
-}
-
