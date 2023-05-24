@@ -15,9 +15,9 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
 - Works on screens of different sizes (phone, tablet, desktop) ✅
 - Loading state ✅
-    <ditails>
+    <details>
     <img src="./readmeimages/loading-state.png" alt="loading-state.png">
-    </ditails>
+    </details>
 - phone, tablet:
   - Works in light and dark mode ✅
   - 3D interactions ✅
