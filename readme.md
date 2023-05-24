@@ -4,16 +4,24 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
 <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png">
 
+# contents 
+- [Portofolio 2023](#portofolio-2023)
+- [contents](#contents)
+- [🛠️ Features Combined](#️-features-combined)
+- [👁️ Demo Link!](#️-demo-link)
+
+
 # 🛠️ Features Combined
 
 - Works on screens of different sizes (phone, tablet, desktop) ✅
 - Loading state ✅
-
+    <ditails>
+    <img src="./readmeimages/loading-state.png" alt="loading-state.png">
+    </ditails>
 - phone, tablet:
   - Works in light and dark mode ✅
   - 3D interactions ✅
   - effect for appearing ✅
-
 - desktop:
   - Desktop style is 3D room ✅
   - Possibility to move left and right ✅
@@ -26,9 +34,3 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 # 👁️ Demo Link!
 
 - [Online demo](https://sundouskanaan.github.io/portfolio2023/)
-
-# contents 
-- [Portofolio 2023](#portofolio-2023)
-- [🛠️ Features Combined](#️-features-combined)
-- [👁️ Demo Link!](#️-demo-link)
-- [contents](#contents)
