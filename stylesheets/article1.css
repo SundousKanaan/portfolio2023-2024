@@ -385,11 +385,26 @@ main>div>article:first-of-type>section:first-of-type > a{
 
     /* NL flag */
     main>div>article:first-of-type>section:nth-of-type(3) > img:nth-of-type(2){
-        width: 3vw;
+        width: 12%;
         position: absolute;
-        left: 18.5%;
+        left: 18%;
         top: 0;
         z-index: 2;
+        transform-style: preserve-3d;
+        transform-origin: top;
+    }
+    
+    main>div>article:first-of-type>section:nth-of-type(3) > img:nth-of-type(2):hover{
+        animation: flagFlutter 1s infinite both ease-in-out alternate;
+    }
+    
+    @keyframes flagFlutter {
+        from{
+            transform: rotateX(0deg);
+        }
+        to{
+            transform: rotateX(20deg);
+        }
     }
 
     /* HvA logo */
