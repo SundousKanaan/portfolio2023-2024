@@ -439,8 +439,8 @@ function handleKeyPress(event) {
 }
 
 function goFore() {
-    rightWall.classList.add("hiddenButton")
-    leftWall.classList.add("hiddenButton")
+    // rightWall.classList.add("hiddenButton")
+    // leftWall.classList.add("hiddenButton")
     back.classList.remove("hiddenButton")
     lamp.classList.add("hidden")
 
@@ -460,8 +460,8 @@ function goBack() {
 
     if (translateZ === 80) {
         back.classList.add("hiddenButton")
-        rightWall.classList.remove("hiddenButton")
-        leftWall.classList.remove("hiddenButton")
+        // rightWall.classList.remove("hiddenButton")
+        // leftWall.classList.remove("hiddenButton")
         lamp.classList.remove("hidden")
     }
 }
