@@ -49,6 +49,10 @@ p:focus-visible {
   background-color: var(--text-color);
 }
 
+button{
+  font-family: 'Courgette', cursive;
+}
+
 body {
   width: 100vw;
   width: 100dvw;
@@ -726,10 +730,16 @@ body>div:last-of-type {
     display: grid;
 
     background-color: #58004c00;
+
+    display: grid;
+    place-items: center;
+    color: var(--them-color);
+    filter: drop-shadow(0 0 .1em white);
   }
 
   body>button:nth-last-of-type(-n+4) img {
     transition: .5s;
+    position: absolute;
   }
 
   body>button:nth-last-of-type(-n+4):focus-visible,

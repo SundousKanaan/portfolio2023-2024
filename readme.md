@@ -23,7 +23,10 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
 - <details>
     <summary>Loading state ✅</summary>
+    I selected the Digimon Calumon because it possesses a special connection to the Internet, assisting other Digimon with their digievolutions. This unique connection made it a fitting choice for the concept of loading. (and he is so cute)
+
     <img src="./readmeimages/loading-state.png" alt="loading-state.png">
+
     </details>
 
 - phone, tablet:
@@ -46,10 +49,11 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     </details>
 
   - <details>
-    <summary>Possibility to move left and right ✅</summary>
-    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    <summary> Possibility to move in the room with buttons and keyboard ✅</summary>
+    <img src="./readmeimages/room-view-movement-arrows.png" alt="mobile-view-3d-list" width="90%">
     </details>
 
+  - Possibility to move left and right ✅
   - <details>
     <summary>The possibility of approaching and moving away from the wall to a certain extent ✅</summary>
     <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">

@@ -68,10 +68,10 @@ const runCountdown = () => {
     // // handle clicking on the clock
     // countDownInt = setInterval(countDown, 60);
 
-      // Start de countdown na een vertraging van 2 seconden
-  setTimeout(() => {
-    countDownInt = setInterval(countDown, 60);
-  }, 1600);
+    // Start de countdown na een vertraging van 2 seconden
+    setTimeout(() => {
+        countDownInt = setInterval(countDown, 60);
+    }, 1600);
 };
 
 // call the function when the page is loaded
@@ -402,6 +402,43 @@ let currDegrees = 0;
 let currRoomdeg = 0;
 
 fore.addEventListener("click", () => {
+    goFore();
+});
+
+back.addEventListener("click", () => {
+    goBack();
+});
+
+const mediaQuery = window.matchMedia('(min-width: 1250px)');
+if (mediaQuery.matches) {
+    document.addEventListener("keydown", handleKeyPress);
+}
+
+function handleKeyPress(event) {
+    if (event.key === "w" || event.key === "W") {
+        if (translateZ < 100 && translateZ >= 80) {
+            goFore();
+        }
+    }
+
+    if (event.key === "s" || event.key === "S") {
+        if (translateZ <= 100 && translateZ > 80) {
+            goBack();
+        }
+    }
+
+    if (event.key === "a" || event.key === "A") {
+        currRoomdeg += -.25;
+        rotateRoom(currRoomdeg, translateZ);
+    }
+
+    if (event.key === "d" || event.key === "D") {
+        currRoomdeg += .25;
+        rotateRoom(currRoomdeg, translateZ);
+    }
+}
+
+function goFore() {
     rightWall.classList.add("hiddenButton")
     leftWall.classList.add("hiddenButton")
     back.classList.remove("hiddenButton")
@@ -413,10 +450,11 @@ fore.addEventListener("click", () => {
     if (translateZ >= 100) {
         fore.classList.add("hiddenButton")
     }
-});
+}
 
-back.addEventListener("click", () => {
+function goBack() {
     fore.classList.remove("hiddenButton")
+
     translateZ -= 5;
     rotateRoom(currDegrees, translateZ);
 
@@ -426,7 +464,7 @@ back.addEventListener("click", () => {
         leftWall.classList.remove("hiddenButton")
         lamp.classList.remove("hidden")
     }
-});
+}
 
 rightWall.addEventListener("click", () => {
     currRoomdeg += .25;
@@ -482,17 +520,17 @@ const allAnimationItems = document.querySelectorAll('main > div > article')
 console.log(allAnimationItems);
 
 const options = {
-threshold: .1
+    threshold: .1
 }
 
 function callbackFunction(entries) {
-entries.forEach(entry => {
-if (entry.intersectionRatio > 0) {
-entry.target.classList.add('appear');
-}
-})
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+            entry.target.classList.add('appear');
+        }
+    })
 }
 const observer = new IntersectionObserver(callbackFunction, options)
 allAnimationItems.forEach(item => {
-observer.observe(item)
+    observer.observe(item)
 })
