@@ -449,6 +449,8 @@ main>div>article:nth-of-type(3)>section ul li>a {
         background-size: 15%, 15%;
         background-size: 44%, 36%;
         background-blend-mode: luminosity;
+
+        transform-style: preserve-3d;
     }
 
     main>div>article:nth-of-type(3) h2 {
@@ -471,18 +473,19 @@ main>div>article:nth-of-type(3)>section ul li>a {
     }
 
     main>div>article:nth-of-type(3)>section ul {
-        width: 90%;
+        width: 80%;
         height: 30%;
 
         /* transform-style: unset; */
         transform-style: preserve-3d;
-        transform: translateZ(3em) translateY(-0.45em);
+        transform: translateZ(1.5em) translateY(-0.45em);
         position: absolute;
         bottom: 0;
         border-radius: .5em .5em 0 0;
 
         display: grid;
-        grid-template-columns: 1em 30% 1em 7em 1em 30% 1em;
+        grid-template-columns: 4% 30% 3.5% 25% 3.5% 30% 4%;
+
         grid-template-rows: 90%;
 
         background-color: var(--bookcase);
@@ -513,11 +516,11 @@ main>div>article:nth-of-type(3)>section ul li>a {
     main>div>article:nth-of-type(3) section::after {
         content: "";
         display: block;
-        width: 25%;
+        width: 20%;
         height: 24%;
         border-radius: .5em;
         position: absolute;
-        bottom: 2.5%;
+        bottom: 2%;
 
         z-index: 0;
 
@@ -525,17 +528,17 @@ main>div>article:nth-of-type(3)>section ul li>a {
         box-shadow: inset 0 .4em 0 var(--bookcase-part-shadow);
 
         transform-style: preserve-3d;
-        transform: translateZ(4em) translateY(-0.6em);
+        transform: translateZ(1.5em) translateY(-0.6em);
     }
 
     main>div>article:nth-of-type(3) section::before {
         content: "";
         display: block;
-        width: 6em;
-        height: 3.5em;
+        width: 12%;
+        height: 22%;
 
         position: absolute;
-        bottom: .35em;
+        bottom: 1.5%;
         z-index: 1;
         background-image: url(https://images.vexels.com/media/users/3/208682/isolated/preview/12673703ecdf4f24e15d72d0fb423594-cute-anthurium-plant.png);
         background-position: center;
@@ -543,26 +546,27 @@ main>div>article:nth-of-type(3)>section ul li>a {
         background-repeat: no-repeat;
 
         transform-origin: 50% 100%;
-        transform: translateZ(4em) translateY(-0.6em);
+        transform: translateZ(1.5em) translateY(-0.6em) rotate(0);
 
         animation: shaking .5s infinite both linear alternate;
     }
 
     @keyframes shaking {
         from {
-            transform: translateZ(4em) translateY(-0.6em) rotate(-3deg);
+            transform: translateZ(1.5em) translateY(-0.6em) rotate(-3deg);
         }
 
         to {
-            transform: translateZ(4em) translateY(-0.6em) rotate(3deg);
+            transform: translateZ(1.5em) translateY(-0.6em) rotate(3deg);
         }
     }
 
 
 
     main>div>article:nth-of-type(3)>section ul li {
-        width: 5em;
-        height: 1em;
+        width: 80%;
+        /* height: 1em; */
+        height: 30%;
 
         box-shadow: none;
         border-radius: .05em;
@@ -603,18 +607,20 @@ main>div>article:nth-of-type(3)>section ul li>a {
     }
 
     main>div>article:nth-of-type(3)>section ul li:nth-child(2) {
+        width: 65%;
         background-color: rgb(173, 49, 11);
         box-shadow: inset 0 .2em rgb(131, 34, 4);
-        bottom: 1em;
-        right: 1em;
+        bottom: 29%;
+        right: 15%;
     }
 
     main>div>article:nth-of-type(3)>section ul li:nth-child(3) {
-        width: 4em;
+        width: 60%;
+        height: 20%;
         background-color: rgb(26, 155, 21);
         box-shadow: inset 0 .2em rgb(10, 116, 6);
-        bottom: 2em;
-        left: 1.5em;
+        bottom: 58%;
+        left: 32%;
     }
 
     main>div>article:nth-of-type(3)>section ul li:nth-last-child(1) {
@@ -624,17 +630,20 @@ main>div>article:nth-of-type(3)>section ul li>a {
     }
 
     main>div>article:nth-of-type(3)>section ul li:nth-last-child(2) {
+        width: 65%;
         background-color: rgb(64, 105, 219);
         box-shadow: inset 0 .2em rgb(5, 98, 185);
-        bottom: 1em;
-        left: 1em;
+        bottom: 29%;
+        left: 15%;
     }
 
     main>div>article:nth-of-type(3)>section ul li:nth-last-child(3) {
+        height: 20%;
+        width: 65%;
         background-color: rgb(122, 122, 122);
         box-shadow: inset 0 .2em rgb(107, 107, 107);
-        right: 1em;
-        bottom: 2em;
+        right: 32%;
+        bottom: 58%;
     }
 
 

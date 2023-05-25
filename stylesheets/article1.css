@@ -272,7 +272,7 @@ main>div>article:first-of-type>section:first-of-type > a{
         appearance: none;
         --webkit-appearance: none;
 
-        width: 8em;
+        width: 20%;
         height: 80%;
 
         position: absolute;
@@ -342,12 +342,12 @@ main>div>article:first-of-type>section:first-of-type > a{
 
     /* light button */
     main>div>article:first-of-type>button:nth-of-type(2){
-        width: 0.7em;
+        width: 2%;
         aspect-ratio: 1/2;
         display: block;
         position: absolute;
-        left: 39%;
-        bottom: 30%;
+        left: 37%;
+        bottom: 40%;
         border: none;
         box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 -0.7em 0 var(--bed-sheet-shadow);
         background-color: var(--bed-sheet);
@@ -413,20 +413,22 @@ main>div>article:first-of-type>section:first-of-type > a{
         height: 100%;
     }
 
+
     main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(2),
     main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(3),
     main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(4),
     main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(5),
     main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(6){
-        width: 1em;
+        width: 30%;
         position: absolute;
-        right: 2.5em;
+        left: -5%;
     }
 
     /* figma logo */
     main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(2){
-        width: .8em;
+        width: 20%;
         bottom: 45%;
+        left: 0;
     }
     
     /* photoshop logo */
@@ -446,9 +448,9 @@ main>div>article:first-of-type>section:first-of-type > a{
 
     /* js logo */
     main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(6){
-        width: 2em;
+        width: 60%;
         bottom: 54.5%;
-        right: 2em;
+        left: -20%;
     }
 
     /* couch */
@@ -507,12 +509,13 @@ main>div>article:first-of-type>section:first-of-type > a{
 
     main>div>article:first-of-type>section:nth-of-type(3) > a{
         display: block;
-        width: 3em;
-        height: 2em;
+        width: 7%;
+        height: 10%;
         background-color: transparent;
         cursor: pointer;
 
         position: absolute;
+        top: 40%;
         left: 40%;
 
         background-image: url(https://i.pinimg.com/originals/0a/ca/cf/0acacfe788e0d73a77db226f0fc9cbf5.png);
@@ -540,13 +543,13 @@ main>div>article:first-of-type>section:first-of-type > a{
 
     main>div>article:first-of-type>section:nth-of-type(3) > a::before{
         content: '';
-        width: .3em;
+        width: 5%;
         height: 400%;
         display: block;
 
         position: absolute;
         bottom: 100%;
-        left: calc(50% - .3em/2);
+        left: calc(50% - 5%/2);
         background-color: var(--them-color);
     }
 
@@ -556,8 +559,8 @@ main>div>article:first-of-type>section:first-of-type > a{
         height: fit-content;
         border-radius: 5em;
 
-        padding: .2em .3em;
-        font-size: .6em;
+        /* padding: .2em .3em; */
+        font-size: 40%;
         text-align: center;
         position: absolute;
         right: calc(50% - 100% / 2);

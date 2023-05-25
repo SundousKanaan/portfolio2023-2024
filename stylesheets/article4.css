@@ -121,10 +121,10 @@ main>div>article:nth-of-type(4)>article {
 
     main>div>article:nth-of-type(4) ul {
         width: 45%;
-        height: 65%;
+        height: 60%;
         position: absolute;
-        left: 2em;
-        top: .5em;
+        left: 5%;
+        top: 5%;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -206,22 +206,28 @@ main>div>article:nth-of-type(4)>article {
     main>div>article:nth-of-type(4)>div:first-of-type,
     main>div>article:nth-of-type(4)>div:first-of-type div {
         display: block;
-        width: 15em;
-        height: 3em;
+        width: 55%;
+        height: 20%;
 
         position: absolute;
         bottom: 0;
-        left: .6em;
+        left: 4.5%;
         z-index: 2;
 
         background-color: var(--wood);
         box-shadow: inset 0 .3em 0 var(--wood-shadow);
     }
+    
+    main>div>article:nth-of-type(4)>div:first-of-type{
+        transform-style: preserve-3d;
+        transform: translateZ(.5em);
+    }
 
-    main>div>article:nth-of-type(4)>div:first-of-type div {
-        height: 1em;
+    main>div>article:nth-of-type(4)>div:first-of-type > div {
+        width: 100%;
+        height: 30%;
         border-radius: .5em .5em 0 0;
-        bottom: 3em;
+        bottom: 99%;
         left: 0em;
         z-index: -1;
         background-color: var(--bed-cover);
@@ -258,24 +264,25 @@ main>div>article:nth-of-type(4)>article {
 
     main>div>article:nth-of-type(4)>div:first-of-type::before {
         content: "";
-        width: .7em;
-        height: 7em;
+        width: 5%;
+        height: 200%;
         display: block;
         border-radius: 5em 5em 0 0;
         position: absolute;
         bottom: 0;
-        left: -.6em;
+        left: -4.5%;
         background-color: var(--wood);
     }
 
     main>div>article:nth-of-type(4)>div:first-of-type::after {
         content: "";
         display: block;
-        width: 2.5em;
-        height: 2.5em;
+        width: 10%;
+        height: 80%;
         position: absolute;
-        bottom: 3.9em;
+        bottom: 123%;
         left: 18%;
+        z-index: -3;
 
         background-color: transparent;
         background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/58bf091d-a37d-4d53-95ec-ee700a7bd2cc/deeln8u-4e48c003-02b2-410c-8c28-12281cd276ef.png/v1/fill/w_394,h_548/pikachu_plush_toy__png__by_spongebobfan2010_deeln8u-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQ4IiwicGF0aCI6IlwvZlwvNThiZjA5MWQtYTM3ZC00ZDUzLTk1ZWMtZWU3MDBhN2JkMmNjXC9kZWVsbjh1LTRlNDhjMDAzLTAyYjItNDEwYy04YzI4LTEyMjgxY2QyNzZlZi5wbmciLCJ3aWR0aCI6Ijw9Mzk0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Js6ub9nR0dRzWZ4jWvLL7NZeuD78JNTQS8nK0TlFmnY);
@@ -289,12 +296,12 @@ main>div>article:nth-of-type(4)>article {
 
     main>div>article:nth-of-type(4)>article {
         display: block;
-        width: 5em;
-        height: 6em;
+        width: 20%;
+        height: 45%;
 
         position: absolute;
-        right: 7em;
-        bottom: 4em;
+        right: 18%;
+        bottom: 23%;
         /* border-bottom: solid .3em var(--wood); */
 
         box-shadow:
@@ -303,7 +310,7 @@ main>div>article:nth-of-type(4)>article {
     
         transform-style: preserve-3d;
         transform-origin: bottom;
-        transform: translateZ(3em) rotateX(10deg);
+        transform: translateZ(2em) rotateX(10deg);
 
         background-color: rgb(255, 255, 255);
         /* background-image: linear-gradient(to right, transparent 0 30%, brown 0 70%, transparent 0 100%); */
@@ -311,13 +318,13 @@ main>div>article:nth-of-type(4)>article {
 
     main>div>article:nth-of-type(4)>article::before {
         content: "";
-        width: .3em;
-        height: 10em;
+        width: 5%;
+        height: 170%;
         display: block;
 
         position: absolute;
         left: 50%;
-        top: -1em;
+        top: -10%;
 
         transform: translateZ(-1em) rotateX(-10deg);
         background-color: var(--wood);
@@ -325,12 +332,12 @@ main>div>article:nth-of-type(4)>article {
 
     main>div>article:nth-of-type(4)>article::after {
         content: "";
-        width: 5em;
-        height: 9em;
+        width: 100%;
+        height: 150%;
         display: block;
         position: absolute;
         top: 0;
-        left: .5em;
+        left: 5%;
 
         transform: translateZ(-1em) rotateX(0deg);
 
