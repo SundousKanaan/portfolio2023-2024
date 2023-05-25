@@ -921,4 +921,9 @@ body>div:last-of-type {
   body>div:last-of-type.hidden {
     opacity: 0;
   }
+
+  main>div>article.appear{
+    animation: none;
+    opacity: 100%;
+  }
 }

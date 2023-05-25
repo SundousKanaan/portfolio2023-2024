@@ -14,6 +14,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 - [👁️ Demo Link!](#️-demo-link)
 - [contents](#contents)
 - [🛠️ Features Combined](#️-features-combined)
+- [Cons](#cons)
 
 
 # 🛠️ Features Combined
@@ -91,4 +92,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     <summary>Leave the room completely ✅</summary>
     <img src="./readmeimages/room-view-about-wall-review.png" alt="room-view-about-wall-review" width="90%">
     </details>
+
+# Cons
+Due to time constraints, my room currently lacks smooth and clear accessibility. As this is my first experience creating a space in 3d space, I acknowledge that there is room for improvement in future iterations. Rest assured, I am committed to enhancing accessibility in my future works.
 
