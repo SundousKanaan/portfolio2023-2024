@@ -4,11 +4,16 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
 <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png">
 
+---
+# 👁️ Demo Link!
+
+- [Online demo](https://sundouskanaan.github.io/portfolio2023/)
+
 # contents 
 - [Portofolio 2023](#portofolio-2023)
+- [👁️ Demo Link!](#️-demo-link)
 - [contents](#contents)
 - [🛠️ Features Combined](#️-features-combined)
-- [👁️ Demo Link!](#️-demo-link)
 
 
 # 🛠️ Features Combined
@@ -25,7 +30,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     <summary>Loading state ✅</summary>
     I selected the Digimon Calumon because it possesses a special connection to the Internet, assisting other Digimon with their digievolutions. This unique connection made it a fitting choice for the concept of loading. (and he is so cute)
 
-    <img src="./readmeimages/loading-state.png" alt="loading-state.png">
+    <img src="./readmeimages/loading-state.gif" alt="loading-state.gif">
 
     </details>
 
@@ -53,18 +58,24 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     <img src="./readmeimages/room-view-movement-arrows.png" alt="mobile-view-3d-list" width="90%">
     </details>
 
-  - Possibility to move left and right ✅
   - <details>
     <summary>The possibility of approaching and moving away from the wall to a certain extent ✅</summary>
-    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    1. <img src="./readmeimages/room-view-UX-UI-wall.png" alt="room-view-UX-UI-wall.png" width="45%">
+    2. <img src="./readmeimages/room-view-UX-UI-wall-1.png" alt="room-view-UX-UI-wall-1.png" width="45%">
+    <br> 3. <img src="./readmeimages/room-view-UX-UI-wall-2.png" alt="room-view-UX-UI-wall-2.png" width="45%">
+    4. <img src="./readmeimages/room-view-UX-UI-wall-3.png" alt="room-view-UX-UI-wall-3.png" width="45%">
+    <br> 5. <img src="./readmeimages/room-view-UX-UI-wall-4.png" alt="room-view-UX-UI-wall-4.png" width="45%">
+
+    
     </details>
+  - Possibility to move left and right ✅
 
   - <details>
     <summary>Different interactions for each article ✅</summary>
-    <img src="./readmeimages/room-view-dark-mode.png" alt="mobile-view-3d-list" width="90%">
-    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
-    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
-    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    1. <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode" width="45%">
+    2. <img src="./readmeimages/room-view-UX-UI-wall.png" alt="room-view-UX-UI-wall.png" width="45%">
+    <br> 3. <img src="./readmeimages/room-view-about-wall.png" alt="room-view-about-wall.png" width="45%">
+    4. <img src="./readmeimages/room-view-hobbys-wall.png" alt="room-view-hobbys-wall.png" width="45%">
 
     </details>
 
@@ -78,9 +89,6 @@ In my search for an internship for the upcoming academic year, I'm building a ne
   - Save room mode in localstorage ✅
   - <details>
     <summary>Leave the room completely ✅</summary>
-    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    <img src="./readmeimages/room-view-about-wall-review.png" alt="room-view-about-wall-review" width="90%">
     </details>
 
-# 👁️ Demo Link!
-
-- [Online demo](https://sundouskanaan.github.io/portfolio2023/)

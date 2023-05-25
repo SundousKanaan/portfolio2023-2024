@@ -23,7 +23,7 @@ const loadingScreen = document.querySelector("body > div.loading")
 
 setTimeout(() => {
     loadingScreen.classList.remove("loading")
-}, 1500);
+}, 2500);
 
 
 // skils circels (mobile size) ===========================================================================
