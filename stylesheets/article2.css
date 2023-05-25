@@ -429,13 +429,13 @@ main>div>article:nth-of-type(2) ul li > button{
 
     main>div>article:nth-of-type(2)>div::after {
         content: "";
-        width: 1em;
-        height: 1em;
+        width: 10%;
+        height: 15%;
         background-color: var(--screen);
 
         position: absolute;
         bottom: -1em;
-        right: calc(50% - 1em /2);
+        right: calc(50% - 10% /2);
     }
 
     /* the table */
