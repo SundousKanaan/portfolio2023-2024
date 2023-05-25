@@ -357,8 +357,9 @@ main>div>article:nth-of-type(2) ul li > button{
         height: 37%;
 
         position: absolute;
-        bottom: 4.1em;
+        bottom: 4.3em;
         z-index: 100000;
+        border-radius: .3em;
 
         background-color: white;
         background-image: url(../hobbyesimages/my-room.png);
@@ -372,14 +373,7 @@ main>div>article:nth-of-type(2) ul li > button{
         background-image: none;
     }
 
-    /* desktop */
-    /* screen */
-    /* main>div>article:nth-of-type(2)>div iframe {
-        width: 100%;
-        height: 100%;
-        border: solid .3em var(--screen);
-    } */
-
+    /* desktop screen */
     main>div>article:nth-of-type(2)>div section{
         width: 100%;
         height: 99%;
@@ -454,6 +448,7 @@ main>div>article:nth-of-type(2) ul li > button{
         position: absolute;
         bottom: -1.4em;
         right: calc(50% - 5em /2);
+        border-radius: 2em;
     }
 
     /* table */

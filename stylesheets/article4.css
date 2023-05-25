@@ -428,7 +428,6 @@ main>div>article:nth-of-type(4)>article {
         content: "";
         width: 50%;
         aspect-ratio: 1/1;
-        /* height: 1em; */
         display: block;
 
         position: absolute;
@@ -439,12 +438,10 @@ main>div>article:nth-of-type(4)>article {
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        /* background-color: red; */
     }
 
     main>div>article:nth-of-type(4)>div:nth-of-type(2) div:first-of-type::after {
         background-image: url(https://www.sideshow.com/cdn-cgi/image/width=500,quality=80,f=auto/https://www.sideshow.com/storage/product-images/910900/zenitsu-agatsuma-thunderclap-and-flash_dc-comics_silo_md.png);
-        /* width: 40%; */
         right: 5%;
     }
 
@@ -456,7 +453,6 @@ main>div>article:nth-of-type(4)>article {
     main>div>article:nth-of-type(4)>div:nth-of-type(2) div:nth-of-type(2)::after {
         background-image: url(../hobbyesimages/naruto-figure.png);
         width: 40%;
-        /* height: 2em; */
         right: 5%;
         background-size: cover;
     }
