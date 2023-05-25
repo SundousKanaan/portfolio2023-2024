@@ -13,7 +13,14 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
 # 🛠️ Features Combined
 
-- Works on screens of different sizes (phone, tablet, desktop) ✅
+- <details>
+    <summary>Works on screens of different sizes (phone, tablet, desktop) ✅</summary>
+    <img src="./readmeimages/mobile-view-light-mode.png" alt="mobile-view-light-mode.png" width="32%">
+     <img src="./readmeimages/tablet-view-light-mode.png" alt="tablet-view-light-mode.png" width="60%">
+    <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png" width="93%">
+
+    </details>
+
 - <details>
     <summary>Loading state ✅</summary>
     <img src="./readmeimages/loading-state.png" alt="loading-state.png">
