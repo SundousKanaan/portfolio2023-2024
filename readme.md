@@ -88,7 +88,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
   - Save room mode in localstorage ✅
   - <details>
     <summary>Leave the room completely ✅</summary>
-    <img src="./readmeimages/room-view-leave-room-review.gif" alt="room-view-leave-room-review.gif" width="100">
+    <img src="./readmeimages/room-view-leave-room-review.gif" alt="room-view-leave-room-review.gif" width="100%">
     </details>
 
 # Cons
