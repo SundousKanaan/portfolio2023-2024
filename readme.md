@@ -30,7 +30,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     <summary>Loading state ✅</summary>
     I selected the Digimon Calumon because it possesses a special connection to the Internet, assisting other Digimon with their digievolutions. This unique connection made it a fitting choice for the concept of loading. (and he is so cute)
 
-    <img src="./readmeimages/loading-state.gif" alt="loading-state.gif">
+    <img src="./readmeimages/loading-state.gif" alt="loading-state.gif" width="50%">
 
     </details>
 
@@ -42,7 +42,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     </details>
   - <details>
     <summary> 3D interactions ✅</summary>
-    <img src="./readmeimages/mobile-view-3d-list.gif" alt="mobile-view-3d-gif" width="90%">
+    <img src="./readmeimages/mobile-view-3d-list.gif" alt="mobile-view-3d-gif" width="50%">
     </details>
   - effect for appearing ✅
 
@@ -60,35 +60,35 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
   - <details>
     <summary>The possibility of approaching and moving away from the wall to a certain extent ✅</summary>
-    <img src="./readmeimages/room-view-fore-back-moving.gif" alt="room-view-fore-back-moving.gif">
+    <img src="./readmeimages/room-view-fore-back-moving.gif" alt="room-view-fore-back-moving.gif" width="50%">
     </details>
   
   - <details><summary>Possibility to move left and right ✅</summary>
-    <img src="./readmeimages/room-view-left-right-moving.gif" alt="room-view-left-right-moving.gif">
+    <img src="./readmeimages/room-view-left-right-moving.gif" alt="room-view-left-right-moving.gif" width="50%">
     </details>
   - <details>
     <summary>Different interactions for each article ✅</summary>
 
-    1. Code projects:<img src="./readmeimages/room-view-projects-review.gif" alt="room-view-projects-review.gif">
+    1. Code projects:<img src="./readmeimages/room-view-projects-review.gif" alt="room-view-projects-review.gif" width="50%">
 
-    2. UX/UI projects:<img src="./readmeimages/room-view-UX-UI-review.png" alt="room-view-UX-UI-review.gif">
+    2. UX/UI projects:<img src="./readmeimages/room-view-UX-UI-review.png" alt="room-view-UX-UI-review.gif" width="50%">
 
-    3.  About me: <img src="./readmeimages/room-view-about-review.gif" alt="room-view-about-review.gif">
+    3.  About me: <img src="./readmeimages/room-view-about-review.gif" alt="room-view-about-review.gif" width="50%">
 
-    4. My hobby's:<img src="./readmeimages/room-view-hobbys-review.gif" alt="room-view-hobbys-review.gif">
+    4. My hobby's:<img src="./readmeimages/room-view-hobbys-review.gif" alt="room-view-hobbys-review.gif" width="50%">
 
     </details>
 
   - <details>
     <summary>button to adjust the mode (light / dark) ✅</summary>
-      <img src="./readmeimages/room-view-dark-mode.gif" alt="room-view-dark-mode.gif" width="90%">
+      <img src="./readmeimages/room-view-dark-mode.gif" alt="room-view-dark-mode.gif" width="50%">
 
     </details>
 
   - Save room mode in localstorage ✅
   - <details>
     <summary>Leave the room completely ✅</summary>
-    <img src="./readmeimages/room-view-leave-room-review.gif" alt="room-view-leave-room-review.gif" width="100%">
+    <img src="./readmeimages/room-view-leave-room-review.gif" alt="room-view-leave-room-review.gif" width="50%">
     </details>
 
 # Cons
