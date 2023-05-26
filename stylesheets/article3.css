@@ -574,6 +574,7 @@ main>div>article:nth-of-type(3)>section ul li>a {
 
         transform-style: preserve-3d;
         transform: none;
+        overflow: visible;
     }
 
     main>div>article:nth-of-type(3)>section ul li:hover{
@@ -673,6 +674,7 @@ main>div>article:nth-of-type(3)>section ul li>a {
         position: absolute;
         text-align: center;
 
+        transform-style: preserve-3d;
         width: 8em;
         color: var(--text-color);
 
