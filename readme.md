@@ -55,7 +55,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
   - <details>
     <summary> Possibility to move in the room with buttons and keyboard ✅</summary>
-    <img src="./readmeimages/room-view-movement-arrows.png" alt="room-view-movement-arrows.png">
+    <img src="./readmeimages/room-view-movement-arrows.png" alt="room-view-movement-arrows.png" width="100%">
     </details>
 
   - <details>
@@ -69,13 +69,17 @@ In my search for an internship for the upcoming academic year, I'm building a ne
   - <details>
     <summary>Different interactions for each article ✅</summary>
 
-    1. Code projects:<img src="./readmeimages/room-view-projects-review.gif" alt="room-view-projects-review.gif" width="50%">
+    1. Code projects:
+      <br> <img src="./readmeimages/room-view-projects-review.gif" alt="room-view-projects-review.gif" width="50%">
 
-    2. UX/UI projects:<img src="./readmeimages/room-view-UX-UI-review.png" alt="room-view-UX-UI-review.gif" width="50%">
+    2. UX/UI projects:
+      <br> <img src="./readmeimages/room-view-UX-UI-review.png" alt="room-view-UX-UI-review.gif" width="50%">
 
-    3.  About me: <img src="./readmeimages/room-view-about-review.gif" alt="room-view-about-review.gif" width="50%">
+    3.  About me:
+      <br> <img src="./readmeimages/room-view-about-review.gif" alt="room-view-about-review.gif" width="50%">
 
-    4. My hobby's:<img src="./readmeimages/room-view-hobbys-review.gif" alt="room-view-hobbys-review.gif" width="50%">
+    4. My hobby's:
+      <br> <img src="./readmeimages/room-view-hobbys-review.gif" alt="room-view-hobbys-review.gif" width="50%">
 
     </details>
 
