@@ -2,7 +2,7 @@
 
 In my search for an internship for the upcoming academic year, I'm building a new portfolio. This time, I've created a virtual room that truly represents me. Though my actual room is small, I've imagined it on a larger scale. This virtual space showcases my style and serves as a digital portfolio to highlight my skills and best work from my studies. Come along as I bring this expanded room to life in code.
 
-<img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png">
+<img src="./readmeimages//room-view-light-mode.png" alt="room-view-light-mode.png">
 
 ---
 # 👁️ Demo Link!
@@ -23,8 +23,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     <summary>Works on screens of different sizes (phone, tablet, desktop) ✅</summary>
     <img src="./readmeimages/mobile-view-light-mode.png" alt="mobile-view-light-mode.png" width="32%">
      <img src="./readmeimages/tablet-view-light-mode.png" alt="tablet-view-light-mode.png" width="60%">
-    <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png" width="93%">
-
+    <img src="./readmeimages//room-view-light-mode.png" alt="room-view-light-mode.png" width="93%">
     </details>
 
 - <details>
@@ -51,12 +50,12 @@ In my search for an internship for the upcoming academic year, I'm building a ne
   
   - <details>
     <summary>Desktop style is 3D room ✅</summary>
-    <img src="./readmeimages/room-view-light-mode.png" alt="mobile-view-3d-list" width="90%">
+    <img src="./readmeimages//room-view-light-mode.png" alt="room-view-light-mode.png">
     </details>
 
   - <details>
     <summary> Possibility to move in the room with buttons and keyboard ✅</summary>
-    <img src="./readmeimages/room-view-movement-arrows.png" alt="mobile-view-3d-list.png">
+    <img src="./readmeimages/room-view-movement-arrows.png" alt="room-view-movement-arrows.png">
     </details>
 
   - <details>
@@ -89,7 +88,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
   - Save room mode in localstorage ✅
   - <details>
     <summary>Leave the room completely ✅</summary>
-    <img src="./readmeimages/room-view-about-wall-review.gif" alt="room-view-about-wall-review.gif">
+    <img src="./readmeimages/room-view-leave-room-review.gif" alt="room-view-leave-room-review.gif">
     </details>
 
 # Cons
