@@ -38,12 +38,12 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 - phone, tablet:
   - <details>
     <summary> Works in light and dark mode ✅</summary>
-    <img src="./readmeimages/mobile-view-light-mode.png" alt="room-view-light-mode" width="45%">
-    <img src="./readmeimages/mobile-view-dark-mode.png" alt="room-view-dark-mode" width="45%">
+    <img src="./readmeimages/mobile-view-light-mode.png" alt="room-view-light-mode.png" width="45%">
+    <img src="./readmeimages/mobile-view-dark-mode.png" alt="mobile-view-dark-mode.png" width="45%">
     </details>
   - <details>
     <summary> 3D interactions ✅</summary>
-    <img src="./readmeimages/mobile-view-3d-list.png" alt="mobile-view-3d-list" width="90%">
+    <img src="./readmeimages/mobile-view-3d-list.gif" alt="mobile-view-3d-gif" width="90%">
     </details>
   - effect for appearing ✅
 
@@ -56,41 +56,40 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
   - <details>
     <summary> Possibility to move in the room with buttons and keyboard ✅</summary>
-    <img src="./readmeimages/room-view-movement-arrows.png" alt="mobile-view-3d-list" width="90%">
+    <img src="./readmeimages/room-view-movement-arrows.png" alt="mobile-view-3d-list.png">
     </details>
 
   - <details>
     <summary>The possibility of approaching and moving away from the wall to a certain extent ✅</summary>
-    1. <img src="./readmeimages/room-view-UX-UI-wall.png" alt="room-view-UX-UI-wall.png" width="45%">
-    2. <img src="./readmeimages/room-view-UX-UI-wall-1.png" alt="room-view-UX-UI-wall-1.png" width="45%">
-    <br> 3. <img src="./readmeimages/room-view-UX-UI-wall-2.png" alt="room-view-UX-UI-wall-2.png" width="45%">
-    4. <img src="./readmeimages/room-view-UX-UI-wall-3.png" alt="room-view-UX-UI-wall-3.png" width="45%">
-    <br> 5. <img src="./readmeimages/room-view-UX-UI-wall-4.png" alt="room-view-UX-UI-wall-4.png" width="45%">
-
-    
+    <img src="./readmeimages/room-view-fore-back-moving.gif" alt="room-view-fore-back-moving.gif">
     </details>
-  - Possibility to move left and right ✅
-
+  
+  - <details><summary>Possibility to move left and right ✅</summary>
+    <img src="./readmeimages/room-view-left-right-moving.gif" alt="room-view-left-right-moving.gif">
+    </details>
   - <details>
     <summary>Different interactions for each article ✅</summary>
-    1. <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode" width="45%">
-    2. <img src="./readmeimages/room-view-UX-UI-wall.png" alt="room-view-UX-UI-wall.png" width="45%">
-    <br> 3. <img src="./readmeimages/room-view-about-wall.png" alt="room-view-about-wall.png" width="45%">
-    4. <img src="./readmeimages/room-view-hobbys-wall.png" alt="room-view-hobbys-wall.png" width="45%">
+
+    1. Code projects:<img src="./readmeimages/room-view-projects-review.gif" alt="room-view-projects-review.gif">
+
+    2. UX/UI projects:<img src="./readmeimages/room-view-UX-UI-review.png" alt="room-view-UX-UI-review.gif">
+
+    3.  About me: <img src="./readmeimages/room-view-about-review.gif" alt="room-view-about-review.gif">
+
+    4. My hobby's:<img src="./readmeimages/room-view-hobbys-review.gif" alt="room-view-hobbys-review.gif">
 
     </details>
 
   - <details>
     <summary>button to adjust the mode (light / dark) ✅</summary>
-    <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png" width="90%">
-    <img src="./readmeimages/room-view-dark-mode.png" alt="room-view-dark-mode.png" width="90%">
+      <img src="./readmeimages/room-view-dark-mode.gif" alt="room-view-dark-mode.gif" width="90%">
 
     </details>
 
   - Save room mode in localstorage ✅
   - <details>
     <summary>Leave the room completely ✅</summary>
-    <img src="./readmeimages/room-view-about-wall-review.png" alt="room-view-about-wall-review" width="90%">
+    <img src="./readmeimages/room-view-about-wall-review.gif" alt="room-view-about-wall-review.gif">
     </details>
 
 # Cons
