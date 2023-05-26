@@ -55,7 +55,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 
   - <details>
     <summary> Possibility to move in the room with buttons and keyboard ✅</summary>
-    <img src="./readmeimages/room-view-movement-arrows.png" alt="room-view-movement-arrows.png" width="100%">
+    <img src="./readmeimages/room-view-movement-arrows.png" alt="room-view-movement-arrows.png" width="80%">
     </details>
 
   - <details>
