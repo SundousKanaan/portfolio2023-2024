@@ -214,7 +214,7 @@ const uxList = document.querySelector("main>div>article:nth-of-type(3) ul")
 const uxfiles = [{
     name: "G-Book",
     link: "gbook",
-    image: "gbook.jpg",
+    image: "g-book.jpg",
     description: "Program for multiple devices to learn how to draw manga characters. An application that can make drawing a Manga character easier for novice artists."
 },
 {
