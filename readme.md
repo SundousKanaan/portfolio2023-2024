@@ -40,6 +40,7 @@ Prior to diving into coding, I began by sketching out simple designs for the por
 - <details>
     <summary>Loading state ✅</summary>
     I selected the Digimon Calumon because it possesses a special connection to the Internet, assisting other Digimon with their digievolutions. This unique connection made it a fitting choice for the concept of loading. (and he is so cute)
+    <br>
 
     <img src="./readmeimages/loading-state.gif" alt="loading-state.gif" width="50%">
 
