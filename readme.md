@@ -2,20 +2,31 @@
 
 In my search for an internship for the upcoming academic year, I'm building a new portfolio. This time, I've created a virtual room that truly represents me. Though my actual room is small, I've imagined it on a larger scale. This virtual space showcases my style and serves as a digital portfolio to highlight my skills and best work from my studies. Come along as I bring this expanded room to life in code.
 
-<img src="./readmeimages//room-view-light-mode.png" alt="room-view-light-mode.png">
+<img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png">
 
 ---
 # 👁️ Demo Link!
 
-- [Online demo](https://sundouskanaan.github.io/portfolio2023/)
+- [Online demo](https:/sundouskanaan.github.io/portfolio2023/)
 
 # contents 
 - [Portofolio 2023](#portofolio-2023)
 - [👁️ Demo Link!](#️-demo-link)
 - [contents](#contents)
+- [Sketches](#sketches)
 - [🛠️ Features Combined](#️-features-combined)
 - [Cons](#cons)
 
+# Sketches
+
+Prior to diving into coding, I began by sketching out simple designs for the portfolio, envisioning how it would appear on both small and large screen devices. However, as I progressed with the coding process, certain aspects underwent changes. I discovered new and visually appealing ideas to incorporate, leading to adjustments in interaction style, appearance, and overall design. These modifications allowed for a more captivating and visually striking implementation of the portfolio.
+
+<details> <summary>Sketches foto's</summary>
+<img src="./readmeimages/room-sketches.jpg" alt="room-sketches.jpg" width="100%">
+<img src="./readmeimages/mobile-sketches.jpg" alt="mobile-sketches.jpg" width="50%">
+</details>
+
+<br>
 
 # 🛠️ Features Combined
 
@@ -23,7 +34,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
     <summary>Works on screens of different sizes (phone, tablet, desktop) ✅</summary>
     <img src="./readmeimages/mobile-view-light-mode.png" alt="mobile-view-light-mode.png" width="32%">
      <img src="./readmeimages/tablet-view-light-mode.png" alt="tablet-view-light-mode.png" width="60%">
-    <img src="./readmeimages//room-view-light-mode.png" alt="room-view-light-mode.png" width="93%">
+    <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png" width="93%">
     </details>
 
 - <details>
@@ -50,7 +61,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
   
   - <details>
     <summary>Desktop style is 3D room ✅</summary>
-    <img src="./readmeimages//room-view-light-mode.png" alt="room-view-light-mode.png">
+    <img src="./readmeimages/room-view-light-mode.png" alt="room-view-light-mode.png">
     </details>
 
   - <details>
