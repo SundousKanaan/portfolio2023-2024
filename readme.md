@@ -85,7 +85,7 @@ Prior to diving into coding, I began by sketching out simple designs for the por
       <br> <img src="./readmeimages/room-view-projects-review.gif" alt="room-view-projects-review.gif" width="50%">
 
     2. UX/UI projects:
-      <br> <img src="./readmeimages/room-view-UX-UI-review.png" alt="room-view-UX-UI-review.gif" width="50%">
+      <br> <img src="./readmeimages/room-view-UX-UI-review.gif" alt="room-view-UX-UI-review.gif" width="50%">
 
     3.  About me:
       <br> <img src="./readmeimages/room-view-about-review.gif" alt="room-view-about-review.gif" width="50%">
