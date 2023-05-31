@@ -244,7 +244,7 @@ main>div>article:first-of-type>section:first-of-type > a{
         border: solid .2em var(--them-color);
         box-shadow: 0 .1em .05em rgba(53, 53, 53, 0.699);
         position: absolute;
-        right: 22%;
+        right: 30%;
         top: 12%;
         z-index: 2;
 
