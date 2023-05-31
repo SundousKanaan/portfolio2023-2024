@@ -415,24 +415,24 @@ if (mediaQuery.matches) {
 }
 
 function handleKeyPress(event) {
-    if (event.key === "w" || event.key === "W") {
+    if (event.key === "w" || event.key === "W" || event.keyCode == '38') {
         if (translateZ < 100 && translateZ >= 80) {
             goFore();
         }
     }
 
-    if (event.key === "s" || event.key === "S") {
+    if (event.key === "s" || event.key === "S" || event.keyCode == '40') {
         if (translateZ <= 100 && translateZ > 80) {
             goBack();
         }
     }
 
-    if (event.key === "a" || event.key === "A") {
+    if (event.key === "a" || event.key === "A" || event.keyCode == '37') {
         currRoomdeg += -.25;
         rotateRoom(currRoomdeg, translateZ);
     }
 
-    if (event.key === "d" || event.key === "D") {
+    if (event.key === "d" || event.key === "D" || event.keyCode == '39') {
         currRoomdeg += .25;
         rotateRoom(currRoomdeg, translateZ);
     }
