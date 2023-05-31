@@ -220,7 +220,7 @@ main>div>article:nth-of-type(2)>div {
 
 
 main>div>article:nth-of-type(2) ul li div.desktop-version,
-main>div>article:nth-of-type(2) ul li > button{
+main>div>article:nth-of-type(2) ul li>button {
     display: none;
 }
 
@@ -236,7 +236,7 @@ main>div>article:nth-of-type(2) ul li > button{
 /* ************ */
 
 @media (min-width: 1250px) {
-    main>div>article:nth-of-type(2){
+    main>div>article:nth-of-type(2) {
         transform-style: preserve-3d;
         perspective: 50em;
         padding: 0;
@@ -263,8 +263,8 @@ main>div>article:nth-of-type(2) ul li > button{
         overscroll-behavior-x: none;
 
         display: grid;
-        grid-template-columns: repeat(6, 1fr );
-        grid-template-rows: repeat(3, 20% );
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 20%);
         gap: 1em;
 
         position: absolute;
@@ -287,10 +287,10 @@ main>div>article:nth-of-type(2) ul li > button{
         position: relative;
         z-index: 4;
         box-shadow: 0 0 0 .1em var(--them-color),
-        0 .2em .05em rgba(53, 53, 53, 0.699);
+            0 .2em .05em rgba(53, 53, 53, 0.699);
     }
 
-    main>div>article:nth-of-type(2) ul li::before{
+    main>div>article:nth-of-type(2) ul li::before {
         content: "";
         width: .5em;
         aspect-ratio: 1/1;
@@ -302,13 +302,13 @@ main>div>article:nth-of-type(2) ul li > button{
         z-index: 2;
 
         background-color: var(--bookcase);
-        box-shadow: 
-        inset 0 -.1em var(--bookcase-shadow),
-        0 .1em .05em rgba(53, 53, 53, 0.699);
+        box-shadow:
+            inset 0 -.1em var(--bookcase-shadow),
+            0 .1em .05em rgba(53, 53, 53, 0.699);
     }
 
     main>div>article:nth-of-type(2) ul li div,
-    main>div>article:nth-of-type(2) ul li section{
+    main>div>article:nth-of-type(2) ul li section {
         display: none;
     }
 
@@ -332,9 +332,9 @@ main>div>article:nth-of-type(2) ul li > button{
         border-radius: .5em .5em 0 0;
     }
 
-    main>div>article:nth-of-type(2) ul li > button {
+    main>div>article:nth-of-type(2) ul li>button {
         appearance: none;
-        --webkit-appearance:none;
+        --webkit-appearance: none;
         width: 100%;
         height: 100%;
         font-size: .4em;
@@ -367,43 +367,66 @@ main>div>article:nth-of-type(2) ul li > button{
         background-size: cover;
         background-repeat: no-repeat;
         box-shadow: 0 0 0 0.3em var(--screen);
+
+        display: grid;
+        place-items: center;
     }
 
-    main>div>article:nth-of-type(2)>div.projectOpen{
+    main>div>article:nth-of-type(2)>div.projectOpen {
         background-image: none;
     }
 
     /* desktop screen */
-    main>div>article:nth-of-type(2)>div section{
-        width: 100%;
-        height: 99%;
+    main>div>article:nth-of-type(2)>div section {
+        width: 99%;
+        height: 98%;
         overflow-y: scroll;
+        border-radius: .3em;
+        /* overflow: hidden; */
 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: .5em;
+
+        /* background-color: red; */
     }
 
-    main>div>article:nth-of-type(2)>div section::-webkit-scrollbar{
-        opacity: 0;
-        width: 0;
+    main>div>article:nth-of-type(2)>div section::-webkit-scrollbar {
+        width: .3em;
     }
 
-    main>div>article:nth-of-type(2)>div section h3{
+    main>div>article:nth-of-type(2)>div section::-webkit-scrollbar-thumb {
+        background-color: var(--them-color);
+        border-radius: 5em;
+
+    }
+
+    main>div>article:nth-of-type(2)>div section h3 {
         color: var(--them-color);
         grid-area: 1/1/2/-1;
         justify-self: center;
         margin-top: .5em;
     }
 
-    main>div>article:nth-of-type(2)>div section img{
-        width: 90%;
-        grid-area: 3/1/4/-1;
-        justify-self: center;
-        margin-bottom: .8em;
+    main>div>article:nth-of-type(2)>div section p {
+        width: 100%;
+        text-align: center;
+        grid-area: 2/1/3/-1;
+        font-size: .5em;
+        color: black;
+        padding: 0 .5em;
     }
 
-    main>div>article:nth-of-type(2)>div section a{
+    main>div>article:nth-of-type(2)>div section img {
+        width: 90%;
+        grid-area: 4/1/5/-1;
+        justify-self: center;
+        margin: .8em 0;
+        box-shadow: 0 0 0.3em .1em var(--them-color);
+
+    }
+
+    main>div>article:nth-of-type(2)>div section a {
         width: fit-content;
         height: fit-content;
         text-decoration: none;
@@ -417,12 +440,12 @@ main>div>article:nth-of-type(2) ul li > button{
         transition: .5s;
     }
 
-    main>div>article:nth-of-type(2)>div section a:hover{
+    main>div>article:nth-of-type(2)>div section a:hover {
         background-color: var(--secondere-color);
         box-shadow: -.1em .1em .1em rgba(0, 0, 0, 0.486);
     }
 
-    main>div>article:nth-of-type(2)>div section a:active{
+    main>div>article:nth-of-type(2)>div section a:active {
         transform: scale(.8);
         box-shadow: 0 0 0 rgba(0, 0, 0, 0.486);
     }
@@ -471,7 +494,7 @@ main>div>article:nth-of-type(2) ul li > button{
         width: 50%;
         height: 2.1em;
         background-image:
-        linear-gradient(to right,
+            linear-gradient(to right,
                 var(--wood) 5%,
                 transparent 0 95%,
                 var(--wood) 0 100%);
@@ -482,7 +505,7 @@ main>div>article:nth-of-type(2) ul li > button{
     }
 
     main>div>article:nth-of-type(2)::after,
-    main>div>article:nth-of-type(2)::before{
+    main>div>article:nth-of-type(2)::before {
         transform-style: preserve-3d;
         transform: translateZ(1em) translateY(-.2em);
     }
@@ -506,26 +529,27 @@ main>div>article:nth-of-type(2) ul li > button{
     }
 
     main>div>article:nth-of-type(2) ul li:has(:focus-visible),
-    main>div>article:nth-of-type(2) ul li:has(:hover){
+    main>div>article:nth-of-type(2) ul li:has(:hover) {
         /* transform: scale(1.15); */
         box-shadow: 0 0 0 .1em var(--secondere-color),
-        0 .2em .05em rgba(53, 53, 53, 0.699);
+            0 .2em .05em rgba(53, 53, 53, 0.699);
         transform-origin: 50% 5%;
         transform: rotate(5deg);
         animation: fotoRotate 1s -.5s infinite both alternate ease-in-out;
     }
 
     @keyframes fotoRotate {
-        0%{
-            transform:rotate(5deg)
+        0% {
+            transform: rotate(5deg)
         }
-        100%{
-            transform:rotate(-5deg)
+
+        100% {
+            transform: rotate(-5deg)
         }
     }
 
-    main>div>article:nth-of-type(2) ul li > button:focus-visible,
-    main>div>article:nth-of-type(2) ul li > button:hover{
+    main>div>article:nth-of-type(2) ul li>button:focus-visible,
+    main>div>article:nth-of-type(2) ul li>button:hover {
         outline: none;
         color: var(--dark-text);
     }

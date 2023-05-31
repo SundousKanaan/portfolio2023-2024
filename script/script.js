@@ -198,6 +198,7 @@ async function gitProjectsButtons() {
             screen.innerHTML = `
             <section>
                 <h3>${repoData.name}</h3>
+                <p>${repoData.description}</p>
                 <a href="${repoData.html_url}">repo ></a>
                 <a href="${repoData.homepage}">site ></a>
                 <img src="./projectsimages/${repoData.name}.png" alt="project ${reposData.name} foto">
