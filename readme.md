@@ -7,6 +7,7 @@ In my search for an internship for the upcoming academic year, I'm building a ne
 ---
 # 👁️ Demo Link!
 
+Advise: open it please with Chrome.
 - [Online demo](https:/sundouskanaan.github.io/portfolio2023/)
 
 # contents 
