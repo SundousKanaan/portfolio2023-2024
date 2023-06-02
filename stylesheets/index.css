@@ -831,7 +831,7 @@ body>div:last-of-type {
   }
 
   body>button.hiddenButton {
-    visibility: hidden;
+    display: none;
   }
 
 
