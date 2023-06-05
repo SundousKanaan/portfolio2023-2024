@@ -555,6 +555,36 @@ main>div>article:first-of-type>section:first-of-type > a{
         transition: .5s;
     }
 
+    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) a{
+        width: 3em;
+        height: 2em;
+        position: absolute;
+        bottom: 100%;
+        right: 4%;
+
+        background-image: 
+        url(https://cdn.icon-icons.com/icons2/2553/PNG/512/linkedin_logo_icon_153021.png),
+        url(https://www.nicepng.com/png/full/29-298744_the-best-pillows-for-sleeping-guide-slumbr-cartoon.png);
+        background-position: 80% 62%, center;
+        background-repeat: no-repeat no-repeat;
+        background-size: 25%,contain;
+    }
+
+    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) a:focus-visible,
+    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) a:hover{
+        outline: none;
+        animation: billow .5s infinite both alternate;
+    }
+
+
+    @keyframes billow {
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(-10%);
+        }
+    }
     main>div>article:first-of-type>section:nth-of-type(3) > a:hover{
         transform: rotate(5deg);
         animation: mailRotate 1s -.5s infinite both alternate ease-in-out;
