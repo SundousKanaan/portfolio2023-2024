@@ -1,638 +1,786 @@
-main>div>article:first-of-type {
-    gap: 3em;
+main > div > article:first-of-type {
+  gap: 3em;
 }
 
-main>div>article:first-of-type>section:first-of-type {
-    width: 90%;
-    height: fit-content;
+main > div > article:first-of-type > section:first-of-type {
+  width: 90%;
+  height: fit-content;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
 
-main>div>article:first-of-type>section:first-of-type div:first-of-type {
-    width: 13em;
-    height: 13em;
-    position: relative;
-    border-radius: 50%;
+main > div > article:first-of-type > section:first-of-type div:first-of-type {
+  width: 13em;
+  height: 13em;
+  position: relative;
+  border-radius: 50%;
 
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
-main>div>article:first-of-type>section:first-of-type div:first-of-type:after {
-    content: "";
-    display: block;
-    width: 110%;
-    height: 110%;
-    border-radius: 50%;
+main
+  > div
+  > article:first-of-type
+  > section:first-of-type
+  div:first-of-type:after {
+  content: "";
+  display: block;
+  width: 110%;
+  height: 110%;
+  border-radius: 50%;
 
-    position: absolute;
-    z-index: -1;
+  position: absolute;
+  z-index: -1;
 
-    background-color: transparent;
-    background-image: repeating-conic-gradient(from var(--angle, 0deg),
-            var(--them-color) 44.8deg,
-            transparent 45.2deg);
-    animation: borderRotate 4s -1s linear infinite;
+  background-color: transparent;
+  background-image: repeating-conic-gradient(
+    from var(--angle, 0deg),
+    var(--them-color) 44.8deg,
+    transparent 45.2deg
+  );
+  animation: borderRotate 4s -1s linear infinite;
 }
 
 @keyframes borderRotate {
-    100% {
-        --angle: 360deg;
-    }
+  100% {
+    --angle: 360deg;
+  }
 }
 
 @property --angle {
-    syntax: "<angle>";
-    inherits: true;
-    initial-value: 0deg;
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
 }
 
-main>div>article:first-of-type>section:first-of-type div img {
-    display: block;
-    width: 100%;
-    height: 100%;
+main > div > article:first-of-type > section:first-of-type div img {
+  display: block;
+  width: 100%;
+  height: 100%;
 
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
 
-    align-self: center;
+  align-self: center;
 
-    /* box-shadow: -.5em .5em 0 var(--secondere-color); */
-    /* animation: shadow 1s -.5s infinite linear both alternate; */
+  /* box-shadow: -.5em .5em 0 var(--secondere-color); */
+  /* animation: shadow 1s -.5s infinite linear both alternate; */
 }
 
 @keyframes shadow {
-    from {
-        box-shadow: -.5em .5em 0 var(--secondere-color);
-    }
+  from {
+    box-shadow: -0.5em 0.5em 0 var(--secondere-color);
+  }
 
-    to {
-        box-shadow: .5em -.5em 0 var(--secondere-color);
-    }
+  to {
+    box-shadow: 0.5em -0.5em 0 var(--secondere-color);
+  }
 }
 
-main>div>article:first-of-type>section:first-of-type div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
+main > div > article:first-of-type > section:first-of-type div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
 }
 
-main>div>article:first-of-type>section:first-of-type div h1,
-main>div>article:first-of-type>section:first-of-type div p,
-main>div>article:first-of-type>section:first-of-type div a {
-    width: fit-content;
-    max-width: 60%;
-    text-align: center;
-    padding: 0 .5em;
-    color: var(--titels-color);
+main > div > article:first-of-type > section:first-of-type div h1,
+main > div > article:first-of-type > section:first-of-type div p,
+main > div > article:first-of-type > section:first-of-type div a {
+  width: fit-content;
+  max-width: 60%;
+  text-align: center;
+  padding: 0 0.5em;
+  color: var(--titels-color);
 
-    position: relative;
-    background-color: var(--bg);
+  position: relative;
+  background-color: var(--bg);
 
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
-main>div>article:first-of-type>section:first-of-type div a::before,
-main>div>article:first-of-type>section:first-of-type div h1::before,
-main>div>article:first-of-type>section:first-of-type div p::before {
-    content: "";
-    display: block;
+main > div > article:first-of-type > section:first-of-type div a::before,
+main > div > article:first-of-type > section:first-of-type div h1::before,
+main > div > article:first-of-type > section:first-of-type div p::before {
+  content: "";
+  display: block;
 
-    width: 90vw;
-    height: .2em;
+  width: 90vw;
+  height: 0.2em;
 
-    border-radius: 2em;
+  border-radius: 2em;
 
-    position: absolute;
-    top: calc(50% - .2em / 2);
-    z-index: -1;
+  position: absolute;
+  top: calc(50% - 0.2em / 2);
+  z-index: -1;
 
-    background-color: var(--them-color);
-    animation: lineEffect 1s 1 both linear;
+  background-color: var(--them-color);
+  animation: lineEffect 1s 1 both linear;
 }
 
 @keyframes lineEffect {
-    from {
-        transform: scaleX(0);
-    }
+  from {
+    transform: scaleX(0);
+  }
 
-    to {
-        transform: scaleX(1);
-    }
+  to {
+    transform: scaleX(1);
+  }
 }
 
-
-main>div>article:first-of-type>section:first-of-type h2 {
-    margin-top: 2em;
+main > div > article:first-of-type > section:first-of-type h2 {
+  margin-top: 2em;
 }
 
 /* circle */
 
-main>div>article:first-of-type>section:nth-of-type(2) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
+main > div > article:first-of-type > section:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }
 
 .clock {
-    width: fit-content;
+  width: fit-content;
 
-    width: 10em;
-    height: 10em;
-    border-radius: 100%;
-    display: grid;
-    place-items: center;
-    transition: 0.5s;
-    position: relative;
-    background-color: var(--dark-bg);
+  width: 10em;
+  height: 10em;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  position: relative;
+  background-color: var(--dark-bg);
 }
 
 .clock svg {
-    position: absolute;
-    width: 10em;
-    height: 10em;
+  position: absolute;
+  width: 10em;
+  height: 10em;
 
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .clock svg circle {
-    width: 10em;
-    height: 10em;
-    fill: none;
-    stroke-width: 10px;
-    stroke-linecap: round;
-    stroke-dasharray: 817;
-    stroke-dashoffset: 817;
-    transform-box: fill-box;
-    transform-origin: center;
-    transform: rotate(-90deg);
+  width: 10em;
+  height: 10em;
+  fill: none;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke-dasharray: 817;
+  stroke-dashoffset: 817;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-90deg);
 
-    position: absolute;
+  position: absolute;
 }
 
 .clock svg circle:nth-of-type(1) {
-    stroke-dashoffset: 0;
-    opacity: 0.1;
-    stroke: #f3f3f3;
+  stroke-dashoffset: 0;
+  opacity: 0.1;
+  stroke: #f3f3f3;
 }
 
 .clock svg circle:nth-of-type(2) {
-    stroke: var(--them-color);
-    stroke-dashoffset: calc(817 - (817 * 0) / 100);
+  stroke: var(--them-color);
+  stroke-dashoffset: calc(817 - (817 * 0) / 100);
 }
 
-main>div>article:first-of-type>button {
-    display: none;
+main > div > article:first-of-type > button {
+  display: none;
 }
 
-
-main>div>article:first-of-type>section:nth-of-type(3){
-    display: none;
+main > div > article:first-of-type > section:nth-of-type(3) {
+  display: none;
 }
 
-
-
-main>div>article:first-of-type>section:first-of-type > a{
-    display: none;
+main > div > article:first-of-type > section:first-of-type > a {
+  display: none;
 }
-
-
 
 /* ************ */
 /* larg screens */
 /* ************ */
 
 @media (min-width: 1250px) {
-    main>div>article:first-of-type {
-        display: grid;
-        place-items: center;
-        padding: 0;
+  main > div > article:first-of-type {
+    display: grid;
+    place-items: center;
+    padding: 0;
 
-        transform-style: preserve-3d;
-        perspective: 50em;
+    transform-style: preserve-3d;
+    perspective: 50em;
+  }
+
+  main > div > article:first-of-type h2 {
+    visibility: hidden;
+  }
+
+  main > div > article:first-of-type > section:first-of-type {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+    display: block;
+  }
+
+  /* my foto */
+  main > div > article:first-of-type > section:first-of-type div:first-of-type {
+    width: 5vw;
+    height: auto;
+    border-radius: 50%;
+    border: solid 0.2em var(--them-color);
+    box-shadow: 0 0.1em 0.05em rgba(53, 53, 53, 0.699);
+    position: absolute;
+    right: 30%;
+    top: 12%;
+    z-index: 2;
+
+    margin: 0;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:first-of-type
+    div:first-of-type:after {
+    display: none;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:first-of-type
+    div:nth-of-type(2) {
+    display: none;
+  }
+
+  /* my data */
+  main > div > article:first-of-type > section:nth-of-type(2) {
+    display: none;
+  }
+
+  /* the door */
+  main > div > article:first-of-type > button:first-of-type {
+    display: block;
+    appearance: none;
+    --webkit-appearance: none;
+
+    width: 20%;
+    height: 80%;
+
+    position: absolute;
+    left: 14%;
+    bottom: 0;
+
+    border: none;
+    border-radius: 5em 5em 0 0;
+
+    background-color: var(--wood);
+    box-shadow: 0 0 0 0.5em var(--wood-shadow), 0 0 0 0.2em var(--wood);
+
+    background-image: url(https://movieplayer.net-cdn.it/t/images/2023/02/23/suzume-recensione-anime-makoto-shinkai_XriQhpo_jpg_1600x900_crop_q85.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    cursor: pointer;
+    transform-origin: -10% 50%;
+    transform-style: preserve-3d;
+    transition: 0.5s transform;
+  }
+
+  main > div > article:first-of-type > button:first-of-type:active {
+    transform: rotateY(-5deg);
+  }
+
+  main > div > article:first-of-type > button:first-of-type::after {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 1em;
+
+    position: absolute;
+    right: 0.5em;
+
+    border-radius: 50%;
+
+    background-color: var(--bookcase);
+    box-shadow: inset 0 -0.2em var(--bookcase-shadow);
+  }
+
+  main > div > article:first-of-type > button:first-of-type:hover::after {
+    animation: shakingDoorHand 0.5s infinite both linear alternate;
+  }
+
+  @keyframes shakingDoorHand {
+    from {
+      box-shadow: inset 0.1em -0.2em var(--bookcase-shadow);
     }
-
-    main>div>article:first-of-type h2 {
-        visibility: hidden;
+    to {
+      box-shadow: inset -0.1em -0.2em var(--bookcase-shadow);
     }
+  }
 
-    main>div>article:first-of-type>section:first-of-type {
-        width: 100%;
-        height: 100%;
-        /* background-color: red; */
-        position: absolute;
-        display: block;
+  main > div > article:first-of-type > section:nth-of-type(3) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: grid;
+    place-items: center;
+
+    transform-style: preserve-3d;
+  }
+
+  /* light button */
+  main > div > article:first-of-type > button:nth-of-type(2) {
+    width: 2%;
+    aspect-ratio: 1/2;
+    display: block;
+    position: absolute;
+    left: 37%;
+    bottom: 40%;
+    border: none;
+    box-shadow: 0 0 0 0.15em var(--secondere-color),
+      inset 0 -0.7em 0 var(--bed-sheet-shadow);
+    background-color: var(--bed-sheet);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  main > div > article:first-of-type > button:nth-of-type(2):hover {
+    box-shadow: 0 0 0 0.15em var(--secondere-color),
+      inset 0 -0.4em 0 var(--bed-sheet-shadow);
+  }
+
+  main > div > article:first-of-type > button:nth-of-type(2):active {
+    box-shadow: 0 0 0 0.15em var(--secondere-color),
+      inset 0 0.4em 0 var(--bed-sheet-shadow);
+  }
+
+  main > div > article:first-of-type > button:nth-of-type(2).darkmode {
+    box-shadow: 0 0 0 0.15em var(--secondere-color),
+      inset 0 0.7em 0 var(--bed-sheet-shadow);
+  }
+
+  main > div > article:first-of-type > button:nth-of-type(2).darkmode:hover {
+    box-shadow: 0 0 0 0.15em var(--secondere-color),
+      inset 0 0.4em 0 var(--bed-sheet-shadow);
+  }
+
+  main > div > article:first-of-type > button:nth-of-type(2).darkmode:active {
+    box-shadow: 0 0 0 0.15em var(--secondere-color),
+      inset 0 -0.4em 0 var(--bed-sheet-shadow);
+  }
+
+  /* cmd icon */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    > img:first-of-type {
+    height: 75%;
+    position: absolute;
+    left: 3%;
+    bottom: 0;
+  }
+
+  /* NL flag */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    > img:nth-of-type(2) {
+    width: 12%;
+    position: absolute;
+    left: 18%;
+    top: 0;
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform-origin: top;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    > img:nth-of-type(2):hover {
+    animation: flagFlutter 1s infinite both ease-in-out alternate;
+  }
+
+  @keyframes flagFlutter {
+    from {
+      transform: rotateX(0deg);
     }
-
-    /* my foto */
-    main>div>article:first-of-type>section:first-of-type div:first-of-type {
-        width: 5vw;
-        height: auto;
-        border-radius: 50%;
-        border: solid .2em var(--them-color);
-        box-shadow: 0 .1em .05em rgba(53, 53, 53, 0.699);
-        position: absolute;
-        right: 30%;
-        top: 12%;
-        z-index: 2;
-
-        margin: 0;
+    to {
+      transform: rotateX(20deg);
     }
+  }
 
-    main>div>article:first-of-type>section:first-of-type div:first-of-type:after {
-        display: none;
+  /* HvA logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    > img:nth-of-type(3) {
+    width: 7%;
+    position: absolute;
+    left: 2.5%;
+    top: 8%;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type {
+    width: 3em;
+    height: 95%;
+
+    position: absolute;
+    right: -0.5em;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:first-of-type {
+    width: 100%;
+    height: 100%;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:not(:first-of-type) {
+    width: 30%;
+    position: absolute;
+    left: -5%;
+  }
+
+  /* figma logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(2) {
+    width: 20%;
+    bottom: 45%;
+    left: 0;
+  }
+
+  /* photoshop logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(3) {
+    bottom: 65%;
+  }
+
+  /* adobe xd logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(4) {
+    bottom: 35%;
+  }
+
+  /* css logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(5) {
+    bottom: 75%;
+  }
+
+  /* js logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(6) {
+    width: 60%;
+    bottom: 54.5%;
+    left: -20%;
+  }
+
+  /* miro logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(7) {
+    bottom: 84.5%;
+    /* left: -35%; */
+  }
+
+  /* notion logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(8) {
+    bottom: 45%;
+    left: -40%;
+  }
+
+  /* React.js logo */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(9) {
+    bottom: 65%;
+    left: -43%;
+  }
+
+  /* sveltekit */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(10) {
+    bottom: 25%;
+    left: -9%;
+  }
+
+  /* typescript */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(11) {
+    bottom: 45%;
+    left: -80%;
+  }
+
+  /* jest */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:first-of-type
+    img:nth-of-type(12) {
+    bottom: 35%;
+    left: -43%;
+  }
+
+  /* couch */
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2) {
+    width: 35%;
+    height: 8%;
+    border-radius: 0.5em;
+
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+
+    background-color: var(--bed-sheet);
+    box-shadow: inset 0 -0.3em 0 var(--bed-sheet-shadow);
+
+    display: grid;
+    place-items: center;
+
+    transform-style: preserve-3d;
+    transform: translateZ(2em);
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2)::before {
+    content: "";
+    width: 100%;
+    height: 250%;
+    border-radius: 0.5em;
+
+    position: absolute;
+    bottom: 100%;
+
+    background-color: var(--bed-sheet);
+    box-shadow: inset 0 -0.3em 0 var(--bed-sheet-shadow);
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2)
+    span {
+    display: block;
+    width: 8%;
+    height: 300%;
+    border-radius: 0.5em 0.5em 0 0;
+
+    position: absolute;
+    box-shadow: 0 0 0 0.1em var(--bed-sheet-shadow);
+
+    background-color: var(--bed-sheet);
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2)
+    span:first-of-type {
+    left: -5%;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2)
+    span:nth-of-type(2) {
+    right: -5%;
+  }
+
+  main > div > article:first-of-type > section:nth-of-type(3) > a {
+    display: block;
+    width: 7%;
+    height: 10%;
+    background-color: transparent;
+    cursor: pointer;
+
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+    background-image: url(https://i.pinimg.com/originals/0a/ca/cf/0acacfe788e0d73a77db226f0fc9cbf5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transform-origin: 50% -400%;
+    transition: 0.5s;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2)
+    a {
+    width: 3em;
+    height: 2em;
+    position: absolute;
+    bottom: 100%;
+    right: 4%;
+
+    background-image: url(https://cdn.icon-icons.com/icons2/2553/PNG/512/linkedin_logo_icon_153021.png),
+      url(https://www.nicepng.com/png/full/29-298744_the-best-pillows-for-sleeping-guide-slumbr-cartoon.png);
+    background-position: 80% 62%, center;
+    background-repeat: no-repeat no-repeat;
+    background-size: 25%, contain;
+  }
+
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2)
+    a:focus-visible,
+  main
+    > div
+    > article:first-of-type
+    > section:nth-of-type(3)
+    div:nth-of-type(2)
+    a:hover {
+    outline: none;
+    animation: billow 0.5s infinite both alternate;
+  }
+
+  @keyframes billow {
+    from {
+      transform: translateY(0);
     }
-
-
-    main>div>article:first-of-type>section:first-of-type div:nth-of-type(2) {
-        display: none;
+    to {
+      transform: translateY(-10%);
     }
+  }
+  main > div > article:first-of-type > section:nth-of-type(3) > a:hover {
+    transform: rotate(5deg);
+    animation: mailRotate 1s -0.5s infinite both alternate ease-in-out;
+  }
 
-    /* my data */
-    main>div>article:first-of-type>section:nth-of-type(2) {
-        display: none;
+  @keyframes mailRotate {
+    0% {
+      transform: rotate(5deg);
     }
-
-
-    /* the door */
-    main>div>article:first-of-type>button:first-of-type {
-        display: block;
-        appearance: none;
-        --webkit-appearance: none;
-
-        width: 20%;
-        height: 80%;
-
-        position: absolute;
-        left: 14%;
-        bottom: 0;
-
-        border: none;
-        border-radius: 5em 5em 0 0;
-
-        background-color: var(--wood);
-        box-shadow:
-            0 0 0 .5em var(--wood-shadow),
-            0 0 0 .2em var(--wood);
-
-        background-image: url(https://movieplayer.net-cdn.it/t/images/2023/02/23/suzume-recensione-anime-makoto-shinkai_XriQhpo_jpg_1600x900_crop_q85.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        cursor: pointer;
-        transform-origin: -10% 50%;
-        transform-style: preserve-3d;
-        transition: .5s transform;
+    100% {
+      transform: rotate(-5deg);
     }
+  }
 
-    main>div>article:first-of-type>button:first-of-type:active{
-        transform: rotateY(-5deg);
-    }
+  main > div > article:first-of-type > section:nth-of-type(3) > a::before {
+    content: "";
+    width: 5%;
+    height: 400%;
+    display: block;
 
-    main>div>article:first-of-type>button:first-of-type::after {
-        content: "";
-        display: block;
-        width: 1em;
-        height: 1em;
+    position: absolute;
+    bottom: 100%;
+    left: calc(50% - 5% / 2);
+    background-color: var(--them-color);
+  }
 
-        position: absolute;
-        right: .5em;
+  main > div > article:first-of-type > section:nth-of-type(3) > a::after {
+    content: "Mail me";
+    width: 100%;
+    height: fit-content;
+    border-radius: 5em;
 
-        border-radius: 50%;
+    /* padding: .2em .3em; */
+    font-size: 40%;
+    text-align: center;
+    position: absolute;
+    right: calc(50% - 100% / 2);
+    bottom: 110%;
+    text-decoration: none;
 
-        background-color: var(--bookcase);
-        box-shadow: inset 0 -.2em var(--bookcase-shadow);
-    }
-    
-    main>div>article:first-of-type>button:first-of-type:hover::after{
-        animation: shakingDoorHand .5s infinite both linear alternate;
-    }
+    background-color: var(--them-color);
+    color: var(--text-color);
 
-    @keyframes shakingDoorHand {
-        from{
-            box-shadow: inset .1em -.2em var(--bookcase-shadow);
-        }
-        to{
-            box-shadow: inset -.1em -.2em var(--bookcase-shadow);
-        }
-    }
+    opacity: 0;
+    transition: 0.5s;
+  }
 
-    main>div>article:first-of-type>section:nth-of-type(3){
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        display: grid;
-        place-items: center;
-
-        transform-style: preserve-3d;
-    }
-
-    /* light button */
-    main>div>article:first-of-type>button:nth-of-type(2){
-        width: 2%;
-        aspect-ratio: 1/2;
-        display: block;
-        position: absolute;
-        left: 37%;
-        bottom: 40%;
-        border: none;
-        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 -0.7em 0 var(--bed-sheet-shadow);
-        background-color: var(--bed-sheet);
-        transition: .5s;
-        cursor: pointer;
-    }
-
-    main>div>article:first-of-type>button:nth-of-type(2):hover{
-        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 -0.4em 0 var(--bed-sheet-shadow);
-    }
-
-    main>div>article:first-of-type>button:nth-of-type(2):active{
-        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 0.4em 0 var(--bed-sheet-shadow);
-    }
-
-    main>div>article:first-of-type>button:nth-of-type(2).darkmode{
-        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 0.7em 0 var(--bed-sheet-shadow);
-    }
-
-    main>div>article:first-of-type>button:nth-of-type(2).darkmode:hover{
-        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 0.4em 0 var(--bed-sheet-shadow);
-    }
-
-    main>div>article:first-of-type>button:nth-of-type(2).darkmode:active{
-        box-shadow: 0 0 0 0.15em var(--secondere-color), inset 0 -0.4em 0 var(--bed-sheet-shadow);
-    }
-
-    /* cmd icon */
-    main>div>article:first-of-type>section:nth-of-type(3) > img:first-of-type{
-        height: 75%;
-        position: absolute;
-        left: 3%;
-        bottom: 0;
-    }
-
-    /* NL flag */
-    main>div>article:first-of-type>section:nth-of-type(3) > img:nth-of-type(2){
-        width: 12%;
-        position: absolute;
-        left: 18%;
-        top: 0;
-        z-index: 2;
-        transform-style: preserve-3d;
-        transform-origin: top;
-    }
-    
-    main>div>article:first-of-type>section:nth-of-type(3) > img:nth-of-type(2):hover{
-        animation: flagFlutter 1s infinite both ease-in-out alternate;
-    }
-    
-    @keyframes flagFlutter {
-        from{
-            transform: rotateX(0deg);
-        }
-        to{
-            transform: rotateX(20deg);
-        }
-    }
-
-    /* HvA logo */
-    main>div>article:first-of-type>section:nth-of-type(3) > img:nth-of-type(3){
-        width: 7%;
-        position: absolute;
-        left: 2.5%;
-        top: 8%;
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type{
-        width: 3em;
-        height: 95%;
-
-        position: absolute;
-        right: -.5em;
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:first-of-type{
-        width: 100%;
-        height: 100%;
-    }
-
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(2),
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(3),
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(4),
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(5),
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(6),
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(7),
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(8){
-        width: 30%;
-        position: absolute;
-        left: -5%;
-    }
-
-    /* figma logo */
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(2){
-        width: 20%;
-        bottom: 45%;
-        left: 0;
-    }
-    
-    /* photoshop logo */
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(3){
-        bottom: 65%;
-    }
-
-    /* adobe xd logo */
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(4){
-        bottom: 35%;
-    }
-
-    /* css logo */
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(5){
-        bottom: 75%;
-    }
-
-    /* js logo */
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(6){
-        width: 60%;
-        bottom: 54.5%;
-        left: -20%;
-    }
-    /* miro logo */
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(7){
-        bottom: 84.5%;
-        /* left: -35%; */
-    }
-
-    /* notion logo */
-    main>div>article:first-of-type>section:nth-of-type(3) div:first-of-type img:nth-of-type(8){
-        bottom: 45%;
-        left: -40%;
-    }
-
-    /* couch */
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2){
-        width: 35%;
-        height: 8%;
-        border-radius: .5em;
-
-        position: absolute;
-        right: 20%;
-        bottom: 10%;
-
-        background-color: var(--bed-sheet);
-        box-shadow: inset 0 -.3em 0 var(--bed-sheet-shadow);
-
-        display: grid;
-        place-items: center;
-
-        transform-style: preserve-3d;
-        transform: translateZ(2em);
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2)::before{
-        content: "";
-        width: 100%;
-        height: 250%;
-        border-radius: .5em;
-
-
-        position: absolute;
-        bottom: 100%;
-
-        background-color: var(--bed-sheet);
-        box-shadow: inset 0 -.3em 0 var(--bed-sheet-shadow);
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) span{
-        display: block;
-        width: 8%;
-        height: 300%;
-        border-radius: .5em .5em 0 0;
-
-        position: absolute;
-        box-shadow: 0 0 0 .1em var(--bed-sheet-shadow);
-
-        background-color: var(--bed-sheet);
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) span:first-of-type{
-        left: -5%;
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) span:nth-of-type(2){
-        right: -5%;
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) > a{
-        display: block;
-        width: 7%;
-        height: 10%;
-        background-color: transparent;
-        cursor: pointer;
-
-        position: absolute;
-        top: 40%;
-        left: 40%;
-
-        background-image: url(https://i.pinimg.com/originals/0a/ca/cf/0acacfe788e0d73a77db226f0fc9cbf5.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        transform-origin: 50% -400% ;
-        transition: .5s;
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) a{
-        width: 3em;
-        height: 2em;
-        position: absolute;
-        bottom: 100%;
-        right: 4%;
-
-        background-image: 
-        url(https://cdn.icon-icons.com/icons2/2553/PNG/512/linkedin_logo_icon_153021.png),
-        url(https://www.nicepng.com/png/full/29-298744_the-best-pillows-for-sleeping-guide-slumbr-cartoon.png);
-        background-position: 80% 62%, center;
-        background-repeat: no-repeat no-repeat;
-        background-size: 25%,contain;
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) a:focus-visible,
-    main>div>article:first-of-type>section:nth-of-type(3) div:nth-of-type(2) a:hover{
-        outline: none;
-        animation: billow .5s infinite both alternate;
-    }
-
-
-    @keyframes billow {
-        from{
-            transform: translateY(0);
-        }
-        to{
-            transform: translateY(-10%);
-        }
-    }
-    main>div>article:first-of-type>section:nth-of-type(3) > a:hover{
-        transform: rotate(5deg);
-        animation: mailRotate 1s -.5s infinite both alternate ease-in-out;
-    }
-
-    @keyframes mailRotate {
-        0%{
-            transform:rotate(5deg)
-        }
-        100%{
-            transform:rotate(-5deg)
-        }
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) > a::before{
-        content: '';
-        width: 5%;
-        height: 400%;
-        display: block;
-
-        position: absolute;
-        bottom: 100%;
-        left: calc(50% - 5%/2);
-        background-color: var(--them-color);
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) > a::after{
-        content: "Mail me";
-        width: 100%;
-        height: fit-content;
-        border-radius: 5em;
-
-        /* padding: .2em .3em; */
-        font-size: 40%;
-        text-align: center;
-        position: absolute;
-        right: calc(50% - 100% / 2);
-        bottom: 110%;
-        text-decoration: none;
-
-        background-color: var(--them-color);
-        color: var(--text-color);
-
-        opacity: 0;
-        transition: .5s;
-    }
-
-    main>div>article:first-of-type>section:nth-of-type(3) > a:hover::after{
-        opacity: 100%;
-    }
+  main > div > article:first-of-type > section:nth-of-type(3) > a:hover::after {
+    opacity: 100%;
+  }
 }
